@@ -1,4 +1,4 @@
-function DivisionDeNumeros() {
+function divisionDeNumeros() {
     let numero1 = 10
     let numero2 = 5
     let resultado = numero1 / numero2
@@ -6,7 +6,7 @@ function DivisionDeNumeros() {
     document.write("Se divió " + numero1 + " entre " + numero2)
     document.write(" Puedes ver el resultado de la división en la consola!")
 }
-DivisionDeNumeros()
+divisionDeNumeros()
 
 console.log(10 === "10")
 console.log(5 > 10)
