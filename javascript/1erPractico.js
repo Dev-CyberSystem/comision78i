@@ -8,10 +8,9 @@
 // 10 es igual a 10 
 10 === 10 // true (mismo datos en valor y tipo de datos)
 // 5 es igual a cinco (en valor solamente)
-5 == cinco // false (busca el numero y no la letra)
 5 == 5 // true (mismo valor)
 6 !== 10 // true
 8 !== '8' // true (mismo valor pero distinto tipo de dato)
-
-
+let mensaje = "estoy aprendiendo javascript"
+let resultado = 20 + 30
 
