@@ -40,5 +40,13 @@ console.log("Valor de Variable num2 afuera" + - num2)
 // Tienen que tener un index.html y un archivo .js
 // Nombres de los archivos primerPractico.js
 
-
+function sumarNumeros() {
+    let numero20 = prompt("Ingrese el numero 20");
+    console.log(numero20);
+    let numero30 = prompt("Ingrese el numero 30");
+    console.log(numero30);
+    let resultado = numero20 + numero30;
+    console.log(resultado);
+}
+sumarNumeros();
 
