@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 1rem;
+    background-color: blue;
+    color: white;
+}
