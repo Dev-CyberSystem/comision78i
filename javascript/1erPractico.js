@@ -9,6 +9,7 @@
 10 === 10 // true (mismo datos en valor y tipo de datos)
 // 5 es igual a cinco (en valor solamente)
 5 == 5 // true (mismo valor)
+5 == cinco // false (busca el numero y no la letra)
 6 !== 10 // true
 8 !== '8' // true (mismo valor pero distinto tipo de dato)
 true && true && false // false (en AND para ser true todos los valores deben ser true)
