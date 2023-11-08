@@ -7,7 +7,7 @@ function Numeros() {
 Numeros()
 
 function soloString() {
-    let mensaje: "Hola soy de la comision 78i"
+    let mensaje:"Hola,soy de la comision 78i";
     console.log(mensaje)
 }
 soloString()
@@ -17,5 +17,5 @@ function verificarEdad(edad, esMayor) {
     console.log("es mayor: " + esMayor)
 
 }
-verificarEdad(27,true):
+verificarEdad(27,true);
    
