@@ -25,6 +25,13 @@ console.log(num4)
 console.log(nombre)
 console.log(x)
 
+function sumar (a, b){
+    return (a + b)
+}
+
+let suma2 = sumar(4, 5)
+document.write("La suma es" + suma2)
+console.log(suma2)
 
 
 // Crear Variables con let y const
