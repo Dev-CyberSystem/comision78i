@@ -11,6 +11,36 @@
 5 == 5 // true (mismo valor)
 6 !== 10 // true
 8 !== '8' // true (mismo valor pero distinto tipo de dato)
-let mensaje = "estoy aprendiendo javascript"
+true && true && false // false (en AND para ser true todos los valores deben ser true)
+!true // false (invierte el valor)
+false || false || true // true (en OR basta con que un valor sea true para que te devuelva true)
+let texto = "estoy aprendiendo javascript"
 let resultado = 20 + 30
-
+let numero = 5
+// ejercicio realizado en la consola
+let number = 4
+let number2 = 4
+number + number2 
+let respuestas = 8
+// funciones
+function suma() {
+    let numero = 10
+    let otroNumero = 20
+    let suma = numero + otroNumero
+    document.write ("la suma es " + suma)  
+}
+suma ()
+function multiplicar() {
+    let num1 = 10
+    let num2 = 5 
+    let multiplicar = num1 * num2
+    document.write (" la multiplicacion es " + multiplicar)    
+}
+multiplicar()
+function concatenar() {
+    let name = "hola"
+    let name2 = " que tal"
+    let concatenar = name + name2
+    document.write(" la concatenacion es " + concatenar)
+}
+concatenar()
