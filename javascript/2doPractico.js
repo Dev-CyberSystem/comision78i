@@ -94,4 +94,37 @@
         console.log(concatenar)
     }
     declarar()
-    
+
+//Crea una función donde se declare dos variable con el valores booleanos y se comparen si son iguales, luego muestra el resultado en la consola.
+    const igual =() => {
+        const bool1 = false
+        const bool2 = true
+        const iguales = bool1 == bool2
+        console.log(iguales)
+    }
+    igual()
+
+//Crea una función donde se declare dos variable con el valores booleanos y se comparen si son diferentes, luego muestra el resultado en la consola.
+    const diferente =() => {
+        const dif1 = false
+        const dif2 = true
+        const diferente = dif1 != dif2
+        console.log(diferente)
+    }
+    diferente()
+
+//Crea una función donde se declare dos variables con valores numéricos y se compare si el primero es mayor que el segundo, luego muestra el resultado en la consola.
+    const variable =() => {
+        const number4 = 90
+        const number5 = 100
+        const resultado = number4 > number5
+        console.log(resultado)
+    }
+    variable()
+//Mediante un prompt pide al usuario que ingrese un numéro y luego muestra el resultado en l consola.
+    let ingresar = prompt()
+
+
+
+
+//Mediante un prompt pide al usuario que ingrese un nombre y luego muestra el resultado en l consola.
