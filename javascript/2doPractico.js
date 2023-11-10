@@ -78,4 +78,20 @@
         console.log(resta)
     }
     par()
+//Crea una función donde se declare una variable con el valor 5 y se le sume 10, luego muestra el resultado en la consola.
+   function aumenta() {
+        let number3 = 5
+        number3 += 10
+        console.log(number3)
+   } 
+   aumenta()
 
+//Crea una función donde se declare dos variable con el valores en string y se concatenen, luego muestra el resultado en la consola.
+    const declarar =() => {
+        const string1 = "esto me cuesta"
+        const string2 = " horrores :("
+        const concatenar = string1 + string2
+        console.log(concatenar)
+    }
+    declarar()
+    
