@@ -137,6 +137,27 @@
     ingresar()
 
 //Mediante un prompt pide al usuario que ingrese dos números, estos se deben almacenar en dos variables diferentes, luego haz una suma de ambos y que el resultado se guarde en otre variable, muestra el resultado de la suma en el documento.
+    const usuario =() => {
+        const prompt1 = prompt("Ingrese un número")
+        const prompt2 = prompt("ingrese otro número")
+        const resultado = parseInt(prompt1) + parseInt(prompt2)
+        console.log(resultado)
+        document.write("el resultado es " + resultado)
+    }
+    usuario()
+
 //Escribe un programa que solicite al usuario su año de nacimiento y calcule su edad actual y muestre si es o no mayor de edad. Luego, muestra la edad en una cadena de texto.
+   const año =() => {
+     const nacimiento = prompt("Ingrese su año de nacimiento")
+     const edadActual = 2023 - nacimiento
+     const mayor = nacimiento > 18
+     console.log("Usted es mayor de edad. " + "" + "Tienes " + edadActual)
+   }
+   año()
+    
 //Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
- 
+    const frase =() => {
+        const phrase = prompt("Ingrese una frase")
+        console.log(phrase.length)
+    }
+    frase()
