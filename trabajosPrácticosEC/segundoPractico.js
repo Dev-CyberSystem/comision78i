@@ -78,3 +78,78 @@ let booleano3 = 1
 let booleano4 = 2
 console.log (booleano3 > 0 && booleano4 > 5)
 
+// Crea dos variables con valores booleanos diferentes y utiliza el operador lógico OR (||) para compararlas. Muestra el resultado en la consola
+
+let booleano5 = true
+let booleano6 = false
+console.log (booleano5 || booleano6)
+
+// Crea una variable que almacene un valor numérico y utiliza el operador de comparación mayor que (>) para compararlo con otro valor numérico. Muestra el resultado en la consola
+
+let numTres = 3
+console.log( numTres > 1)
+
+// Crea una variable que almacene un valor numérico y utiliza el operador de comparación menor o igual que (<=) para compararlo con otro valor numérico. Muestra el resultado en la consola.
+
+let numCinco = 5
+console.log(numCinco <= 8)
+
+// Crea una Funcion que reciba dos parametros y los sume, luego muestra el resultado en la consola.
+
+function recibeDosParametros (){
+    let parametro1 = 1
+    let parametro2 = 2
+    let sumaParametros = parametro1 + parametro2
+    console.log (sumaParametros)
+} recibeDosParametros ()
+
+// Crea una Funcion que reciba dos parametros y los reste, luego muestra el resultado en la consola.
+
+function recibeDosParametros2 (){
+    let parametro1 = 1
+    let parametro2 = 2
+    let sumaParametros = parametro1 - parametro2
+    console.log (sumaParametros)
+} recibeDosParametros2 ()
+
+// Crea una funcion donde se declare una variable con el valor 5 y se le sume 10, luego muestra el resultado en la consola.
+
+function recibeUnParametro () {
+    let parametro5 = 5
+    console.log(parametro5 +10)
+} recibeUnParametro ()
+
+// Crea una funcion donde se declaren dos variables con valores en string y se concatenen, luego muestra el resultado en la consola.
+
+function recibeUnString () {
+    let parametroS = "Hola"
+    let parametroS2 = " Mundoooooooooooooooo"
+    console.log(parametroS + parametroS2)
+} recibeUnString ()
+
+// Crea una funcion donde se declaren dos variables con valores booleanos y se compare si son iguales, luego muestra el resultado en la consola.
+
+function Booleanos () {
+    let booleano7 = 7
+    let booleano8 = 8
+    console.log(booleano7 == booleano8)
+} Booleanos()
+
+// Crea una funcion donde se declaren dos variables con valores booleanos y se compare si son diferentes, luego muestra el resultado en la consola.
+
+function masBooleanos () {
+    let booleano9 = 9
+    let booleano10 = 10
+    console.log(booleano10 != booleano9)
+} masBooleanos()
+
+// Crea una funcion donde se declaren dos variables con valores numericos y se compare si el primero es mayor que el segundo, luego muestra el resultado en la consola.
+
+function numericos () {
+    let variable1 = 1
+    let variable2 = 2
+    console.log (variable1 > variable2)
+} numericos()
+
+// Mediante un prompt pide al usuario que ingrese un numero y luego muestra el resultado en la consola.
+
