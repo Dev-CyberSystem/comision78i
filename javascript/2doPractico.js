@@ -121,10 +121,22 @@
         console.log(resultado)
     }
     variable()
-//Mediante un prompt pide al usuario que ingrese un numéro y luego muestra el resultado en l consola.
-    let ingresar = prompt()
-
-
-
 
 //Mediante un prompt pide al usuario que ingrese un nombre y luego muestra el resultado en l consola.
+    const ingresar2 =() => {
+        const namePrompt = prompt("Ingrese su nombre")
+        console.log(namePrompt)
+    }
+    ingresar2()
+
+//Mediante un prompt pide al usuario que ingrese un número y luego muestra el resultado en l consola.
+    const ingresar =() => {
+        const numPrompt = prompt("Ingrese un numéro")
+        console.log(numPrompt)
+    }
+    ingresar()
+
+//Mediante un prompt pide al usuario que ingrese dos números, estos se deben almacenar en dos variables diferentes, luego haz una suma de ambos y que el resultado se guarde en otre variable, muestra el resultado de la suma en el documento.
+//Escribe un programa que solicite al usuario su año de nacimiento y calcule su edad actual y muestre si es o no mayor de edad. Luego, muestra la edad en una cadena de texto.
+//Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
+ 
