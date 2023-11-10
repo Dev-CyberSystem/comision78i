@@ -153,3 +153,15 @@ function numericos () {
 
 // Mediante un prompt pide al usuario que ingrese un numero y luego muestra el resultado en la consola.
 
+/*let numeroIngresado = prompt("Pon tu número aqui")
+let numero = numeroIngresado
+console.log ("El número es " + numero)*/
+
+// Mediante un prompt pide al usuario que ingrese su nombre y luego muestra el resultado en la consola.
+
+/*let nombreIngresado = prompt("Pon tu nombre aqui")
+let nombre = nombreIngresado
+console.log ("Mi nombre es " + nombre)*/
+
+
+// Mediante un prompt pide al usuario que ingrese dos numeros, estos se deben almacenar en dos variables diferentes, luego haz una suma de ambos y que el resultado se guarde en otra variable, muestra el resultado de la suma en el documento.
