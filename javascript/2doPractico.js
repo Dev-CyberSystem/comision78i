@@ -1,20 +1,14 @@
 //Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
-    const multiplicar =() => {
-        const number1 = 12
-        const number2 = 6
-        const resultado = number1 * number2
-        console.log(resultado)
-    }
-    multiplicar()
+    let number1 = 12
+    let number2 = 8
+    let solución = number1 * number2
+    console.log(solución)
 
 //Crea dos variables con valores numéricos diferentes y compáralas usando el operador de igualdad (==). Muestra el resultado en la consola.
-    const números =() => {
-        const num1 = 10
-        const num2= 34
-        const comparar = num1 == num2
-        console.log(comparar)
-    }
-    números()
+    let num1 = 10
+    let num2= 34
+    let comparar = num1 == num2
+    console.log(comparar)
 
 //Crea dos variables con valores númericos diferentes y compáralas usando el operador de desigualdad (!=). Muestra el resultado en la consola.
    const desigualdad =() => {
@@ -45,13 +39,10 @@
    cadenaDetexto()
 
 //Crea dos variables con valores booleanos diferentes y utiliza el operador lógico AND (&&) para compararlas. Muestra el resultado en la consola.
-   function AND() {
-     let verdadero = true
-     let falso = false 
-     let comparar = verdadero && falso
-     console.log("la comparación es " + comparar)
-   }
-   AND()
+    let verdadero = true
+    let falso = false 
+    let compararbool = verdadero && falso
+    console.log("la comparación es " + comparar)
 
 //Crea dos variables con valores booleanos diferentes y utiliza el operador lógico OR (||) para compararlas. Muestra el resultado en la consola.
     const OR =() => {
@@ -61,4 +52,30 @@
         console.log("la comparación es " + comparar)
     } 
     OR()
+
+//Crea una variable que almacene un valor numérico y utiliza el operador de comparación mayor que (>) para compararlo con otro valor numérico. Muestra el resultado en la consola.
+    let num5 = 45
+    let num6 = 25
+    let resultado = num5 > num6
+    console.log(resultado)  
+
+//Crea una variable que almacene un valor numérico y utiliza el operador de comparación menor o igual que (<=) para compararlo con otro valor numérico. Muestra el resultado en la consola.  
+    let num7 = 870
+    let num8 = 234
+    let respuesta = num7 <= num8 
+    console.log(respuesta)
+
+//Crea una función que reciba dos parametros y los sume, luego muestra el resultado en la consola.
+    const parametros =(a,b) => {
+        let suma = 650 + 432
+        console.log(suma)
+    }
+    parametros()
+
+//Crea una función que reciba dos parametros y los reste, luego muestra el resultado en la consola.
+    const par =(a,b) => {
+        let resta = 768 - 298
+        console.log(resta)
+    }
+    par()
 
