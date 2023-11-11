@@ -179,12 +179,14 @@ numeroParse()
 
 //  Escribe un programa que solicite al usuario su año de nacimiento y calcule su edad actual y muestre si es o no mayor de edad. Luego, muestra la edad en una cadena de texto.
 
-function año() {
+function nacimiento() {
     let año = prompt("Ingrese su año de nacimiento")
-    let edadActual = 2023 - parseInt(año)
-    console.log(edadActual)
+  nacimiento = parseInt(año)
+  let actual = 2023
+  let edad = actual - año
+  console.log("La edad actual es: " + edad + " años.")
 }
-año()
+nacimiento()
 
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
 
