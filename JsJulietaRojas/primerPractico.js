@@ -10,7 +10,7 @@ Numeros()
     let mensaje= "Hola,soydelacomision78i";
     console.log(mensaje)
 
-
+//Boolean
 function verificarEdad(edad, esMayor) {
     console.log("edad: " + edad)
     console.log("es mayor: " + esMayor)

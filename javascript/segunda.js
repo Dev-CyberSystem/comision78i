@@ -114,9 +114,9 @@ let sumar = function(a,b) {
     return a + b;
 }
 
-//Tarea 
+//Tarea
+//Realiza una operacion matemática simple y almacena el resultado en una variable. Luego meustra el resultado en la consola
 //Quiz Javascript - Introducción
-//Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
 // Crea dos variables con valores numéricos diferentes y compáralas usando el operador de igualdad (==). Muestra el resultado en la consola.
 // Crea dos variables con valores numéricos diferentes y compáralas usando el operador de desigualdad (!=). Muestra el resultado en la consola.
 // Crea una variable con un valor numérico y aumenta su valor en 5 utilizando el operador de incremento (++). Muestra el resultado en la consola.
@@ -138,13 +138,3 @@ let sumar = function(a,b) {
 // Mediante un prompt pide al usuario que ingrese dos numeros, estos se deben almacenar en dos variables diferentes, luego haz una suma de ambos y que el resultado se guarde en otra variable, muestra el resultado de la suma en el documento.
 //  Escribe un programa que solicite al usuario su año de nacimiento y calcule su edad actual y muestre si es o no mayor de edad. Luego, muestra la edad en una cadena de texto.
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
-
-
-
-
-//Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
-
-let numeroUno = 10;
-let numeroDos = 20;
-let resultados = numeroUno + numeroDos;
-console.log(resultados)
