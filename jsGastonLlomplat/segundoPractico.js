@@ -33,9 +33,16 @@ diferencia()
 
 // Crea una variable con un valor numérico y aumenta su valor en 5 utilizando el operador de incremento (++). Muestra el resultado en la consola.
 
-
+let namber = 37;
+namber += 5
+console.log(namber)
 
 // Crea una variable con un valor numérico y disminuye su valor en 3 utilizando el operador de decremento (--). Muestra el resultado en la consola.
+
+let namber2 = 37;
+namber2 -= 3
+console.log(namber2)
+
 // Crea una variable que almacene una cadena de texto y utiliza el operador de concatenación (+) para agregar más texto al final de la cadena. Muestra el resultado en la consola.
 
 let oracion = "Juegue deca querido. "
@@ -100,7 +107,24 @@ function concatenacion() {
 concatenacion()
 
 // Crea una funcion donde se declaren dos variables con valores booleanos y se compare si son iguales, luego muestra el resultado en la consola.
+
+function igualBool() {
+    let booleano_uno = true
+    let booleano_dos = false
+    let comparacionBool = booleano_uno == booleano_dos
+    console.log(comparacionBool)
+}
+igualBool()
+
 // Crea una funcion donde se declaren dos variables con valores booleanos y se compare si son diferentes, luego muestra el resultado en la consola.
+
+function difBool() {
+    let numer = true
+    let numer2 = false
+    let diferenciaBool = numer != numer2
+    console.log(diferenciaBool)
+}
+difBool()
 
 // Crea una funcion donde se declaren dos variables con valores numericos y se compare si el primero es mayor que el segundo, luego muestra el resultado en la consola.
 
@@ -145,7 +169,13 @@ function calculoEdad() {
         return console.log(`Usted es menor de edad. Tiene ${edadActual} años`)
     }
 }
-calculoEdad()
+calculoEdad() 
 
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
 
+function numPalabras() {
+    let frase = prompt("Ingrese una frase")
+    let palabras = frase.split(" ").length
+    console.log(`El número de palabras de la frase es: ${palabras}`)
+}
+numPalabras()
