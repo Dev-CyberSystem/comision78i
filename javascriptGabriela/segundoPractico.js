@@ -88,7 +88,8 @@
 
     // num8 <= 10 // false
 
-    // console.log (num8 >=60)
+    // console.log (num8 <=10)
+
 // Crea una Funcion que reciba dos parametros y los sume, luego muestra el resultado en la consola.
     
     // function sumar (a , b) {
@@ -106,37 +107,37 @@
 // }
 
 // const resultado1 = restar (20 , 5 )
-// console.log (resultado)
+// console.log (resultado1)
     
 // Crea una funcion donde se declare una variable con el valor 5 y se le sume 10, luego muestra el resultado en la consola.
 
+// let number = 5
 
-    //  function suma ( a=5 , b) {
-    //     return a + b
-    //  }
-    //  const resultado = suma ( a , 10)
-    //  console.log (resultado)
-
+// function suma ( number , b) {
+//    return number + b
+// }
+// let resultado = suma ( number , 10)
+// console.log (resultado)
 
 
   
 // Crea una funcion donde se declaren dos variables con valores en string y se concatenen, luego muestra el resultado en la consola. 
-// function texto (){
-//     a= "Buen"
-//     b= "Dia"
-//     return (a + b)
 
-//  }
+// let a= "Buen"
+// let b= " Dia"
+//  function texto (){
+             
+//              return (a + b)
 
-//  const mostrar = texto ( a , b)
+//                   }
+
+//  let mostrar = texto ( a , b)
 //  console.log (mostrar)
-
-//  texto()
 
     
 // Crea una funcion donde se declaren dos variables con valores booleanos y se compare si son iguales, luego muestra el resultado en la consola.
    
-// let Booleano1 = true
+//    let Booleano1 = true
 //    let Booleano2 = false
    
 //    function compararBooleano (){
@@ -157,9 +158,7 @@
 // let Booleano2 = false
 
 // function compararBooleano (){
-  
-   
-//    return Booleano1 !== Booleano2
+        //return Booleano1 !== Booleano2
 // }
 
 //  let resultado = compararBooleano (Booleano1 , Booleano2)
