@@ -1,58 +1,54 @@
 //Tarea 
 //Quiz Javascript - Introducción
+
+
 //Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
 
 // function sumar (){
 //     return 10 + 2
-//     console.log (sumar ())
-// }                               //Muestra resultado en consola
+//     
+//                   }                              
 // sumar()
 
 // const resultado = sumar ()       //Guarda resultado en una variable
+// console.log(resultado)
 
 
 // Crea dos variables con valores numéricos diferentes y compáralas usando el operador de igualdad (==). Muestra el resultado en la consola.
 
 //  let num1 = 10
 //  let num2 = 8
-//  num1 === num2 // False
-
-//  console.log (num1 + num2)
+//console.log (num1===num2)
    
   
 // Crea dos variables con valores numéricos diferentes y compáralas usando el operador de desigualdad (!=). Muestra el resultado en la consola.
 
 //  let num3 = 6
 //  let num4 = 4
-//  num3 !== num4 // True
-
-//  console.log (num3 + num4)
+//  console.log (num3 !== num4)
  
 
 // Crea una variable con un valor numérico y aumenta su valor en 5 utilizando el operador de incremento (++). Muestra el resultado en la consola.
   
-    // let num5 = 10
-    // num5++
-    // num5 +=5
+// let numero = 10; numero++ , numero++, numero++ , numero++ , numero++  
 
-    // console.log (num5)
+// console.log (numero)
     
 
 
 // Crea una variable con un valor numérico y disminuye su valor en 3 utilizando el operador de decremento (--). Muestra el resultado en la consola.
   
-//    let num6 = 8
-//     num6--
+// let numero = 10; numero-- , numero--, numero-- 
 
-//     num6 -=3
-
-//     console.log (num6)
+//     console.log (numero)
 
 // Crea una variable que almacene una cadena de texto y utiliza el operador de concatenación (+) para agregar más texto al final de la cadena. Muestra el resultado en la consola.
    
-//   let texto = "Este" + " es" + " el" + " segundo" + " practico"
+// let texto = "Este"
 
-//   console.log (texto)
+// let cadenaDeTexto = texto + "es el segundo Practico"
+
+// console.log (cadenaDeTexto)
 
 
 
@@ -172,29 +168,62 @@
 
 // Crea una funcion donde se declaren dos variables con valores numericos y se compare si el primero es mayor que el segundo, luego muestra el resultado en la consola.
   
-    // let number1 = 10
-    // let number2 = 6
+    let number1 = 10
+    let number2 = 6
 
-    // function compararNumeros (){
-    //     return number1 > number2
-    // }
+    function compararNumeros (){
+        return number1 > number2
+    }
 
-    // let resultado = compararNumeros (number1, number2)
-    // console.log (resultado)
+    let resultado = compararNumeros (number1, number2)
+    console.log (resultado)
 
 // Mediante un prompt pide al usuario que ingrese un numero y luego muestra el resultado en la consola.
      
-    //    let ingresarNumero = prompt ("Ingrese su numero de telefono")
+       let ingresarNumero = prompt ("Ingrese su numero de telefono")
 
-    //    console.log (ingresarNumero)
+       console.log (ingresarNumero)
      
 // Mediante un prompt pide al usuario que ingrese su nombre y luego muestra el resultado en la consola.
    
-// let ingresarNombre = prompt ("Ingrese su nombre")
+let ingresarNombre = prompt ("Ingrese su nombre")
 
-// console.log (ingresarNombre)
+console.log (ingresarNombre)
 
 
 // Mediante un prompt pide al usuario que ingrese dos numeros, estos se deben almacenar en dos variables diferentes, luego haz una suma de ambos y que el resultado se guarde en otra variable, muestra el resultado de la suma en el documento.
+
+  
+let ingresarNumero1 = parseInt (prompt ("Ingrese el primer numero"))
+let ingresarNumero2 = parseInt (prompt ("Ingrese el segundo numero"))
+
+let resultadoSuma = ingresarNumero1 + ingresarNumero2
+
+document.write ("La suma es: " + resultadoSuma)
+
 //  Escribe un programa que solicite al usuario su año de nacimiento y calcule su edad actual y muestre si es o no mayor de edad. Luego, muestra la edad en una cadena de texto.
+
+let añoNacimiento = parseInt (prompt("Ingrese su año de Nacimiento"))
+
+let fechaActual = new Date ()
+let añoActual = fechaActual.getFullYear ()
+let edad = añoActual - añoNacimiento
+
+//console.log (edad) para probar si me devuele el resultado
+
+
+let esMayorDeEdad = edad >= 18
+
+console.log(esMayorDeEdad)  //Para comprobar si es mayor de edad
+
+let mensaje = "Su edad actual es" + edad 
+
+document.write (mensaje)
+
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
+
+let texto = "Todo es posible si crees en ti mismo y nunca te rindes. El camino al éxito puede ser difícil, pero cada obstáculo te acerca un paso más a tus metas. ¡No hay límites para tus sueños si tienes una actitud optimista!"
+
+let longitud = texto.length
+
+console.log (longitud)
