@@ -80,11 +80,11 @@ console.log(eliminarLetras);
 // saludar();
 
 function arrancar() {
-    let numero1 = 10;
-    let numero2 = 20;
-    return numero1 + numero2;
+  let numero1 = 10;
+  let numero2 = 20;
+  return numero1 + numero2;
 }
-arrancar()
+arrancar();
 
 function sumar(pepito, b) {
   return pepito + b;
@@ -94,27 +94,27 @@ let resultado = sumar(2, "diego");
 console.log(resultado);
 
 function registro(nombre, apellido, edad, direccion) {
-    let rol = "usuario"
-  console.log(`Hola ${nombre} ${apellido} tienes ${edad} años y vives en ${direccion} y tu rol es ${rol}`);
+  let rol = "usuario";
+  console.log(
+    `Hola ${nombre} ${apellido} tienes ${edad} años y vives en ${direccion} y tu rol es ${rol}`
+  );
 }
 registro("Jacinto", "Pichimahuida", 30, "Av. Siempre Viva");
-
 
 // Funciones de flecha
 
 const restar = () => {
-    console.log("Esta es una funcion de flecha")
-    console.log("Esta es una funcion de flecha")
-}
-
+  console.log("Esta es una funcion de flecha");
+  console.log("Esta es una funcion de flecha");
+};
 
 restar();
 
-let sumar = function(a,b) {
-    return a + b;
-}
+let sumar = function (a, b) {
+  return a + b;
+};
 
-//Tarea 
+//Tarea
 //Quiz Javascript - Introducción
 //Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
 // Crea dos variables con valores numéricos diferentes y compáralas usando el operador de igualdad (==). Muestra el resultado en la consola.
@@ -140,11 +140,7 @@ let sumar = function(a,b) {
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
 
 
-
-
-//Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
-
 let numeroUno = 10;
 let numeroDos = 20;
 let resultados = numeroUno + numeroDos;
-console.log(resultados)
+console.log(resultados);
