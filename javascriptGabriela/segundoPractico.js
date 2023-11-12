@@ -31,28 +31,28 @@
 
 // Crea una variable con un valor numérico y aumenta su valor en 5 utilizando el operador de incremento (++). Muestra el resultado en la consola.
   
-    let num5 = 10
-    num5++
-    num5 +=5
+    // let num5 = 10
+    // num5++
+    // num5 +=5
 
-    console.log (num5)
+    // console.log (num5)
     
 
 
 // Crea una variable con un valor numérico y disminuye su valor en 3 utilizando el operador de decremento (--). Muestra el resultado en la consola.
   
-   let num6 = 8
-    num6--
+//    let num6 = 8
+//     num6--
 
-    num6 -=3
+//     num6 -=3
 
-    console.log (num6)
+//     console.log (num6)
 
 // Crea una variable que almacene una cadena de texto y utiliza el operador de concatenación (+) para agregar más texto al final de la cadena. Muestra el resultado en la consola.
    
-  let texto = "Este" + " es" + " el" + " segundo" + " practico"
+//   let texto = "Este" + " es" + " el" + " segundo" + " practico"
 
-  console.log (texto)
+//   console.log (texto)
 
 
 
@@ -60,12 +60,12 @@
 
 // Crea dos variables con valores booleanos diferentes y utiliza el operador lógico AND (&&) para compararlas. Muestra el resultado en la consola.
 
-   let nombre = true
-   let apellido = false
+//    let nombre = true
+//    let apellido = false
 
-   nombre && apellido  // false
+//    nombre && apellido  // false
 
-   console.log (nombre && apellido)
+//    console.log (nombre && apellido)
 
 
 
@@ -73,52 +73,128 @@
 
 // Crea dos variables con valores booleanos diferentes y utiliza el operador lógico OR (||) para compararlas. Muestra el resultado en la consola.
     
-      let texto1= true
-      let texto2=false
-      texto1 || texto2 // true
+    //   let texto1= true
+    //   let texto2=false
+    //   texto1 || texto2 // true
  
 // Crea una variable que almacene un valor numérico y utiliza el operador de comparación mayor que (>) para compararlo con otro valor numérico. Muestra el resultado en la consola.
 
-     let num7 = 5
+    //  let num7 = 5
      
-     num7 > 2  // true
+    //  num7 > 2  // true
 
-     console.log (num7 > 2)
+    //  console.log (num7 > 2)
 
    
 // Crea una variable que almacene un valor numérico y utiliza el operador de comparación menor o igual que (<=) para compararlo con otro valor numérico. Muestra el resultado en la consola.
 
-    let num8 = 20
+    // let num8 = 20
 
-    num8 <= 10 // false
+    // num8 <= 10 // false
 
-    console.log (num8 >=60)
+    // console.log (num8 >=60)
 // Crea una Funcion que reciba dos parametros y los sume, luego muestra el resultado en la consola.
     
-    function sumar (a , b) {
-        return a + b
-    }
+    // function sumar (a , b) {
+    //     return a + b
+    // }
 
-    const resultado = sumar (20 , 10)
-    console.log (resultado)
+    // const resultado = sumar (20 , 10)
+    // console.log (resultado)
 
 
 // Crea una Funcion que reciba dos parametros y los reste, luego muestra el resultado en la consola.
     
-function restar (a , b) {
-    return a - b
-}
+// function restar (a , b) {
+//     return a - b
+// }
 
-const resultado1 = restar (20 , 5 )
-console.log (resultado)
+// const resultado1 = restar (20 , 5 )
+// console.log (resultado)
     
 // Crea una funcion donde se declare una variable con el valor 5 y se le sume 10, luego muestra el resultado en la consola.
-// Crea una funcion donde se declaren dos variables con valores en string y se concatenen, luego muestra el resultado en la consola.
+
+
+    //  function suma ( a=5 , b) {
+    //     return a + b
+    //  }
+    //  const resultado = suma ( a , 10)
+    //  console.log (resultado)
+
+
+
+  
+// Crea una funcion donde se declaren dos variables con valores en string y se concatenen, luego muestra el resultado en la consola. 
+// function texto (){
+//     a= "Buen"
+//     b= "Dia"
+//     return (a + b)
+
+//  }
+
+//  const mostrar = texto ( a , b)
+//  console.log (mostrar)
+
+//  texto()
+
+    
 // Crea una funcion donde se declaren dos variables con valores booleanos y se compare si son iguales, luego muestra el resultado en la consola.
+   
+// let Booleano1 = true
+//    let Booleano2 = false
+   
+//    function compararBooleano (){
+     
+      
+//       return Booleano1 === Booleano2
+//   }
+   
+//     let resultado = compararBooleano (Booleano1 , Booleano2)
+//     console.log (resultado)
+
+
+
+
 // Crea una funcion donde se declaren dos variables con valores booleanos y se compare si son diferentes, luego muestra el resultado en la consola.
+
+// let Booleano1 = true
+// let Booleano2 = false
+
+// function compararBooleano (){
+  
+   
+//    return Booleano1 !== Booleano2
+// }
+
+//  let resultado = compararBooleano (Booleano1 , Booleano2)
+//  console.log (resultado)
+
+
 // Crea una funcion donde se declaren dos variables con valores numericos y se compare si el primero es mayor que el segundo, luego muestra el resultado en la consola.
+  
+    // let number1 = 10
+    // let number2 = 6
+
+    // function compararNumeros (){
+    //     return number1 > number2
+    // }
+
+    // let resultado = compararNumeros (number1, number2)
+    // console.log (resultado)
+
 // Mediante un prompt pide al usuario que ingrese un numero y luego muestra el resultado en la consola.
+     
+    //    let ingresarNumero = prompt ("Ingrese su numero de telefono")
+
+    //    console.log (ingresarNumero)
+     
 // Mediante un prompt pide al usuario que ingrese su nombre y luego muestra el resultado en la consola.
+   
+// let ingresarNombre = prompt ("Ingrese su nombre")
+
+// console.log (ingresarNombre)
+
+
 // Mediante un prompt pide al usuario que ingrese dos numeros, estos se deben almacenar en dos variables diferentes, luego haz una suma de ambos y que el resultado se guarde en otra variable, muestra el resultado de la suma en el documento.
 //  Escribe un programa que solicite al usuario su año de nacimiento y calcule su edad actual y muestre si es o no mayor de edad. Luego, muestra la edad en una cadena de texto.
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
