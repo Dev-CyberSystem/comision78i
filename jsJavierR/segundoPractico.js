@@ -124,7 +124,12 @@ function cumple(){
         ano = parseInt(ano)
         let edad = 2023 - ano
         let edad1 = edad.toString()
-        console.log(edad1)
+        if (edad <= 18){
+            console.log("menor" + edad1)
+        }
+        else{
+            console.log("mayor" + edad1)
+        }
 }
 cumple()
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
@@ -134,3 +139,6 @@ function cantidad(){
     console.log(palabras)
 }
 cantidad()
+
+
+var holas = 3 / 2 
