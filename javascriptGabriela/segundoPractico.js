@@ -185,6 +185,7 @@
      
 // Mediante un prompt pide al usuario que ingrese su nombre y luego muestra el resultado en la consola.
    
+
 let ingresarNombre = prompt ("Ingrese su nombre")
 
 console.log (ingresarNombre)
@@ -226,3 +227,9 @@ let texto = "Todo es posible si crees en ti mismo y nunca te rindes. El camino a
 let longitud = texto.length
 
 console.log (longitud)
+
+
+
+function contador de palabras (){
+    
+}
