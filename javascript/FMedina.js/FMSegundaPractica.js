@@ -30,12 +30,11 @@ valor++;
 console.log(valor)
 valor++;
 console.log(valor)
-valor++;
-console.log(valor)
-valor++;
-console.log(valor)
-valor++;
-console.log(valor)
+
+// let valor = 15;
+// valor +=5;
+// console.log(valor);  //valor+= 5 || valor = valor + 5
+
 
 // Crea una variable con un valor numérico y disminuye su valor en 3 utilizando el operador de decremento (--). Muestra el resultado en la consola.
 let decremento = 5
@@ -161,7 +160,7 @@ usuario()
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
 function numeroDePalabras() {
     let frase = prompt("Ingrese una frase")
-    let CantidadDePalabras = frase.split(" ")  //el split divide una cadena de texto con el divisor que coloquemos dentro de las comillas "".
-    console.log("El número de palabras ingresadas es de " + CantidadDePalabras.length)
+    let CantidadDePalabras = frase.split(" ").length  //el split divide una cadena de texto con el divisor que coloquemos dentro de las comillas "". transforma el string en un array.
+    console.log("El número de palabras ingresadas es de " + CantidadDePalabras)
 }
 numeroDePalabras()
