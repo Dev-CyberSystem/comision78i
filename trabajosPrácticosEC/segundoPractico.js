@@ -190,3 +190,4 @@ function palabras () {
     let numeroDePalabras = variableFrase.length
     console.log("La frase tiene " + numeroDePalabras)
 } palabras ()
+
