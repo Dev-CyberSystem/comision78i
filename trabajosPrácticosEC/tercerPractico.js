@@ -59,10 +59,40 @@ const Divisible = (num4) => {
 
 // Crear un programa que pida al usuario dos números y luego muestre cuál es el mayor de los dos.
 
+/* const ElMayor =() => {
+    let num7 = prompt("Ingresa el primer número")
+    num7 = parseFloat(num7)
+    let num8 = prompt("Ingresa el segundo número")
+    num8 = parseFloat(num8)
+    let nums = [num7 , num8]
+    let numMax = math.mathMax(...nums)
+    console.log(numMax)
+}; ElMayor (); */
 
+/* const ElMayor =() => {
+    let num7 = prompt("Ingresa el primer número");
+    num7 = parseFloat(num7);
+    let num8 = prompt("Ingresa el segundo número");
+    num8 = parseFloat(num8);
+    if (num7 > num8) {
+        console.log("El primer número es el mayor");}
+        else { console.log("El segundo es el mayor") }
+    }; ElMayor (); */
 
 // Crear un programa que pida al usuario una contraseña y la valide según ciertas condiciones, como la longitud y la presencia de caracteres especiales.
 
+/* const Contrasena = () => {
+    let password = prompt("Inserte su contraseña jeje");
+    let caracteresEspeciales = /[!@#$%^&*(),.?":{}|<>]/
+    if (password.length > 8 ) {
+        console.log("La contraseña es muy larga, pa")
+    }
+    else if (caracteresEspeciales.test(password)) {
+       console.log("La constraseña tiene carácteres que no Messirven")
+    }
+    else {
+        console.log("Messirve tu contraseña")}
+}; Contrasena (); */
 // Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).
 
 //Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es un palíndromo".
