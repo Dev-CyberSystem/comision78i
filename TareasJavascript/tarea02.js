@@ -122,11 +122,74 @@ function sumarDosNumeros(numero1, numero2) {
     return resultado;
 }
 
-//usamos la función con dos numeros específicos
+//usamos la función con dos numeros específicos (suma)
 let parametro1 = 8;
 let parametro2 = 2;
 let resultadoSuma = sumarDosNumeros(parametro1, parametro2);
 
 console.log("El resultado de la suma es: " + resultadoSuma);
 
-//pendientes los demas por falta de tiempo :(
+//12-Funcion con parametros (resta)
+function restarDosNumeros(num1, num2){
+    let resultado = num1 - num2;
+    return resultado;
+}
+
+let parametroUno = 23;
+let parametroDos = 3;
+let resultadoResta = restarDosNumeros(parametroUno,parametroDos);
+console.log("El resultado de la resta es: "+ resultadoResta);
+
+//13-Funcion que sume 5 + 10
+function declaraNum(){
+    let valorFijo = 5;
+    return valorFijo+=10;
+}
+console.log(declaraNum());
+
+//14-Concatenar 2 variables string 
+function concatenaString(){
+    let palabra1 = "Bienvenidos";
+    let palabra2 = " a mi programa.";
+    return palabra1+palabra2
+}
+console.log(concatenaString());
+
+//15-Comparar variables booleanas si son iguales o no
+function comparaBoolean(){
+    let llave1 = true;
+    let llave2 = true;
+
+    if(llave1==llave2){
+        return "Son iguales"
+    }else{
+        return "No son iguales"
+    }
+}
+console.log(comparaBoolean());
+
+//16-Comparar variables booleanas si son diferentes
+function comparaBoolean(){
+    let llave1 = true;
+    let llave2 = true;
+
+    if(llave1!=llave2){
+        return "Son diferentes"
+    }else{
+        return "son iguales"
+    }
+}
+console.log(comparaBoolean());
+
+//17-Calcular si un numero es mayor que el otro
+function calculaMayor(){
+    let primerNum = 22;
+    let segundoNum = 22;
+
+    if(primerNum>segundoNum){
+        return "El primero es mayor"
+    }else{
+        return "El segundo es mayor"
+    }
+}
+console.log(calculaMayor());
