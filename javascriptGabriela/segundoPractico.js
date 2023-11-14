@@ -229,7 +229,3 @@ let longitud = texto.length
 console.log (longitud)
 
 
-
-function contador de palabras (){
-    
-}
