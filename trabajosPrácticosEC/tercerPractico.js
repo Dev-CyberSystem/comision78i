@@ -107,13 +107,40 @@ const Divisible = (num4) => {
 
 //Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es un palíndromo".
 
-function palindromo () {
-    let cadena = []
-}
+function palindromo (cadena) {
+    let array = cadena.split("");
+    let reverse = array.reverse();
+    return cadena == reverse.join("") ? "Si es una palíndromo" : "No es una palíndromo"
+} console.log(palindromo("bob"))
 
 // Crear un programa que pida al usuario una letra y luego muestre si es una vocal o una consonante.
 
+/*  const Vocal = () => {
+    let letra = prompt("Pon una letra");
+    if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+        console.log("Es una vocal");
+    }
+    else {
+        console.log("Es una consonante");
+        }
+    }; Vocal ();  */
+
+
 // Crear un programa que pida al usuario un número del 1 al 7 y luego muestre el día de la semana correspondiente.
+
+
+const Semana = () => {
+    let day = prompt("Ponga un número del 1 al 7 :D")
+    let mon = "Lunes";
+    let tue = "Martes";
+    let wed = "Miercoles";
+    let thu = "Jueves";
+    let fri = "Viernes";
+    let sat = "Sábado";
+    let sun = "Domingo";
+
+}
+
 
 // Crear un programa que pida al usuario un número y luego muestre si es primo o no.
 
