@@ -56,18 +56,6 @@
 
 //Crear un programa que pida al usuario un número y luego muestre si es par o impar.
 
-    //  let numero = parseInt (prompt ("Ingrese un Numero"))  falta!!
-
-    // const numeroPedido = (numero) =>{
-    //     if (numero / 2 === 0 ){
-    //         console.log( number , "Es Par") 
-    //     }
-    //     else{
-    //         console.log (" Es Impar")
-    //     }
-
-    //     }
-    //     numeroPedido()
 
 
 
