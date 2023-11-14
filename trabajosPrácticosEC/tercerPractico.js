@@ -93,9 +93,23 @@ const Divisible = (num4) => {
     else {
         console.log("Messirve tu contraseña")}
 }; Contrasena (); */
+
 // Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).
 
+/* const Calificacion = () => {
+    let score = prompt("Pon una calificacion(?");
+    score = parseFloat(score);
+    if (score >= 70) {
+        console.log("Aprueba")}
+    else {
+        console.log("No apruebas, bro")
+    } }; Calificacion(); */
+
 //Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es un palíndromo".
+
+function palindromo () {
+    let cadena = []
+}
 
 // Crear un programa que pida al usuario una letra y luego muestre si es una vocal o una consonante.
 
