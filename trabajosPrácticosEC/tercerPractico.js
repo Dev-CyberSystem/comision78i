@@ -12,13 +12,54 @@ const esMayor = (num1, num2) => {
 
 //Crear una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero o "Cero" si es igual a cero.
 
+const PositivoONegativo = (num3) => {
+    if (num3 > 0) {
+        console.log("Este número es positivo");
+    } else if (num3 === 0) {
+        console.log("Este número es igual a cero");
+    } else {
+        console.log("Este número es negativo");
+    }
+}; PositivoONegativo (0);
+
 //Crear una función que tome un número como parámetro y devuelva "Par" si es divisible por 2 o "Impar" si no lo es.
+
+const Divisible = (num4) => {
+    if (num4 % 2 === 0) {
+        console.log("Es PAR");
+} else {
+    console.log("IMPAR"); 
+}
+}; Divisible (24);
 
 //Crear un programa que pida al usuario un número y luego muestre si es par o impar.
 
+/*const ParOImpar = () => {
+    let num5 = prompt("Ingresa el primer número")
+    num5 = parseFloat(num5)
+    if (num5 % 2 === 0) {
+        console.log("Es par");}
+        else {
+            console.log("Es impar")
+        }
+}; ParOImpar (num5)*/
+
 // Crear un programa que pida al usuario un número y luego muestre si es positivo, negativo o cero.
 
+/*const PositivoNegativoOCero =() => {
+    let num6 = prompt("Ingresa un número, bro")
+    num6 = parseFloat(num6)
+    if (num6 > 0) {
+        console.log("Positivo"); }
+        else if (num6 === 0) {
+            console.log("Es igual a cero");
+        } else { console.log("Negativo");
+}}; PositivoNegativoOCero ();
+*/
+
 // Crear un programa que pida al usuario dos números y luego muestre cuál es el mayor de los dos.
+
+
 
 // Crear un programa que pida al usuario una contraseña y la valide según ciertas condiciones, como la longitud y la presencia de caracteres especiales.
 
