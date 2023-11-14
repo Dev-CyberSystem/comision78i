@@ -110,9 +110,9 @@ const restar = () => {
 
 restar();
 
-let sumar = function (a, b) {
-  return a + b;
-};
+let sumar = function(a,b) {
+    return a + b;
+}
 
 //Tarea
 //Quiz Javascript - Introducción
@@ -137,10 +137,15 @@ let sumar = function (a, b) {
 // Mediante un prompt pide al usuario que ingrese su nombre y luego muestra el resultado en la consola.
 // Mediante un prompt pide al usuario que ingrese dos numeros, estos se deben almacenar en dos variables diferentes, luego haz una suma de ambos y que el resultado se guarde en otra variable, muestra el resultado de la suma en el documento.
 //  Escribe un programa que solicite al usuario su año de nacimiento y calcule su edad actual y muestre si es o no mayor de edad. Luego, muestra la edad en una cadena de texto.
+
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
 
+
+
+
+//Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
 
 let numeroUno = 10;
 let numeroDos = 20;
 let resultados = numeroUno + numeroDos;
-console.log(resultados);
+console.log(resultados)
