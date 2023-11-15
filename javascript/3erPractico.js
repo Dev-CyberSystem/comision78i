@@ -12,7 +12,7 @@ const esMayor =(num1, num2) => {
 }
 esMayor(45,34)
 
-//Crea una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero, y si es igual a cero.
+//Crear una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero, y si es igual a cero.
 const número =(num1) => {
     if(num1 > 0) {
         console.log("Positivo")
@@ -27,7 +27,7 @@ const número =(num1) => {
 }
 número(50)
 
-//Crea una función que tome un número como parámetro y devuelva "Par" si es divisible por 2 o "Impar" si no lo es.
+//Crear una función que tome un número como parámetro y devuelva "Par" si es divisible por 2 o "Impar" si no lo es.
 const parOimpar =(num2) => {
     if(num2 % 2 === 0)  {
         console.log("Es par")
@@ -39,7 +39,7 @@ const parOimpar =(num2) => {
 parOimpar(7)
 //Puse la comparación con el cero para que de manera correcta me devuelva el par o impar. 
 
-//Crea un programa que pida al usuario un número y luego muestre si es par o impar.
+//Crear un programa que pida al usuario un número y luego muestre si es par o impar.
 const pedir =() => {
     const usuario = prompt("Ingrese un número")
     if (usuario % 2 === 0){
@@ -85,3 +85,42 @@ const mayor =() => {
 mayor()
 //para que en la consola me de el número mayor tuve que cambiar de lugares el number 1 y 2 en el if y else if.
 
+//Crear un programa que pida al usuario una contraseña y la valide según ciertas condiciones, como longitud y la presencia de caracteres especiales.
+const validación=(contraseña) => {
+    const caracteresEsps = /[@#]/
+    if (contraseña.length < 10){
+        alert("La contraseña debe contener al menos 10 caracteres")
+    }
+    else if (!caracteresEsps.test(contraseña)){
+        alert("La contraseña debe contener al  menos uno de los caracteres especiales (@#)")       
+    }
+    else {
+        alert("La contraseña es válida")
+    }
+}
+validación(prompt("Ingrese una contraseña")) 
+
+//Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).
+const calificación =() => {
+    const num = prompt("Ingrese una calificación")
+    if (num >= 70){
+        console.log("Felicidades!!! La calificación es aprobatoria. Obtuviste " + num)
+    }
+    else{
+        console.log("Lo Lamentó!!! La calificación no fue suficiente para aprobar. Obtuviste " + num)
+    }
+}
+calificación()
+
+//Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es palíndromo".
+const palíndromo =(cadena) => {
+    const cadenaNormal = cadena.toLowerCase()
+    const cadenaAlreves = cadenaNormal.split("").reverse().join("")
+    if (cadenaAlreves=== cadenaNormal) {
+        console.log("Es un palíndromo")
+    }
+    else{
+        console.log("No es un palíndromo")
+    }
+}
+palíndromo("oso", "reconocer", "1212")
