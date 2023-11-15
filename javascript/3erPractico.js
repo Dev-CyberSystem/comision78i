@@ -1,3 +1,17 @@
+//Crear una función que tome dos números como parámetros y devuelva el número mayor.
+const esMayor =(num1, num2) => {
+    if (num1 > num2){
+        console.log(num1, "es mayor")
+    }
+    else if (num1 === num2){
+        console.log("son iguales")
+    }
+    else{
+        console.log(num2, "es mayor")
+    }
+}
+esMayor(45,34)
+
 //Crea una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero, y si es igual a cero.
 const número =(num1) => {
     if(num1 > 0) {
@@ -69,4 +83,5 @@ const mayor =() => {
     }
 }
 mayor()
-//para que en la consola me de el número mayor tuve que cambiar de lugares el number 1 y 2. 
+//para que en la consola me de el número mayor tuve que cambiar de lugares el number 1 y 2 en el if y else if.
+
