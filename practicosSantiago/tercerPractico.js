@@ -1,7 +1,5 @@
 //Crear una función que tome dos números como parámetros y devuelva el número mayor.
 
-
-
 const esMayor = (num1, num2) => {
     if (num1 > num2) {
       console.log(num1, "es Mayor");
@@ -93,7 +91,6 @@ const esMayor = (num1, num2) => {
   }
   contraseñaDelUsuario(prompt("Ingresa una contraseña \nDebe contener mínimo 10 caracteres y por lo menos un caracter especial (!@#)"))
 
-  
   // Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).
 
   const estaAprobado = (nota) => {
@@ -155,6 +152,17 @@ const esMayor = (num1, num2) => {
   numeroDiaDeLaSemana(prompt("Ingresa un número del 1 al 7"))
   
   // Crear un programa que pida al usuario un número y luego muestre si es primo o no.
+
+  const esPrimo = (numParaIngresar) => {
+    numParaIngresar = parseInt(numParaIngresar)
+    for(let i = 2; i <= Math.sqrt(numParaIngresar); i++){
+      if (numParaIngresar % i === 0) {
+        return console.log("El número no es primo")
+      }
+    }
+    return console.log("El número es primo")
+  }
+  esPrimo(prompt("Ingresa un numero para calcular si es primo"))
   
   // Crear un programa que pida al usuario su edad y luego muestre si es mayor o menor de edad (18 años).
 
@@ -223,9 +231,46 @@ const esMayor = (num1, num2) => {
   fizzBuzz(30)
   
   // Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
+
+  const esPerfecto = (numUsuario) => {
+    numUsuario = parseInt(numUsuario)
+    let sumaDeDivisores = 1
+    for (let i = 2; i <= Math.sqrt(numUsuario); i++) {
+      if (numUsuario % i === 0) {
+        sumaDeDivisores += i
+        if (i !== numUsuario / i) {
+          sumaDeDivisores += numUsuario / i
+        }
+      }
+    }
+    if (sumaDeDivisores === numUsuario) {
+      return console.log ("Tú numero es perfecto")
+    } else {
+      return console.log ("Tu número NO es perfecto")
+    }
+  }
+  esPerfecto (prompt("Ingresa un número para comprobar si es perfecto o no"))
   
   // Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
   
+  let numerosPrimos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+  const descomposicionFactoresPrimos = (numero) => {
+    numero = parseInt(numero)
+    let numeros = []
+    let i = 0 
+
+    while (numero > 1) {
+      if (numero % numerosPrimos[i] === 0) {
+        numeros.push(numerosPrimos[i])
+        numero /= numerosPrimos[i]
+      } else {
+        i++
+      }
+    }
+    return console.log(numeros)
+  }
+  descomposicionFactoresPrimos(prompt("Ingresa un número para descomponerlo en factores primos"))
+
   // Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
   
   const fechaValida = (dia, mes, año) => {
