@@ -79,7 +79,7 @@ const cualMayor = () =>{
 //7// Crear un programa que pida al usuario una contraseña y la valide según ciertas condiciones, como la longitud y la presencia de caracteres especiales.
 const password = () =>{
     
-    let password = prompt('Ingresa una contraseña que contenga un número, una mayúscula y una minúscula, debe ser de al menos 8 caracteres').trim();
+    let password = prompt('Ingresa una contraseña que contenga un número, una mayúscula y una minúscula, debe ser de al menos 8 caracteres').trim()
     
     password.length < 8
         ? console.log('Contraseña muy corta')
@@ -221,3 +221,59 @@ const esPerfecto = () => {
 // esPerfecto()
 
 //16// Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
+function descomponerPrimos() {
+    let numeroUsuario = parseInt(prompt("Ingrese un número:"))
+    if (isNaN(numeroUsuario) || numeroUsuario <= 1) {
+        return alert("Por favor, ingrese un número válido mayor que 1.")
+    }
+
+    let factoresPrimos = []
+    let divisor = 2
+
+    while (numeroUsuario > 1) {
+        while (numeroUsuario % divisor === 0) {
+            factoresPrimos.push(divisor)
+            numeroUsuario = numeroUsuario / divisor
+        }
+        divisor++
+    }
+
+    let parrafo = document.createElement('p')
+    parrafo.textContent = `La descomposición en factores primos es: ${factoresPrimos.join(' * ')}`
+    document.body.appendChild(parrafo)
+}
+
+// descomponerPrimos()
+
+//17// Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
+
+const esFechaValida = (dia, mes, anio) => {
+    if (isNaN(anio) || anio <= 0) {
+        return false
+    }
+    if (isNaN(mes) || mes < 1 || mes > 12) {
+        return false
+    }
+    const diasEnMes = new Date(anio, mes, 0).getDate()
+    if (isNaN(dia) || dia < 1 || dia > diasEnMes) {
+        return false
+    }
+
+    return true
+}
+// Solicitar al usuario que ingrese una fecha
+// const dia = parseInt(prompt("Ingrese el día:"))
+// const mes = parseInt(prompt("Ingrese el mes:"))
+// const anio = parseInt(prompt("Ingrese el año:"))
+
+// Verificar si la fecha es válida e imprimir el resultado
+if (esFechaValida(dia, mes, anio)) {
+    let parrafo = document.createElement('p')
+    parrafo.textContent = "La fecha ingresada ES válida."
+    document.body.appendChild(parrafo)
+} else {
+    let parrafo = document.createElement('p')
+    parrafo.textContent = "La fecha ingresada NO ES válida."
+    document.body.appendChild(parrafo)
+}
+// esFechaValida(dia,mes,anio)
