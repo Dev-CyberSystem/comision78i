@@ -193,3 +193,79 @@ function calculaMayor(){
     }
 }
 console.log(calculaMayor());
+
+//-18 ingresar numero y mostrarlo en consola
+function ingresaNumero(){
+    let numeroIngresado = prompt("Ingrese un número:");
+    let numero = parseFloat(numeroIngresado); //Convertir el valor ingresado a un número
+
+    //Mostrar en consola
+    if (!isNaN(numero)) {
+    console.log("El número ingresado es: " + numero);
+    } else {
+    console.log("Entrada inválida. Por favor, ingrese un número válido.");
+    }
+}
+console.log(ingresaNumero());
+
+//19-Ingresa nombre y mostrar en pantalla
+function ingresaNombre(){
+    let nombreIngresado = prompt("Ingrese su nombre");
+    console.log("Bienvenid@ " + nombreIngresado);
+}
+console.log(ingresaNombre());
+
+//20- Ingresar dos numeros y guardarlos en variables, sumarlos ymostrar el resultado
+function ingresaSuma(){
+    let numero1Ingresado = prompt("Ingrese el primer número:");
+    let numero1 = parseFloat(numero1Ingresado);
+
+    let numero2Ingresado = prompt("Ingrese el segundo número:");
+    let numero2 = parseFloat(numero2Ingresado);
+
+    // Verificar si las conversiones fueron exitosas y realizar la suma
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        let suma = numero1 + numero2;
+        console.log("La suma de los dos números es: " + suma);
+    } else {
+        console.log("Entrada inválida. Por favor, ingrese números válidos.");
+    }
+}
+console.log(ingresaSuma());
+
+//21-solicitar año nacimiento y calcular edad actual, mostrar si es mayor o no de edad. Finalmente mostrar la cadena de texto.
+function calculaEdad(){
+    let anioNacimiento = prompt("Ingresa tu anio de nacimiento");
+    anioNacimiento2 = parseFloat(anioNacimiento);
+    
+    let AnioActual = prompt("Ingresa anio actual");
+    anioActual2 = parseFloat(AnioActual);
+    
+    let resultado = (anioActual2 - anioNacimiento2);
+    
+    if(resultado >=18){
+        console.log("Usted es mayor de edad y su edad es: ", resultado)
+    }else{
+        console.log("Usted es menor de edad y su edad es: ", resultado)
+    }
+}
+
+calculaEdad();
+
+//22-Solicitar una frase y leer la cantidad de palabras
+let fraseIngresada = prompt("Ingrese una frase");
+
+// Verificar si el usuario ingresó algo
+if (fraseIngresada !== null && fraseIngresada.trim() !== "") {
+    // Dividir la frase en palabras utilizando el espacio como separador
+    let palabras = fraseIngresada.split(" ");
+
+    // Contar el número de palabras
+    let numeroDePalabras = palabras.length;
+
+    // Mostrar el resultado en la consola
+    console.log("Número de palabras en la frase: " + numeroDePalabras);
+} else {
+    console.log("No se ingresó una frase válida. Por favor, inténtelo de nuevo.");
+}
+
