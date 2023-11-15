@@ -59,3 +59,43 @@ let resul=Math.max(num2,num3)
 maxMin(num2,num3)*/
 
 // Crear un programa que pida al usuario una contraseña y la valide según ciertas condiciones, como la longitud y la presencia de caracteres especiales.
+// let contraseña=prompt("ingrese contraseña").length
+
+
+const comprbacion=(palabra)=>{
+if (palabra<8) {
+  alert("contraseña incorrecta")
+} else {
+  alert("contraseña correcta!")
+}
+}
+//  comprbacion()
+
+// Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).
+// let nota= prompt("Ingresa tu nota entre 10 y 100")
+ //let nota2=parseInt(nota)
+
+ const clasificacion=(nota2)=>{
+   if (nota2<70) {
+   document.write("Desaprobaste")
+ } else if(nota2>=70 && nota2<=90) {
+   document.write("Aprobaste")
+ }else{
+  document.write("Exelsior!")
+ }
+ }
+// clasificacion(nota2)
+
+//Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es un palíndromo".
+ //let palabra=prompt("ingresa una palabra para ver si es un palindromo")
+ const palindrome=(palabra)=> {
+  let re = /[\W_]/g
+   let lowRegStr = palabra.toLowerCase().replace(re, '')
+   let reverseStr = lowRegStr.split('').reverse().join('');
+   if (reverseStr === lowRegStr) {
+     alert("es un palindromo")
+   } else {
+     alert("no es un palindromo")
+  }
+}
+ //palindrome(palabra);
