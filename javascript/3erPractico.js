@@ -99,6 +99,7 @@ const validación=(contraseña) => {
     }
 }
 validación(prompt("Ingrese una contraseña")) 
+//Para comprobar si se cumple la condición establecida, utilice el método test.
 
 //Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).
 const calificación =() => {
@@ -114,7 +115,7 @@ calificación()
 
 //Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es palíndromo".
 const palíndromo =(cadena) => {
-    const cadenaNormal = cadena.toLowerCase()
+    const cadenaNormal = cadena
     const cadenaAlreves = cadenaNormal.split("").reverse().join("")
     if (cadenaAlreves=== cadenaNormal) {
         console.log("Es un palíndromo")
@@ -123,4 +124,67 @@ const palíndromo =(cadena) => {
         console.log("No es un palíndromo")
     }
 }
-palíndromo("oso", "reconocer", "1212")
+palíndromo("oso" , "1212" , "reconocer")
+//agregue el método de string split para separar por comas y que a las palabras las convierta en string.
+//agregue el método array reverse para invertir la palabra y asi se pueda verificar si la palabra es palíndromo. 
+//agregue el método join para devolver una cadena concatenando todos los elementos que esten dentro del array. 
+
+//Crear un programa que pida al usuario una letra y luego muestre si es vocal o una consonante.
+const letra =(pedir) => {
+    const vocal = ["a","e","i","o","u"]
+    if (vocal.includes(pedir.toLowerCase())){
+        console.log("Es una vocal")
+    }
+    else{
+        console.log("Es una consonante")
+    }
+}
+letra(prompt("Ingrese una letra"))
+//Para verificar la letra ingresada si era vocal o consonante, utilice el método toLowerCase para que cuando el usuario ingresa la letra automaticamente entre con minuscula.
+//ademas, utilice el método includes para que verifique si existe la letra que le indique.
+
+//Crear un programa que pida al usuario un número del 1 al 7 y luego muestre el día de la semana correspondiente.
+const diaSemana =(number) => {
+    number = parseInt(number)
+    switch (number){
+      case 1:
+        console.log("es lunes")
+        break;
+      case 2:
+        console.log("es martes")
+        break;
+      case 3:
+        console.log("es miércoles")
+        break;
+      case 4:
+        console.log("es jueves")
+        break;
+      case 5:
+        console.log("es viernes")
+        break;
+      case 6:
+        console.log("es sábado")
+        break;
+      case 7:
+        console.log("es domingo")
+        break;
+      default:
+        console.log("número ingresado no valído")
+        break;
+    }
+}
+diaSemana(prompt("Ingrese un número del 1 al 7"))
+//utilice el condicional switch que sirve como reemplazo del if, else if, else.
+
+//Crear un programa que pida al usuario un número y luego muestre si es primo o no.
+const numPrimo =(number) => {
+    for (let i = 2 ; i <= Math.sqrt(number);i++){
+        if (number % i === 0) {
+            console.log("es un número primo")
+        }
+        else{
+            console.log("no es un número primo")
+        }
+    }
+}
+numPrimo(prompt("Ingrese un número para verificar si es un número primo"))
