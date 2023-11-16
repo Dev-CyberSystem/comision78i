@@ -102,53 +102,53 @@
 // calificación()
 
 //Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es un palíndromo".
-function palindromo(cadena) {
-    let array = cadena.toLowerCase().replace(/ /g, ""); //convierto la cadena en un array y aplico el metodo replace.
-    let reverse = array.split("").reverse().join(""); //Divido la cadena en un arreglo de cadenas. Giramos el array por completo y sacamos los espacios con el join. 
-    if (array == reverse) {
-        console.log("Es un palíndromo")
-    } else {
-        console.log("No es un palíndromo")
-    }
-    // return cadena == reverse.join("")
-}
-palindromo("neuquen")
-palindromo("Alli ves Sevilla")
-palindromo("Anita lava la tina")
-palindromo("hola mundo")
+// function palindromo(cadena) {
+//     let array = cadena.toLowerCase().replace(/ /g, ""); //convierto la cadena en un array y aplico el metodo replace.
+//     let reverse = array.split("").reverse().join(""); //Divido la cadena en un arreglo de cadenas. Giramos el array por completo y sacamos los espacios con el join. 
+//     if (array == reverse) {
+//         console.log("Es un palíndromo")
+//     } else {
+//         console.log("No es un palíndromo")
+//     }
+//     // return cadena == reverse.join("")
+// }
+// palindromo("neuquen")
+// palindromo("Alli ves Sevilla")
+// palindromo("Anita lava la tina")
+// palindromo("hola mundo")
 
 // Crear un programa que pida al usuario una letra y luego muestre si es una vocal o una consonante.
-let letra = prompt("Ingrese una letra")
-const programa = () => {
-    if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
-        console.log("Es una vocal")
-    } else {
-        console.log("Es una consonante")
-    }
-}
-programa()
+// let letra = prompt("Ingrese una letra")
+// const programa = () => {
+//     if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+//         console.log("Es una vocal")
+//     } else {
+//         console.log("Es una consonante")
+//     }
+// }
+// programa()
 // Crear un programa que pida al usuario un número del 1 al 7 y luego muestre el día de la semana correspondiente.
-let dia = parseInt(prompt("Ingrese un número del 1 al 7"))
-const diaDeLaSemana = () => {
-    if (dia === 1) {
-        console.log("Hoy es el día Lunes")
-    } else if (dia === 2) {
-        console.log("Hoy es el día Martes")
-    } else if (dia === 3) {
-        console.log("Hoy es el día Miercoles")
-    } else if (dia === 4) {
-        console.log("Hoy es el día Jueves")
-    } else if (dia === 5) {
-        console.log("Hoy es el día Viernes")
-    } else if (dia === 6) {
-        console.log("Hoy es el día Sábado")
-    } else if (dia === 7) {
-        console.log("Hoy es el día Domingo")
-    } else {
-        console.log("Número no válido. Debe ingresar un número del 1 al 7!")
-    }
-}
-diaDeLaSemana()
+// let dia = parseInt(prompt("Ingrese un número del 1 al 7"))
+// const diaDeLaSemana = () => {
+//     if (dia === 1) {
+//         console.log("Hoy es el día Lunes")
+//     } else if (dia === 2) {
+//         console.log("Hoy es el día Martes")
+//     } else if (dia === 3) {
+//         console.log("Hoy es el día Miercoles")
+//     } else if (dia === 4) {
+//         console.log("Hoy es el día Jueves")
+//     } else if (dia === 5) {
+//         console.log("Hoy es el día Viernes")
+//     } else if (dia === 6) {
+//         console.log("Hoy es el día Sábado")
+//     } else if (dia === 7) {
+//         console.log("Hoy es el día Domingo")
+//     } else {
+//         console.log("Número no válido. Debe ingresar un número del 1 al 7!")
+//     }
+// }
+// diaDeLaSemana()
 
 // Crear un programa que pida al usuario un número y luego muestre si es primo o no.
 // let numero = prompt("Ingrese un número")
@@ -186,26 +186,72 @@ diaDeLaSemana()
 // suma()
 
 // Crear un programa que pida al usuario tres números y luego muestre cuál es el mayor de los tres.
-let number1 = prompt("Ingrese un número")
-let number2 = prompt("Ingrese un segundo número")
-let number3 = prompt("Ingrese un tercer número")
-const mayor = () => {
-    if(number1 > number2 && number3) {
-        console.log("El Primer número ingresado es el mayor de los tres números")
-    } else if (number2 > number3 && number1) {
-        console.log("El Segundo número ingresado es el mayor de los tres números")
-    } else {
-        console.log("El Tercer número ingresado es el mayor de los tres números")
-    }
-}
-mayor()
+// let number1 = prompt("Ingrese un número")
+// let number2 = prompt("Ingrese un segundo número")
+// let number3 = prompt("Ingrese un tercer número")
+// const mayorDeTres = () => {
+
+//     if(number1 > number2 && number1 > number3) {
+//         console.log("El Primer número ingresado es el mayor de los tres números")
+//     } else if (number2 > number3 && number2 > number1) {
+//         console.log("El Segundo número ingresado es el mayor de los tres números")
+//     } else {
+//         console.log("El Tercer número ingresado es el mayor de los tres números")
+//     }
+// }
+// mayorDeTres()
 
 // Crear un programa que pida al usuario una letra y luego muestre si es una letra mayúscula o minúscula.
+// let letra = prompt("Ingrese una letra")
+// const minisculaOMayuscula = () => {
+//     if (letra === letra.toLocaleUpperCase() === 1) {
+//         console.log("La letra ingresada es una MAYÚSCULA")
+//     } else if (letra.length > 1) {
+//         console.log("Ingresa una letra sola")
+//     } 
+//     else {
+//         console.log("La letra ingresada es MINÚSCULA")
+//     }
+// }
+// minisculaOMayuscula()
 
 //Crear una función que tome un número como parámetro y devuelva "Fizz" si es divisible por 3, "Buzz" si es divisible por 5 o "FizzBuzz" si es divisible por ambos. En cualquier otro caso, devolver el número.
 
+// const divisible = (numeroIngresado) => {
+//     if (numeroIngresado % 3 === 0 && numeroIngresado % 5 === 0) {
+//         console.log("FizzBuzz")
+//     } else if (numeroIngresado % 3 === 0) {
+//         console.log("Fizz")    
+//     } else if (numeroIngresado % 5 === 0) {
+//         console.log("Buzz")
+//     } else {
+//         console.log(numeroIngresado)
+//     }
+// }  
+// divisible(30)
+
 // Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
+
 
 // Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
 
+ 
 // Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
+let dia = parseInt(prompt("Ingrese el día en el que cumple años"))
+let mes = parseInt(prompt("Ingrese en números el mes en el que cumple años"))
+let año = parseInt(prompt("Ingrese el año en el que cumple años"))
+
+const cumpleaños = () => {
+    if (dia <1 || dia > 31) {
+        alert("Ingrese un día válido")
+    } else if (mes % 4 != 0) {
+        console.log("Cumple años en un año no biciesto")
+    } else if (mes % 4 === 0) {
+        console.log("Cumple años en un año biciesto")
+    } else if (año === 0) {
+        console.log("Ingrese un año válido")
+    } else {
+        console.log("Tu fecha es válida")
+    }
+}
+cumpleaños()
