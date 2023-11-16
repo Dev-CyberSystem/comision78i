@@ -229,5 +229,40 @@ const numMayor =(número1, número2, número3) => {
     console.log("El número mayor de los tres ingresado es " + mayorNum)
 }
 numMayor(prompt("Ingrese en número 1"), prompt("Ingrese el número 2"), prompt("Ingrese el número 3"))
+//utilice el método Math.max para saber cual es el mayor de los tres números ingresados.
 
 //Crear un programa que pida al usuario una letra y luego muestre si es una letra mayúscula o minúscula.
+const letraIngresada =(letraMayúcula) => {
+    if (letraMayúcula === letraMayúcula.toUpperCase()) {
+        console.log("La letra que ingreso es mayúscula")
+    }
+    else if (letraMayúcula === letraMayúcula.toLowerCase()){
+        console.log("La letra que ingreso es minúscula")
+    }
+    else{
+        console.log("Lo que ingresaste no es una letra")
+    }
+}
+letraIngresada(prompt("Ingrese una letra para verificar si es mayúscula o minúscula"))
+//Utilice el método toLowerCase y toUpperCase para realizar la comparación de forma separada.
+
+//Crear una función que tome un número como parámetro y devuelva "Fizz" si es divisible por 3, "Buzz" si es divisible por 5 o "FizzBuzz" si es divisible por ambos. En cualquier otro caso, devolver el número.
+const esDivisible =(Number) => {
+   switch (true) {
+    case (Number % 3 === 0):
+        console.log("Fizz")
+    case (Number % 5 === 0):
+        console.log("Buzz")
+    case (Number % 3 === 0 && Number % 5 === 0):
+        console.log("FizzBuzz")
+    default:
+        console.log("Number")
+        break;
+   }
+}
+esDivisible(45)
+//utilece el condicional switch con la expresión true para que verifique si es verdadero que el número 45 es divisible por 3, 5 y ambos.
+
+//Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
+//Crear un programa que pida al usuario un número y luego muestre su descompisición en factores primos.
+//Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
