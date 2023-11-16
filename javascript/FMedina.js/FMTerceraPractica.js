@@ -110,7 +110,7 @@
 //     } else {
 //         console.log("No es un palíndromo")
 //     }
-//     // return cadena == reverse.join("")
+//     return cadena == reverse.join("")
 // }
 // palindromo("neuquen")
 // palindromo("Alli ves Sevilla")
