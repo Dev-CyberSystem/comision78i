@@ -99,3 +99,33 @@ if (palabra<8) {
   }
 }
  //palindrome(palabra);
+
+ // Crear un programa que pida al usuario una letra y luego muestre si es una vocal o una consonante.
+ let letra = prompt("ingresa una letra")
+letra.toLowerCase()
+
+console.log(letra)
+
+  switch (letra) {
+    case "a":
+      alert("es una vocal")
+      break;
+      case "e":
+      alert("es una vocal")
+      break;
+      case "i":
+      alert("es una vocal")
+      break;
+      case "o":
+      alert("es una vocal")
+      break;
+      case "u":
+      alert("es una vocal")
+      break;
+    default:
+      alert("es una consonante")
+      break;
+  }
+
+  // Crear un programa que pida al usuario un número del 1 al 7 y luego muestre el día de la semana correspondiente.
+  
