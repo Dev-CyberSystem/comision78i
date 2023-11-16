@@ -180,11 +180,54 @@ diaSemana(prompt("Ingrese un número del 1 al 7"))
 const numPrimo =(number) => {
     for (let i = 2 ; i <= Math.sqrt(number);i++){
         if (number % i === 0) {
-            console.log("es un número primo")
+           return console.log("es un número primo")
         }
-        else{
+        else {
             console.log("no es un número primo")
         }
     }
-}
+}            
 numPrimo(prompt("Ingrese un número para verificar si es un número primo"))
+//no se como es la solución :(
+
+//Crear un programa que pida al usuario su edad y luego muestre si es mayor o menor de edad (18 años).
+const mayorEdad =(edad) => {
+    if (edad > 18) {
+        console.log("Felicidades, eres mayor de edad.")
+    }
+    else if (edad < 18) {
+        console.log("Lo lamentó, eres un niño aún.")
+    }
+}
+mayorEdad(prompt("Ingrese su edad"))
+
+//Crear un programa que pida al usuario dos números y luego muestre si su suma es mayor, menor o igual a 100.
+const suma =() => {
+    const primerNum = prompt("Ingrese el primer número")
+    const segundoNum = prompt("Ingrese el segundo número")
+    const resultado = parseInt(primerNum) + parseInt(segundoNum)
+    if (resultado > 100) {
+        console.log("el resultado de tu suma es " + resultado + ".Por lo tanto, es mayor a 100")
+    }
+    else if (resultado === 100) {
+        console.log("el resultado de tu suma es " + resultado + ".Por lo tanto, es igual a 100")
+    }
+    else{
+        console.log("el resultado de tu suma es " + resultado + ".Por lo tanto, es menor a 100")
+    }
+}
+suma()
+//utilice el método parseInt para convertir las cadenas en números y asi se pueda aplicar la suma, de lo contrario se realizaba una concatenación.
+
+//Crear un programa que pida al usuario tres números y luego muestre cual es el mayor de los tres.
+const numMayor =(número1, número2, número3) => {
+    número1 = parseInt(número1)
+    número2 = parseInt(número2)
+    número3 = parseInt(número3)
+    const lista = [número1,número2, número3]
+    const mayorNum = Math.max(...lista)
+    console.log("El número mayor de los tres ingresado es " + mayorNum)
+}
+numMayor(prompt("Ingrese en número 1"), prompt("Ingrese el número 2"), prompt("Ingrese el número 3"))
+
+//Crear un programa que pida al usuario una letra y luego muestre si es una letra mayúscula o minúscula.
