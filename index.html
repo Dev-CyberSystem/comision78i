@@ -6,8 +6,125 @@
     <title>Git</title>
   </head>
   <body>
-    <main>
-      <script src="./javascript/practico2.js"></script>
-    </main>
+  <main>
+    <p>1)_ Crear una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero o "Cero" si es igual a cero.</p>
+    <button onclick="simboloNum()"> Resultado</button>
+    <p id="resultados"></p>
+    
+    <p>2)_ Crear una función que tome un número como parámetro y devuelva "Par" si es divisible por 2 o "Impar" si no lo es.</p>
+    <button onclick="esPar()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>3)_ Crear una función que tome un número como parámetro y devuelva "Par" si es divisible por 2 o "Impar" si no lo es.</p>
+    <button onclick="esPar2()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>4)_ Crear un programa que pida al usuario un número y luego muestre si es positivo, negativo o cero.</p>
+    <button onclick="simboloNum2()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>5)_ Crear un programa que pida al usuario dos números y luego muestre cuál es el mayor de los dos.</p>
+    <button onclick="mayorMenor()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>6)_ Crear un programa que pida al usuario una contraseña y la valide según ciertas condiciones, como la longitud y la presencia de caracteres especiales.</p>
+    <button onclick="contrasenia()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>7)_ Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).</p>
+    <button onclick="condicionMateria()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>8)_ Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es un palíndromo".</p>
+    <button onclick="palindromo()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>9)_ Crear un programa que pida al usuario una letra y luego muestre si es una vocal o una consonante.</p>
+    <button onclick="esVocal()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>10)_ Crear un programa que pida al usuario un número del 1 al 7 y luego muestre el día de la semana correspondiente.</p>
+    <button onclick="diaSemana()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>11)_ Crear un programa que pida al usuario un número y luego muestre si es primo o no.</p>
+    <button onclick="esPrimo()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>12)_ Crear un programa que pida al usuario su edad y luego muestre si es mayor o menor de edad (18 años).</p>
+    <button onclick="mayorDeEdad()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>13)_ Crear un programa que pida al usuario dos números y luego muestre si su suma es mayor, menor o igual a 100.</p>
+    <button onclick="suma100()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>14)_ Crear un programa que pida al usuario tres números y luego muestre cuál es el mayor de los tres.</p>
+    <button onclick="numMayor()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>15)_ Crear un programa que pida al usuario una letra y luego muestre si es una letra mayúscula o minúscula.</p>
+    <button onclick="mayMin()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>16)_ Crear una función que tome un número como parámetro y devuelva "Fizz" si es divisible por 3, "Buzz" si es divisible por 5 o "FizzBuzz" si es divisible por ambos. En cualquier otro caso, devolver el número.</p>
+    <button onclick="divisible()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>17)_ Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.</p>
+    <button onclick="numPerfecto()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>18)_ Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.</p>
+    <button onclick="descFactoresPrimos()"> Resultado</button>
+    <p id="resultados"></p>
+
+    <p>19)_ Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.</p>
+    <button onclick="fechaValida()"> Resultado</button>
+    <p id="resultados"></p>   
+    
+    <script src="./javascript/practico3.js"></script>
+  </main>
+    <!-- <h1>Hola Soy Master</h1>
+    <h2>Soy el segundo cambio</h2>
+    <p>Este cambio lo hice recien</p>
+    <p>Cambio hecho por santiago recien :D</p>
+    <p>git init <------ iniciamos un proyecto</p>
+    <p>git add . / archivo-. <--- Mandamos todo al Staging Area</p>
+    <p>git status <-------- revisamos que archivos de modificaron</p>
+    <p>git commit -m "mensaje" <--- creamos un commit</p>
+    <p>git log <--- vemos los commits</p>
+    <p>git branch --- Nos dice en que rama estamos parados</p>
+    <p>git branch nombreRama --- creamos una rama</p>
+    <p>
+      git checkout -b nombreRama --- Creamos una branch y nos movemos a la
+      nueva branch
+    </p>
+    <p>git checkout nombreRama --- Nos movemos a la rama</p>
+    <p>git branch -d nombreRama ------- Eliminamos una branch</p>
+
+    Arquitectura de Branch Rama Principal es MASTER O MAIN --- Sale a
+    producción. Rama de desarrollo DEV/DEVELOP --- Se trabaja en ella. Rama de
+    Features --- Se crean ramas para cada feature. Footer , Nav , Cards
+    feature/footer , feature/nav , feature/cards
+
+    <h1>Esto lo arme desde la rama dev</h1>
+    <h2>Conflicto</h2>
+    <h3>Esto es un cambio agregado</h3>
+    <h1>Cambio hecho por Santiago</h1> -->
+<!-- 
+    <script src="./javascript/primeraJs.js"></script> -->
+    <!-- <script>
+      function sumarNumeros() {
+        let numero1 = prompt("Ingrese el numero 1");
+        console.log(numero1);
+        let numero2 = prompt("Ingrese el numero 2");
+        console.log(numero2);
+        let resultado = numero1 + numero2;
+        console.log(resultado);
+    }
+    sumarNumeros();
+    </script> -->
+    
   </body>
 </html>
