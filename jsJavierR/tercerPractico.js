@@ -4,42 +4,42 @@
 
 
 
-const esMayor = (num1, num2) => {
-    if (num1 > num2) {
-      console.log(num1, "es Mayor");
-    } else if (num1 === num2){
-      console.log("Son iguales")
-    } else {
-      console.log(num2, "Es mayor");
-    }
-  };
+// const esMayor = (num1, num2) => {
+//     if (num1 > num2) {
+//       console.log(num1, "es Mayor");
+//     } else if (num1 === num2){
+//       console.log("Son iguales")
+//     } else {
+//       console.log(num2, "Es mayor");
+//     }
+//   };
   
-  esMayor(5, 5); //pasando los numeros por parametro
+//   esMayor(5, 5); //pasando los numeros por parametro
   
   
-  //Crear una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero o "Cero" si es igual a cero.
-  const aCero = (num1) => {
-    if (num1 > 0){
-        console.log("Positivo")
-    } else if (num1 == 0){
-        console.log("cero")
-    }
-    else {
-        console.log("negativo")
-    }
-  }
+//   //Crear una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero o "Cero" si es igual a cero.
+//   const aCero = (num1) => {
+//     if (num1 > 0){
+//         console.log("Positivo")
+//     } else if (num1 == 0){
+//         console.log("cero")
+//     }
+//     else {
+//         console.log("negativo")
+//     }
+//   }
   
-  aCero(-3)
+//   aCero(-3)
   
-  //Crear una función que tome un número como parámetro y devuelva "Par" si es divisible por 2 o "Impar" si no lo es.
-  const divisible = (num1) =>{
-    if((num1 % 2) == 0){
-        console.log("Es par")
-    }else{
-        console.log("Es impar")
-    }
-  }
-  divisible(2)
+//   //Crear una función que tome un número como parámetro y devuelva "Par" si es divisible por 2 o "Impar" si no lo es.
+//   const divisible = (num1) =>{
+//     if((num1 % 2) == 0){
+//         console.log("Es par")
+//     }else{
+//         console.log("Es impar")
+//     }
+//   }
+//   divisible(2)
 
   //Crear un programa que pida al usuario un número y luego muestre si es par o impar.
 //   let num2 = prompt("Ingresar numero")
@@ -172,6 +172,30 @@ const esMayor = (num1, num2) => {
 //   diaSemana(dia)
   
   // Crear un programa que pida al usuario un número y luego muestre si es primo o no.
+// const primos = () => {
+//   let num1 = parseInt(prompt("Ingresar num para saber si es primo"))
+//   let i = 2
+//   let x = 0
+//   if(num1==1){
+//     x++
+//   }
+//   while(i<=num1-1){
+//     if(num1 % i === 0){
+//       x++
+//     }
+//     i++ 
+//   }
+//   if(x>0){
+//     console.log("Numero no es primo")
+//   }
+//   else{
+//     console.log("El numero es primo")
+//   }
+// }
+
+// primos()  
+
+
 
   // Crear un programa que pida al usuario su edad y luego muestre si es mayor o menor de edad (18 años).
 //   let edad = prompt("Ingrese su edad")
@@ -245,9 +269,50 @@ const esMayor = (num1, num2) => {
 //   tres(6)
   
   // Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
+  // const perfecto = () => {
+  //   let n = parseInt(prompt("ing num"))
+  //   let x = 0
+  //   for(let i = 1; i<=10; i++){
+  //     let x = Math.pow(2,i-1)*(Math.pow(2,i)-1)
+  //     if (n == x ){
+  //       console.log("SI")
+  //       break
+  //     }
+  //   }
+  // }
+  // perfecto()
   
   
   // Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
   
   // Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
-  
+//   const fechaValida = () =>{
+//     let dia = parseInt(prompt("Ingresar dia del año(1-31)"))
+//     let mes = parseInt(prompt("Ingresar mes del año (1-12)"))
+//     let año = parseInt(prompt("Ingresa año (hasta 2024)"))
+//     let mensaje 
+//     if(mes < 1 || mes > 12){
+//       mensaje = "El mes debe ser del 1 al 12"
+//     }
+//     else if(dia < 1 || dia > 31){
+//       mensaje = "La fecha debe ser del 1 al 31"
+//     }else if(((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12)  && dia < 31)){
+//       mensaje = "La fecha debe ser 31"
+//     }else if((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia == 31){
+//       mensaje = "El mes no tiene 31 dias"
+//     }else if (año % 4 == 0){
+//       mensaje = "El año es bisiesto y el mes 2 debe tener 29 dias"
+//     }
+//     else{
+//       mensaje = "La fecha es valida"
+//     }
+
+//     if(mensaje){
+//       console.log(mensaje)
+//     }
+//     else{
+//       mensaje = "La fecha es valida"
+//     }
+
+//   }
+// fechaValida()
