@@ -188,6 +188,7 @@ const numPrimo =(number) => {
     }
 }            
 numPrimo(prompt("Ingrese un número para verificar si es un número primo"))
+//Objeto Math.sqrt calcula la raiz cuadrada.
 //no se como es la solución :(
 
 //Crear un programa que pida al usuario su edad y luego muestre si es mayor o menor de edad (18 años).
