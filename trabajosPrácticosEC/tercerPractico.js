@@ -107,11 +107,11 @@ const Divisible = (num4) => {
 
 //Crear una función que tome una cadena como parámetro y devuelva "Es un palíndromo" si la cadena es igual al revés, de lo contrario, devolver "No es un palíndromo".
 
-function palindromo (cadena) {
+/* function palindromo (cadena) {
     let array = cadena.split("");
     let reverse = array.reverse();
     return cadena == reverse.join("") ? "Si es una palíndromo" : "No es una palíndromo"
-} console.log(palindromo("bob"))
+} console.log(palindromo("bob")) */
 
 // Crear un programa que pida al usuario una letra y luego muestre si es una vocal o una consonante.
 
@@ -129,32 +129,122 @@ function palindromo (cadena) {
 // Crear un programa que pida al usuario un número del 1 al 7 y luego muestre el día de la semana correspondiente.
 
 
-const Semana = () => {
-    let day = prompt("Ponga un número del 1 al 7 :D")
-    let mon = "Lunes";
-    let tue = "Martes";
-    let wed = "Miercoles";
-    let thu = "Jueves";
-    let fri = "Viernes";
-    let sat = "Sábado";
-    let sun = "Domingo";
-
-}
-
+/* let dia = prompt("Ingresar un numero 1-7")
+  const diaSemana = (dia) => {
+    if(dia == 1){
+       console.log("Lunes")
+    }else if(dia == 2){
+        console.log("Martes")
+    }else if(dia == 3){
+        console.log("Miercoles")
+    }
+    else if(dia == 4){
+        console.log("Jueves")
+    }
+     else if(dia == 5){
+         console.log("Viernes")
+     }
+     else if(dia == 6){
+        console.log("Sabado")
+     }
+     else if(dia == 7){
+        console.log("Domingo")
+    }
+ }
+ diaSemana(dia) */
 
 // Crear un programa que pida al usuario un número y luego muestre si es primo o no.
 
+/* const esPrimo = () => {
+    let numIngresado = prompt("Ingresa un número!!!");
+    numIngresado = parseFloat(numIngresado);
+    if (numIngresado % 2 === 0) {
+        console.log("No es un número primo ya que es par")}
+    else if (numIngresado % numIngresado === 0 ) {
+        console.log("Es un número primo")
+    } else (numIngresado === 2); {
+        console.log("Es un número primo también gg");}
+}; esPrimo(); */
 // Crear un programa que pida al usuario su edad y luego muestre si es mayor o menor de edad (18 años).
+
+/* const edadUsuario = () => {
+    let edadMia = prompt("Pon tu edad aquí");
+    edadMia = parseFloat(edadMia);
+    if (edadMia >= 18) {
+        console.log("Sos mayor de edad y entras a GITANA");  
+    } else {
+        console.log("No entras a GITANA ya que sos menor de edad");
+    }
+}; edadUsuario (); */
 
 // Crear un programa que pida al usuario dos números y luego muestre si su suma es mayor, menor o igual a 100.
 
+/* const dosNumeros= () => {
+    let num1 = prompt("Pon el PRIMER número aquí");
+    num1 = parseFloat(num1);
+    let num2 = prompt("Pon el SEGUUUNDO númeoro aquí");
+    num2 = parseFloat(num2);
+    if (num1 + num2 > 100) {
+        console.log("Es mayor a 100");
+    } else if (num1 + num2 === 100) {
+        console.log("Es igual a 100");
+    } else {
+        console.log("Es menor a 100")
+    }
+}; dosNumeros (); */
+
+
 // Crear un programa que pida al usuario tres números y luego muestre cuál es el mayor de los tres.
+
+/* const tresNumeros = () => {
+    let num1 = prompt("Primero");
+    num1 = parseFloat(num1);
+    let num2 = prompt("Segundo");
+    num2 = parseFloat(num2);
+    let num3 = prompt("Tercero");
+    if (num1 > num2 && num1 > num3) {
+        console.log("El primer número es el mayor");
+    } else if (num2 > num1 && num2 > num3) {
+        console.log("El segundo es el mayor");
+    } else if (num3 > num1 && num3 > num2) {
+        console.log("El tercero es el mayor");
+    } else {
+        console.log("Hay números iguales");
+    }
+}; tresNumeros (); */
 
 // Crear un programa que pida al usuario una letra y luego muestre si es una letra mayúscula o minúscula.
 
+/* const letrasMayusOMinus = () => {
+    let letra = prompt("Ingresa una letra");
+    if (letra >= "A" && letra <= "Z") {
+        console.log("Es una letra mayúscula");
+    }
+    else if (letra >= "a" && letra <= "z") {
+        console.log("Es una letra minúscula");
+    }
+    else {
+        console.log("No es una letra lo que pusiste bro");
+    }
+}; letrasMayusOMinus (); */
+
 //Crear una función que tome un número como parámetro y devuelva "Fizz" si es divisible por 3, "Buzz" si es divisible por 5 o "FizzBuzz" si es divisible por ambos. En cualquier otro caso, devolver el número.
 
+const palabrasRaras = (numero) => {
+    if (numero % 3 === 0 && numero % 5 === 0) {
+        console.log("FizzBuzz")
+    } else if (numero % 5 === 0) {
+        console.log("Buzz")
+    } else if (numero % 3) {
+        console.log("Fizz")}
+        else {
+            console.log(numero)
+        }
+}; palabrasRaras (30);
+
 // Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
+
+
 
 // Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
 
