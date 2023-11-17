@@ -240,13 +240,35 @@ const palabrasRaras = (numero) => {
         else {
             console.log(numero)
         }
-}; palabrasRaras (30);
+}; palabrasRaras (30); 
 
 // Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
 
+/* const numeroPerfecto = (numero) => {
+    let sumaDivisores = 0;
+    for (let i = 1 ; i < numero ; i++) {
+        if (numero % i === 0) {
+            sumaDivisores += i;
+        }
+    } 
+    if (sumaDivisores === numero) {
+        return true;
+    } else {
+        return false;
+    }
+};
+let numeroUsuario = prompt("Ingresa un número:");
+numeroUsuario = parseInt(numeroUsuario);
 
+if (numeroPerfecto(numeroUsuario)) {
+    console.log(numeroUsuario + "es un número perfecto");
+} else {
+    console.log( numeroUsuario + "no es un número perfecto");
+} *//*ME AYUDÉ CON CHAT GPT Y GOOGLE PARA HACER ESTE*/
 
 // Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
+
+
 
 // Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
 
@@ -254,3 +276,12 @@ const palabrasRaras = (numero) => {
 
 //Crear una función que tome un número como parámetro y devuelva "Positivo" si es mayor a cero, "Negativo" si es menor a cero o "Cero" si es igual a cero.
 
+const posiNegaCero = (num) => {
+    if (num >  0) {
+        console.log("Positivo")
+    } else if (num === 0) {
+        console.log("Es iguak a cero") 
+} else {
+    console.log("Negativo")
+}
+}; posiNegaCero(-5);
