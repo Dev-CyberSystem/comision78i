@@ -135,22 +135,9 @@ const calificación =() => {
 }
 calificación()
 // 7) Imprimir los números pares del 2 al 20 en la consola.
-for (let i = 2; i <= 20; i += 2) {
+for (let i = 2; i <= 20; i += 2) {// la condición establecida indica que se imprimiran números hasta el 20, en el inicio i tiene valor de 2 xq ese seria el primer n° par de 20.
     console.log(i);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 8) Recorrer un string y mostrar en la consola cada letra en mayúsculas.
 // 9) Pedir al usuario que ingrese un número y mostrar en la consola los números del 1 al número ingresado.
 // 10) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más grande de la serie.
