@@ -283,7 +283,6 @@ const esPerfecto =(num) => {
 }
 esPerfecto(prompt("Ingrese un número para verificar si es un n° perfecto"))
 
-//Crear un programa que pida al usuario un número y luego muestre su descompisición en factores primos.
 //Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
 const fecha =() => {
     //Paso 1: pedir que ingrese tres n°.
@@ -307,4 +306,5 @@ const fecha =() => {
     }
 }
 fecha()
+//Crear un programa que pida al usuario un número y luego muestre su descompisición en factores primos.
 
