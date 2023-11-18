@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <a class="btn btn-primary" href="../index.html" role="button">INICIO</a>
+        <p>1)_ Crea un programa que reciba un número del 1 al 12 y muestre el nombre del mes correspondiente.</p>
+        <button onclick="mesCorrespondiente()"> Resultado</button>
+        <p id="resultados"></p>
+        
+        <p>2)_ Crea un programa que reciba un número del 1 al 7 y muestre el día de la semana correspondiente.</p>
+        <button onclick="diaCorrespondiente()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>3)_ Crea un programa que reciba un carácter y muestre si es una vocal o una consonante.</p>
+        <button onclick="letraCorrespondiente()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>4)_ Crea un programa que reciba un número del 1 al 5 y muestre el nombre del día de la semana correspondiente a esa posición en un arreglo.</p>
+        <button onclick="diaCorrespondienteArreglo()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>5)_ Crea un programa que reciba una letra y muestre si es mayúscula o minúscula.</p>
+        <button onclick="esMayuscula()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>6)_ Crea un programa que reciba una nota del 0 al 10 y muestre la calificación correspondiente (suspenso, aprobado, notable, sobresaliente).</p>
+        <button onclick="calificacion()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>7)_ Imprimir los números pares del 2 al 20 en la consola.</p>
+        <button onclick="pares()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>8)_ Recorrer un string y mostrar en la consola cada letra en mayúsculas.</p>
+        <button onclick="deletreo()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>9)_ Pedir al usuario que ingrese un número y mostrar en la consola los números del 1 al número ingresado.</p>
+        <button onclick="numerosHasta()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>10)_ Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más grande de la serie.</p>
+        <button onclick="masGrande()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>11)_ Pedir al usuario que ingrese una palabra y mostrar en la consola si la palabra es un palíndromo o no.</p>
+        <button onclick="palindromo()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>12)_ Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la suma de los números pares.</p>
+        <button onclick="sumaPares()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>13)_ Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números negativos.</p>
+        <button onclick="numNegativos()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>14)_ Pedir al usuario que ingrese un número y mostrar en la consola todos los números impares desde el 1 hasta el número ingresado.</p>
+        <button onclick="imparHasta()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>15)_  Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más pequeño de la serie.</p>
+        <button onclick="masChico()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>16)_ Pedir al usuario que adivine un número generado aleatoriamente entre 1 y 100. Mostrar en la consola si el usuario adivinó o no el número y la cantidad de intentos que le tomó.</p>
+        <button onclick="adivinarNum()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>17)_ Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números pares.</p>
+        <button onclick="cantPares()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>18)_ Dado un array de números, escribir una función que retorne el número más grande del array.</p>
+        <button onclick="masGrandeArray()"> Resultado</button>
+        <p id="resultados"></p>
+    
+        <p>19)_ Dado un array de números, escribir una función que retorne un nuevo array con los números pares del array original.</p>
+        <button onclick="paresArray()"> Resultado</button>
+        <p id="resultados"></p>   
+
+        <p>20)_ Dado un array de números, escribir una función que retorne la suma de todos los números del array.</p>
+        <button onclick="sumaArray()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>21)_ Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.</p>
+        <button onclick="stringsMayuscula()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>22)_ Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X.</p>
+        <button onclick="arrayMayores()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>23)_ Dado un array de números, escribir una función que retorne la suma de todos los números del array. Además, si algún número es mayor que 10, agregarlo a un nuevo array de "números grandes".</p>
+        <button onclick="sumaArrayNumGrandes()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>24)_ Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.</p>
+        <button onclick="stringsLargos()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>25)_ Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres y que empiecen con la letra "a".</p>
+        <button onclick="stringsLargosA()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>26)_ Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.</p>
+        <button onclick="arrayMayoresCortado()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>27)_ Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original, pero sumándoles 1.</p>
+        <button onclick="numerosMasUno()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>28)_ Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el último.</p>
+        <button onclick="numerosMenosUltimo()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>29)_ Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el primero y el último.</p>
+        <button onclick="numerosMenosPriYUlt()"> Resultado</button>
+        <p id="resultados"></p> 
+
+        <p>30)_ Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el número que se encuentre en la posición X.</p>
+        <button onclick="numerosMenosPosX()"> Resultado</button>
+        <p id="resultados"></p> 
+        
+        <script src="../javascript/practicoClase4.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      </main>
+</body>
+</html>
