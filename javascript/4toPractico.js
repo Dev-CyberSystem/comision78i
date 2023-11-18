@@ -97,8 +97,60 @@ const semanaArray =(número) => {
 }
 semanaArray(parseInt(prompt("Ingrese un número del 1 al 7")))
 // 5) Crea un programa que reciba una letra y muestre si es mayúscula o minúscula.
+const letra1 =(esMayúscula) => {
+    if (esMayúscula.length !== 1) { // utilice !== y .length para verificar que se haya ingresado una sola letra.
+        console.log("Ingrese solo una letra")
+        return
+    }
+    if (esMayúscula === esMayúscula.toUpperCase()){
+        console.log("La letra es Mayúscula")
+    }
+    else if (esMayúscula === esMayúscula.toLowerCase()){
+        console.log("La letra es Minúscula")
+
+    }
+    else{
+        console.log("Lo ingresado no es una letra")
+    }
+}
+letra1(prompt("Ingrese una letra"))
 // 6) Crea un programa que reciba una nota del 0 al 10 y muestre la calificación correspondiente (suspenso, aprobado, notable, sobresaliente).
+const calificación =() => {
+    const nota = prompt("Ingrese un número del 0 al 10 para verificar su calificación")
+    if (nota <= 5) { 
+        console.log("Su calificación es " + nota + ". Por ende, es suspenso.")
+    }
+    else if (nota <= 7){
+        console.log("Su calificación es " + nota + ". Por ende, es aprobado.")
+    }
+    else if (nota <= 9){
+        console.log("Su calificación es " + nota + ". Por ende, es notable.")
+    }
+    else if (nota <= 10){
+        console.log("Su calificación es " + nota + ". Por ende, es sobresaliente.")
+    }
+    else {
+        console.log("Ingrese una calificación válida del 0 al 10.");
+    }
+}
+calificación()
 // 7) Imprimir los números pares del 2 al 20 en la consola.
+for (let i = 2; i <= 20; i += 2) {
+    console.log(i);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 8) Recorrer un string y mostrar en la consola cada letra en mayúsculas.
 // 9) Pedir al usuario que ingrese un número y mostrar en la consola los números del 1 al número ingresado.
 // 10) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más grande de la serie.
