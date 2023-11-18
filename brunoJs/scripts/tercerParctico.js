@@ -262,5 +262,4 @@ const dma=(dia,mes,anio)=>{
     alert("las fechas ingresadas son incorrectas")
   }
 }
-
-dma(dia,mes,anio)
+ //palindrome(palabra);
