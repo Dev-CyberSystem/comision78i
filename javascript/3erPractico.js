@@ -265,5 +265,46 @@ esDivisible(45)
 //utilece el condicional switch con la expresión true para que verifique si es verdadero que el número 45 es divisible por 3, 5 y ambos.
 
 //Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
+const esPerfecto =(num) => {
+    num = parseInt(num)
+    let divisores = 0 // se utiliza para almacenar la suma de los divisores del número que ingrese.
+    for (let i = 1; i < num; i++) { // el bucle comienza desde 1 hasta en n° ingresado, (i) representa un posible divisor.
+        if (num % i === 0) { // comprueba si (i) es un divisor de num.
+            divisores += i // si (i) es un divisor agregar el valor a divisores.
+        }
+        else if (divisores === num) {
+            console.log("El número ingresado es perfecto")
+        }
+        else {
+            console.log("El número ingresado no es perfecto")
+        }
+    }
+    
+}
+esPerfecto(prompt("Ingrese un número para verificar si es un n° perfecto"))
+
 //Crear un programa que pida al usuario un número y luego muestre su descompisición en factores primos.
 //Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
+const fecha =() => {
+    //Paso 1: pedir que ingrese tres n°.
+    const dia = parseInt(prompt("Ingrese un dia"))
+    const mes = parseInt(prompt("Ingrese un mes"))
+    const año = parseInt(prompt("Ingrese un año"))
+    //Paso 2: comprobar si lo que ingreso es un n°, utilizando isNaN + OR.
+    if (isNaN(dia) || isNaN(mes) || isNaN(año)){
+        console.log("Por favor, ingrese valores númericos")
+        return // lo agregue para se mostrará lo establecido en el console y para detener la función.
+    }
+    //Paso 3: comprobar si la fecha es válida, utilizando las clase date tanto para el dia, mes y año que se ingreso, es decir, se comprueba de que lo ingresaso es un valor númerico.
+    const validezDeLaFecha = new Date(dia, mes - 1, año) // el mes en javascript comienza desde cero por eso se resta uno.
+    const fecha = !isNaN(validezDeLaFecha) && validezDeLaFecha.getDate() === dia && validezDeLaFecha.getMonth() === mes - 1 && validezDeLaFecha.getFullYear() === año
+    //Paso 4: mostrar en la consola la válidez o no de lo ingresado.
+    if (fecha) {
+        console.log("La fecha ingresada no es válida")
+    }
+    else{
+        console.log("La fecha ingresada es válida")
+    }
+}
+fecha()
+
