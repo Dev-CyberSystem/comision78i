@@ -372,12 +372,107 @@
   
 // 17- Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
 
+    function esNumeroPerfecto(numero) {
+        
+        let sumaDivisores = 0
+        for (let i = 1; i <= numero / 2; i++) {
+            if (numero % i === 0) {
+                sumaDivisores += i
+            }
+        }
+        
+        return sumaDivisores === numero
+
+    }
+
+    function programa_n_perfecto() {
+
+          const numeroIngresado = prompt("Ingresa un número:")
+          const numero = parseInt(numeroIngresado);
+          
+          if (esNumeroPerfecto(numero)) {
+            console.log(numero + " es un número perfecto.")
+          } else {
+             console.log(numero + " no es un número perfecto.")
+          }
+
+    }
+    
+    programa_n_perfecto();
+    
 // 18- Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
 
+    const factoresPrimos = () => {
+
+        const numero = parseInt(prompt('Ingresa un número'));
+    
+        const esPrimo = (num) => {
+        
+            for(let i = 2; i < num; i++) {
+                if(num % i === 0) return false;
+            }
+            return true;
+        }
+    
+        const obtenerFactoresPrimos = (num) => {
+            let factors = [];
+            
+            for(let i = 2; i <= num; i++) {
+                if(iesPrimo(i) && num % i === 0) {
+                factors.push(i);
+            }
+        }
+
+        return factors;
+        }
+    
+        console.log(obtenerFactoresPrimos(number));
+    
+    }
+  
+  factoresPrimos();
+
+
 // 19- Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
+    
+    const validateDate = () => {
 
+        const dia = parseInt(prompt('Ingresa el día (dd)'));
+        const mes = parseInt(prompt('Ingresa el mes (mm)'));
+        const anio = parseInt(prompt('Ingresa el año (yyyy)'));
 
+        const esFechaValida = (d, m, a) => {
+            const mes30 = [4, 6, 9, 11];
+            const mes31 = [1, 3, 5, 7, 8, 10, 12];
 
+            if(m === 2) {
+                if(esBisiesto(a)) {
+                    return d >= 1 && d <= 29;  
+                } else {
+                    return d >= 1 && d <= 28;
+                }
+                } else if(mes30.includes(m)) {
+                    return d >= 1 && d <= 30;
+                } else if(mes31.includes(m)) {
+                    return d >= 1 && d <= 31;
+                } else {
+                    return false;
+                }
+        }
+
+        const esBisiesto = (anio) => {
+            return anio % 400 === 0 || (anio % 4 === 0 && anio % 100 !== 0);
+        }
+
+        if(esFechaValida(dia, mes, anio)) {
+            console.log('Fecha válida');
+        } else {
+            console.log('Fecha inválida');
+        }
+
+    }
+
+    validateDate();
 
 
 
