@@ -203,8 +203,21 @@ let numeros2 = serieNumeros2.split(",")
 let numMinimo = Math.min (...numeros2)
 console.log("El n° más pequeño de la serie ingresada es " + numMinimo)
 // 16) Pedir al usuario que adivine un número generado aleatoriamente entre 1 y 100. Mostrar en la consola si el usuario adivinó o no el número y la cantidad de intentos que le tomó.
+
 // 17) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números pares.
+const numeroPares =(esPar) => {
+    let number = esPar.split(",")
+    let totalDePares = 0
+    for (let i = 0; i < number.length; i++){ 
+        if (number[i] % 2 === 0){
+            totalDePares++
+        }
+    }
+    console.log("La cantidad de números pares es: " + totalDePares)
+}
+numeroPares(prompt("Ingrese una serie de números separados por coma"))
 // 18) Dado un array de números, escribir una función que retorne el número más grande del array.
+
 // 19) Dado un array de números, escribir una función que retorne un nuevo array con los números pares del array original.
 // 20) Dado un array de números, escribir una función que retorne la suma de todos los números del array.
 // 21) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.
