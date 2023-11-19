@@ -285,6 +285,9 @@
   
   // Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
   
+
+
+  
   // Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
 //   const fechaValida = () =>{
 //     let dia = parseInt(prompt("Ingresar dia del año(1-31)"))
