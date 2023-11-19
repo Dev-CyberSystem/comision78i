@@ -217,8 +217,26 @@ const numeroPares =(esPar) => {
 }
 numeroPares(prompt("Ingrese una serie de números separados por coma"))
 // 18) Dado un array de números, escribir una función que retorne el número más grande del array.
-
+let arrayMayor = [5,27,9,11]
+const arrayMax =(número) =>{
+    let max = número[0] //se establce el valor cero como primer elemento del array.
+    for (let i = 0; i < número.length; i++){
+        if (número[i] > max){
+            max = número[i]
+        }
+    }
+    console.log("El número más grande del array es " + max)
+    return
+}
+arrayMax(arrayMayor)
 // 19) Dado un array de números, escribir una función que retorne un nuevo array con los números pares del array original.
+let array19 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const arrayPares =(numPar) => {
+    const pares = numPar.filter(número => número % 2 === 0)// método filter para obtener solo n° pares.
+    console.log("Números pares: " + pares)
+    return(pares)
+}
+arrayPares(array19)
 // 20) Dado un array de números, escribir una función que retorne la suma de todos los números del array.
 // 21) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.
 // 22) Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X.
