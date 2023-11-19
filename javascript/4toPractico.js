@@ -136,16 +136,72 @@ const calificación =() => {
 calificación()
 // 7) Imprimir los números pares del 2 al 20 en la consola.
 for (let i = 2; i <= 20; i += 2) {// la condición establecida indica que se imprimiran números hasta el 20, en el inicio i tiene valor de 2 xq ese seria el primer n° par de 20.
-    console.log(i);
+    console.log(i)
 }
 // 8) Recorrer un string y mostrar en la consola cada letra en mayúsculas.
+let recorrer = "hola como estas".toUpperCase()
+for ( let i = 0; i <= recorrer.length; i++){ 
+    console.log(recorrer[i])
+}
 // 9) Pedir al usuario que ingrese un número y mostrar en la consola los números del 1 al número ingresado.
+let usuario = parseInt(prompt("Ingrese un número"))
+for (let i = 1; i <= usuario; i++){// en el inicio i tiene un valor de 1, desdes ahi se empezara a contar hasta el n° ingresado.
+    console.log(i)
+}
 // 10) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más grande de la serie.
+let serieNumeros = prompt("Ingrese una serie de números separados por coma")
+let numeros = serieNumeros.split(",")//utilice split para separar por coma los números ingresados.
+let numMaximo = Math.max (...numeros)
+console.log("El n° más grande de la serie ingresada es " + numMaximo)
 // 11) Pedir al usuario que ingrese una palabra y mostrar en la consola si la palabra es un palíndromo o no.
+const esPalíndromo =(palabra) => {
+    const palabraNormal = palabra
+    const palabraAlReves = palabraNormal.split("").reverse().join("")
+    if (palabraNormal === palabraAlReves) {
+        console.log("Es un palíndromo")
+    }
+    else{
+        console.log("No es un palíndromo")
+    }
+}
+esPalíndromo(prompt("Ingrese una palabra para verificar si es un palíndromo o no"))
 // 12) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la suma de los números pares.
+let listNúmeros = prompt("Ingrese una serie de números separados por (,)")
+let num = listNúmeros.split(",")
+let sumaDePares = 0 // en esta varibale se van a incorporar los números pares por eso su valor es 0.
+for (let i = 0; i < num.length; i++){
+    if (num[i] % 2 === 0){ // para verificar que los números se puedan dividir en dos para ser par.
+        sumaDePares += num[i] // esto significa almacenar los números pares en sumaDePares.
+    }
+}
+console.log("La suma de los números pares es: " + sumaDePares)
 // 13) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números negativos.
+const numeroNegativo =(esNegativo) => {
+    let number = esNegativo.split(",")
+    let totalDeNegativo = 0
+    for (let i = 0; i < number.length; i++){ //la condición establece que los números ingresados para ser negativos tienen que ser menor a 0.
+        if(number[i] < 0){
+            totalDeNegativo++// si son negativos se agregan al let totalDeNegativo. 
+        }
+    }
+    console.log("La cantidad de números negativos es: " + totalDeNegativo)
+}
+numeroNegativo(prompt("Ingrese una serie de números separados por coma"))
 // 14) Pedir al usuario que ingrese un número y mostrar en la consola todos los números impares desde el 1 hasta el número ingresado.
+const totalDeImpares =(esImpar) => {
+    let numero = parseInt(esImpar)
+    for (let i = 1; i <= numero; i++){
+        if (i % 2 !== 0){// para comprobar que números son impares. 
+            console.log(i)
+        }
+    }
+}
+totalDeImpares(prompt("Ingrese un número para contar"))
 // 15) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más pequeño de la serie.
+let serieNumeros2 = prompt("Ingrese una serie de números separados por coma")
+let numeros2 = serieNumeros2.split(",")
+let numMinimo = Math.min (...numeros2)
+console.log("El n° más pequeño de la serie ingresada es " + numMinimo)
 // 16) Pedir al usuario que adivine un número generado aleatoriamente entre 1 y 100. Mostrar en la consola si el usuario adivinó o no el número y la cantidad de intentos que le tomó.
 // 17) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números pares.
 // 18) Dado un array de números, escribir una función que retorne el número más grande del array.
