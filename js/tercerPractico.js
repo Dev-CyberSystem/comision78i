@@ -184,6 +184,13 @@ const programa = num1 => {
     }
     return true;
 };
+const num = prompt('ingrese un numero');
+if (esPrimo(parseInt(num))) {
+  console.log(`${num} es un número primo`);
+  } else {
+    console.log(`${num} no es un número primo`);
+    };
+
   
 // Crear un programa que pida al usuario su edad y luego muestre si es mayor o menor de edad (18 años).
 
