@@ -238,9 +238,46 @@ const arrayPares =(numPar) => {
 }
 arrayPares(array19)
 // 20) Dado un array de números, escribir una función que retorne la suma de todos los números del array.
+let array20 = [1,4,6,8,10]
+const arraySuma =(númeroSuma) => {
+    const suma = númeroSuma.reduce((acumulador, elemento) => acumulador + elemento, 0)//utilice este método para sumar o lograr un único valor de todos los elementos del array.
+    console.log("La suma del array de números es: " + suma)
+    return(suma)
+}
+arraySuma(array20)
 // 21) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.
+let array21 = ["hola", "me", "hicieron", "sufrir", "con", "este", "tp"]
+const arrayStrings =(strings) => {
+    for (let i = 0; i < strings.length; i++) {// se hace un recorrido por todo el array por eso comienza en cero.
+        strings[i] = strings[i].toUpperCase();// aqui se aplica toUpperCase para convertir en mayúscula el string original. 
+    }
+    console.log(strings)
+    return(strings)
+}
+arrayStrings(array21)
 // 22) Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X.
+let array22 = [1,2,3,4,5]
+let númeroX = 2
+let almacenarNumMayores = []
+const arrayMayorX =(num, X) => {// la X seria (let númeroX) que establece desde que n° se debe buscar el mayor, en este caso desde 2.
+    for (let i = 0; i < num.length; i++){
+       if (num[i] > X) {
+        almacenarNumMayores.push(num[i])
+       }
+     console.log("Son mayores que X, los siguientes números: " + almacenarNumMayores)
+    }
+    return almacenarNumMayores
+}
+arrayMayorX(array22, númeroX)
 // 23) Dado un array de números, escribir una función que retorne la suma de todos los números del array. Además, si algún número es mayor que 10, agregarlo a un nuevo array de "números grandes".
+
+
+
+
+
+
+
+
 // 24) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.
 // 25) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres y que empiecen con la letra "a".
 // 26) Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.
