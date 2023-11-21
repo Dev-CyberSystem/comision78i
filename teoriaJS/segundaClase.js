@@ -1,30 +1,46 @@
-//Metodos de String
-let texto = "Hola, mundo";
+//Formas de llenar una variable
+let numero = 10;
+let decimal = 12.23;
+let arreglo = [1,2,3,4,5];
 
-//Length: Permite contar la cantidad de caracteres que tenemos
+let objeto = {
+    nombre: "Juan",
+    apellido: "Perez",
+    direccion: {
+        calle: "12avenida",
+    numero: 123,
+    },
+}
+
+//METODOS STRING
+
+//1-Length, contar la cantida de caracteres que tenemos
+let texto = "Hola, mundo";
+let logintud = texto.length;
 console.log(texto.length);
 
-//Pedir un nombre y calcular su ingresar (string)
-let longitud = texto.length;
-
-let ingresarNombre = prompt("Ingrese su Nombre");
-console.log(ingresarNombre);
-
-//Minuscula
+//2-Convertir a Minuscula
 let ingresarApellido = prompt("Ingrese su apellido");
-let convertirMinuscula = ingresarApellido.toLocaleLowerCase();
+let convertirMinuscula = ingresarApellido.toLowerCase();
 
 console.log(convertirMinuscula);
 
-//Método para encontrar una posición dentro de una cadena
+//3- Convierte el texto en MAYUSCULA
+let textoC = "buenos dias";
+
+let convierteMayus = textoC.toUpperCase();
+console.log(convierteMayus);
+
+
+//4-Método para encontrar una posición dentro de una cadena
 let posicion = texto.indexOf("n"); //Hallar en que posicio está la letra "n"
 console.log(posicion);
 
-//Reemplazar palabrapor otra
+//5-Reemplazar palabrapor otra
 let reemplazo = texto.replace("hola", "adios")
 console.log(reemplazo);
 
-//Método Slice Permite extraer una parte de una cadena de texto
+//6-Método Slice Permite extraer una parte de una cadena de texto
 let extraer = texto.slice(0, 4);
 console.log(extraer);
 
