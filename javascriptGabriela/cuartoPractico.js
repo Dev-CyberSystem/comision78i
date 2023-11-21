@@ -152,56 +152,17 @@
 
 
 // Pedir al usuario que ingrese una palabra y mostrar en la consola si la palabra es un palíndromo o no. 
-//falta!!!!!!!!!!!
 
 
-// function esPalindromo(palabra){
-
-// palabra = palabra.toLowerCase().replace(/\s/g, '')
-
-// for (let i=0; i < palabra.lenght /2; i++){
-//     if(palabra[i] !== palabra [palabra.lenght -1 -i]){
-//         return false
-
-//     }
-//  }
-//  return true
-// }
 
 
-// let palabra = prompt ("Ingrese una palabra")
-
-
-// if (esPalindromo(palabra)){
-//     console.log ( palabra + "Es Palindromo")
-// }
-// else {
-//     console.log ("No es Palindromo")
-// }
 
 
 
 
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la suma de los números pares.
 
-//FALTAAAA
 
-//   let numero = prompt("Ingrese numeros separados por coma")
-
-//      let numerosArray = numero.split (",").map(numero)
-        
-
-//      let sumarPar = 0
-
-    
-//     for (let i=0; i < numerosArray.length; i++) {
-    
-//     if (numerosArray[i] % 2 === 0) {
-//       sumarPar += numerosArray[i];
-//     }
-//     }
-
-//     console.log ("La suma de los numeros pares es:" + sumarPar)
 
 
 
@@ -454,9 +415,132 @@
 
 
 // Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.
+
+// function filtrarStrings(array) {
+//     let resultado = []
+  
+//     for (let i = 0; i < array.length; i++) {
+//       if (array[i].length > 5 ) {
+//         resultado.push(array[i])
+//       }
+//     }
+  
+//     return resultado
+//   }
+  
+  
+//   let strings = ["Hola", "Mundo", "Javascript", "Trabajo","Practico", "Cuarto"];
+//   let resultadoFiltrado = filtrarStrings(strings)
+  
+//   console.log(resultadoFiltrado)
+  
+
+
+
+
 // Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres y que empiecen con la letra "a".
+
+// function filtrarStrings(array) {
+//     let resultado = []
+  
+//     for (let i = 0; i < array.length; i++) {
+//       if (array[i].length > 5 && array[i].charAt(0) === 'a') {
+//         resultado.push(array[i])
+//       }
+//     }
+  
+//     return resultado
+//   }
+  
+  
+//   let strings = ["Hola", "Mundo", "Javascript", "Amapola","Amor", "Amarillo"];
+//   let resultadoFiltrado = filtrarStrings(strings)
+  
+//   console.log(resultadoFiltrado)
+
+
+
+
+
+
+
+
 // Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.
+
+
+// function filtrarNumerosMayores(array, X) {
+    
+//     let numerosMayores = array.filter(numero => numero > X)
+    
+    
+//     let primeros3Numeros = numerosMayores.slice(0, 3)
+    
+//     return primeros3Numeros
+//   }
+  
+  
+//   let numeros = [2 , 4 , 6 , 1 , 9]
+//   let X = 3
+  
+//   let resultado = filtrarNumerosMayores(numeros, X)
+//   console.log(resultado)
+
+
 // Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original, pero sumándoles 1.
+
+
+
+// function sumarUno(array) {
+//     let nuevoArray = array.map(function(num) {
+//       return num + 1
+//     })
+    
+//     return nuevoArray
+//   }
+  
+//   let numeros = [1, 2, 3, 4, 5]
+//   let numerosSumados = sumarUno(numeros)
+//   console.log(numerosSumados) 
+
+
 // Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el último.
+
+// function quitarUltimoElemento(array) {
+//     let newArray = array.slice()
+//     newArray.pop()
+//     return newArray
+//   }
+
+//   let numeros = [1, 2, 3, 4, 5]
+//   let nuevoArray = quitarUltimoElemento(numeros)
+//   console.log(nuevoArray)
+
+
 // Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el primero y el último.
+
+// function newArray(array) {
+//     return array.slice(1, -1)
+//   }
+  
+  
+//   const originalArray = [1, 2, 3, 4, 5]
+//   const modifiedArray = newArray(originalArray)
+//   console.log(modifiedArray)
+
+
 // Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el número que se encuentre en la posición X.
+
+// function eliminarElemento(array, posicion) {
+//     var nuevoArray = [...array]
+    
+//     nuevoArray.splice(posicion, 1)
+    
+//     return nuevoArray
+//   }
+  
+  
+//   var numeros = [1, 2, 3, 4, 5]
+//   var posicion = 2
+  
+//   var nuevoArray = eliminarElemento(numeros, posicion)
+//   console.log(nuevoArray)
