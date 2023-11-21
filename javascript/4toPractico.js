@@ -270,16 +270,53 @@ const arrayMayorX =(num, X) => {// la X seria (let númeroX) que establece desde
 }
 arrayMayorX(array22, númeroX)
 // 23) Dado un array de números, escribir una función que retorne la suma de todos los números del array. Además, si algún número es mayor que 10, agregarlo a un nuevo array de "números grandes".
-
-
-
-
-
-
-
-
+let array23 = [3,5,71,10,22]
+let suma = 0
+let mayorX= 10
+let númerosGrandes = []
+const sumaYmayor =(number, X) => {
+    for (let i = 0; i < number.length; i++){
+        if (number[i] > X){
+        númerosGrandes.push(number[i])
+        console.log("Son mayores que 10, los siguientes números: " + númerosGrandes)
+        }
+    }
+    for (let i = 0; i < number.length; i++){
+        suma += number[i]
+        console.log("La suma es: " + suma)
+    }
+    return{
+    númerosGrandes: númerosGrandes,
+    suma: suma
+    }
+}
+sumaYmayor(array23, mayorX)
 // 24) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.
+let array24 = ["perro", "gato", "serpiente", "elefante", "zorro"]
+let nuevosStrings = []
+const arrayCaracteres =(caracteresStrings) => {
+    for (let i = 0; i < caracteresStrings.length; i++){
+        if (caracteresStrings[i].length > 5) {// aqui establezco que se verifique si existen elementos mayores a 5 caracteres.
+        nuevosStrings.push(caracteresStrings[i])// con el push se almacena en let nuevosStrings, los elementos con mas de 5 caracteres. 
+        }
+    }
+    console.log("Estos son los elementos con más de 5 caracteres: " + nuevosStrings)
+    return(nuevosStrings)
+}
+arrayCaracteres(array24)
 // 25) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres y que empiecen con la letra "a".
+let array25 = ["ambulancia", "mesa", "auto", "casa", "anteojos"]
+let stringsA = []
+const arrayConA =(stringConA) => {
+    for (let i = 0; i < stringConA.length; i++){
+        if (stringConA[i].length > 5 && stringConA[i].charAt(0) === "a") {// utilice chartAt para obtener la palabra que comience con A estableciendo una posición 0, es decir, buscara la letra A en el inicio de cada string.
+            stringsA.push(stringConA[i])
+        }
+    }
+    console.log("Estos son los elementos con más de 5 caracteres y que comienzan con A: " + stringsA)
+    return(stringsA)
+}
+arrayConA(array25)
 // 26) Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.
 // 27) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original, pero sumándoles 1.
 // 28) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el último.
