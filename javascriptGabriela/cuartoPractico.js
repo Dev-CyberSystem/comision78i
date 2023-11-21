@@ -151,17 +151,257 @@
     //  console.log ( "El numero mas grande de la serie es: " + maximo)
 
 
-// Pedir al usuario que ingrese una palabra y mostrar en la consola si la palabra es un palíndromo o no.
+// Pedir al usuario que ingrese una palabra y mostrar en la consola si la palabra es un palíndromo o no. 
+//falta!!!!!!!!!!!
+
+
+// function esPalindromo(palabra){
+
+// palabra = palabra.toLowerCase().replace(/\s/g, '')
+
+// for (let i=0; i < palabra.lenght /2; i++){
+//     if(palabra[i] !== palabra [palabra.lenght -1 -i]){
+//         return false
+
+//     }
+//  }
+//  return true
+// }
+
+
+// let palabra = prompt ("Ingrese una palabra")
+
+
+// if (esPalindromo(palabra)){
+//     console.log ( palabra + "Es Palindromo")
+// }
+// else {
+//     console.log ("No es Palindromo")
+// }
+
+
+
+
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la suma de los números pares.
+
+//FALTAAAA
+
+//   let numero = prompt("Ingrese numeros separados por coma")
+
+//      let numerosArray = numero.split (",").map(numero)
+        
+
+//      let sumarPar = 0
+
+    
+//     for (let i=0; i < numerosArray.length; i++) {
+    
+//     if (numerosArray[i] % 2 === 0) {
+//       sumarPar += numerosArray[i];
+//     }
+//     }
+
+//     console.log ("La suma de los numeros pares es:" + sumarPar)
+
+
+
+
+
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números negativos.
+
+// let numeros = prompt("Ingresa una serie de números separados por coma:")
+
+
+
+// let numerosArray = numeros.split(",")
+
+// let contadorNegativos = 0
+
+
+// for (let i = 0; i < numerosArray.length; i++) {
+  
+//   let numero = parseInt(numerosArray[i]);
+
+  
+//   if (numero < 0) {
+//     contadorNegativos++;
+//   }
+// }
+
+
+// console.log("Cantidad de números negativos: " + contadorNegativos)
+
+
+
+
+
+
+
 // Pedir al usuario que ingrese un número y mostrar en la consola todos los números impares desde el 1 hasta el número ingresado.
+
+  
+// let numero = parseInt(prompt("Ingresa un número:"))
+
+
+// for (let i = 1; i <= numero; i++) {
+ 
+//   if (i % 2 !== 0) {
+//     console.log(i);
+//   }
+// }
+
+
+
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más pequeño de la serie.
+
+//let numeros = prompt("Ingrese una serie de números separados por coma: ")
+
+
+// let arregloNumeros = numeros.split(",")
+
+
+// let numerosConvertidos = arregloNumeros.map(function(numero){
+//   return parseFloat(numero);
+// })
+
+// let numeroMasPequeno = Math.min.apply(Math, numerosConvertidos)
+
+
+// console.log("El número más pequeño es: " + numeroMasPequeno)
+
+
+
+
+
+
+
 // Pedir al usuario que adivine un número generado aleatoriamente entre 1 y 100. Mostrar en la consola si el usuario adivinó o no el número y la cantidad de intentos que le tomó.
+
+
+
+// const numeroAleatorio = Math.floor(Math.random() * 100) + 1
+
+
+// let intentos = 0
+// let adivinado = false
+
+// while (!adivinado) {
+ 
+//   const numeroUsuario = parseInt(prompt("Adivina el número (entre 1 y 100):"));
+
+//   intentos++
+
+
+//   if (numeroUsuario === numeroAleatorio) {
+//     console.log("¡Correcto! Adivinaste el número en ${intentos} intentos.")
+//     adivinado = true;
+//   } else if (numeroUsuario < numeroAleatorio) {
+//     console.log("Intenta con un número mayor.")
+//   } else {
+//     console.log("Intenta con un número menor.")
+//   }
+// }
+
+
+
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números pares.
+
+
+
+// let serieNumeros = prompt("Ingrese una serie de números separados por coma:")
+
+
+// let numeros = serieNumeros.split(",")
+
+// var contadorPares = 0
+
+
+// for (let i = 0; i < numeros.length; i++) {
+ 
+//   if (parseInt(numeros[i]) % 2 === 0) {
+//     contadorPares++;
+//   }
+// }
+// console.log("La cantidad de números pares es: " + contadorPares)
+
+
+
+
+
 // Dado un array de números, escribir una función que retorne el número más grande del array.
+
+
+// function encontrarMaximo(arr) {
+//     return Math.max(...arr);
+//   }
+  
+  
+//   let numeros = [10, 5, 80, 20, 3];
+//   let maximo = encontrarMaximo(numeros);
+  
+//   console.log(maximo)
+
+
+
+
 // Dado un array de números, escribir una función que retorne un nuevo array con los números pares del array original.
+
+
+// function encontrarNumerosPares(array) {
+    
+//     var numerosPares = array.filter(function(numero) {
+//       return numero % 2 === 0;
+//     })
+    
+
+//     return numerosPares
+//   }
+  
+
+//   var arrayOriginal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   var numerosPares = encontrarNumerosPares(arrayOriginal);
+  
+//   console.log(numerosPares)
+
+
+
+
 // Dado un array de números, escribir una función que retorne la suma de todos los números del array.
+
+
+//Metodo Reduce
+
+// function sumaArray(array) {
+//     return array.reduce((a, b) => a + b, 0)
+//   }
+  
+  
+//   const numeros = [1, 2, 3, 4, 5]
+//   const resultado = sumaArray(numeros)
+//   console.log(resultado) // Salida: 15
+
+
+
+
 // Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.
+
+function convertirAMayusculas(arr) {
+   
+    const nuevoArr = arr.map(function(str) {
+      return str.toUpperCase()
+    });
+    
+    return nuevoArr
+  }
+ 
+  const arrayOriginal = ['hola', 'mundo', 'javascript']
+  const arrayMayusculas = convertirAMayusculas(arrayOriginal)
+  console.log(arrayMayusculas)
+
+
+
+
+
 // Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X.
 // Dado un array de números, escribir una función que retorne la suma de todos los números del array. Además, si algún número es mayor que 10, agregarlo a un nuevo array de "números grandes".
 // Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.
