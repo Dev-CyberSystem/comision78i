@@ -202,7 +202,7 @@ const serieComa = () => {
 const palindromo = () => {
     let palabra = prompt("Ingrese una palabra")
     // split() Devuelve un nuevo arreglo - reverse() Invierte el arreglo - join() Une el arreglo en una cadena
-    cadenaReversa =palabra.split("").reverse().join("")
+    cadenaReversa = palabra.split("").reverse().join("")
     if (cadenaReversa == palabra) {
         return console.log("Es un palíndromo")
     } else {
@@ -242,6 +242,17 @@ const numerosNegativos = () => {
 //numerosNegativos()
 
 // 14) Pedir al usuario que ingrese un número y mostrar en la consola todos los números impares desde el 1 hasta el número ingresado.
+
+//let numeroImpar = prompt("Ingrese un número")
+const mostrarNumerosImpares = () => {
+    for (let i = 0; i <= numeroImpar; i++) {
+        if (i % 2 != 0) {
+            console.log(i)
+        }
+    }
+}
+//mostrarNumerosImpares()
+
 // 15) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más pequeño de la serie.
 
 const peqComa = () => {
@@ -259,6 +270,23 @@ const peqComa = () => {
 
 
 // 16) Pedir al usuario que adivine un número generado aleatoriamente entre 1 y 100. Mostrar en la consola si el usuario adivinó o no el número y la cantidad de intentos que le tomó.
+
+const adivinarNumero = () => {
+    const numeroAleatorio = Math.floor(Math.random() * 100) + 1
+    let intentos = 1
+    let suposicion = prompt("Adivine el número")
+    while (suposicion != numeroAleatorio) {
+        intentos++
+        if (suposicion > numeroAleatorio) {
+            suposicion = prompt("El número es más chico")
+        } else {
+            suposicion = prompt("El número es más grande")
+        }
+    }
+    alert(`¡ADIVINASTE! Te tomó ${intentos} intentos`)
+}
+//adivinarNumero()
+
 
 
 // 17) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números pares.
@@ -291,9 +319,22 @@ function buscarNumeroGrande() {
 //buscarNumeroGrande()
 
 // 19) Dado un array de números, escribir una función que retorne un nuevo array con los números pares del array original.
+
+let arrayOriginal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+let arrayPares = []
+const arrayParesOriginal = () => {
+    for (let i = 0; i < arrayOriginal.length; i++) {
+        if (arrayOriginal[i] % 2 == 0) {
+            arrayPares.push(arrayOriginal[i])
+        }
+    }
+    console.log(arrayPares)
+}
+//arrayParesOriginal()
+
 // 20) Dado un array de números, escribir una función que retorne la suma de todos los números del array.
 
-let array_ = [1,2,3,4,5]
+let array_ = [1, 2, 3, 4, 5]
 const sumaArray = () => {
     let suma = 0
     for (let i = 0; i < array_.length; i++) {
@@ -303,13 +344,157 @@ const sumaArray = () => {
 }
 //sumaArray()
 
-// Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.
-// Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X.
-// Dado un array de números, escribir una función que retorne la suma de todos los números del array. Además, si algún número es mayor que 10, agregarlo a un nuevo array de "números grandes".
-// Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.
-// Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres y que empiecen con la letra "a".
-// Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.
-// Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original, pero sumándoles 1.
-// Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el último.
-// Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el primero y el último.
-// Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el número que se encuentre en la posición X.
+// 21) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.
+
+let arrayStrings = ["hola", "todo", "bien"]
+let arrayStringsMayus = []
+
+const convertirMayus = () => {
+    for (let i = 0; i < arrayStrings.length; i++) {
+        arrayStringsMayus.push(arrayStrings[i].toLocaleUpperCase())
+    }
+    console.log(arrayStringsMayus)
+}
+//convertirMayus()
+
+// 22) Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X.
+
+let arrayOrishinal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let arrayMayoresX = []
+
+const arrayMayoresQueX = () => {
+    for (let i = 0; i < arrayOrishinal.length; i++) {
+        if (arrayOrishinal[i] > 5) {
+            arrayMayoresX.push(arrayOrishinal[i])
+        }
+    }
+    console.log(arrayMayoresX)
+}
+//arrayMayoresQueX()
+
+// 23) Dado un array de números, escribir una función que retorne la suma de todos los números del array. Además, si algún número es mayor que 10, agregarlo a un nuevo array de "números grandes".
+
+let arrayDado = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+let arrayMayoresDiez = []
+let suma = 0
+
+const mayoresDiez = () => {
+    for (let i = 0; i < arrayDado.length; i++) {
+        suma += arrayDado[i]
+        if (arrayDado[i] > 10) {
+
+            arrayMayoresDiez.push(arrayDado[i])
+        }
+    }
+    console.log(suma)
+    console.log(arrayMayoresDiez)
+}
+//mayoresDiez()
+
+// 24) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.
+
+let arrayBase = ["Manzana", "Pera", "Uva", "Sandía", "Zanahoria"]
+let arrayCinco = []
+
+const arrayMasCinco = () => {
+    for (let i = 0; i < arrayBase.length; i++) {
+        if (arrayBase[i].length > 5) {
+            arrayCinco.push(arrayBase[i])
+        }
+    }
+    console.log(arrayCinco)
+}
+//arrayMasCinco()
+
+// 25) Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres y que empiecen con la letra "a".
+
+let arrayBaseUno = ["Manzana", "Pera", "Uva", "Arándano", , "Zanahoria", "Ananá", "Acelga",]
+let arrayCincoUno = []
+
+const arrayMasCincoA = () => {
+    for (let i = 0; i < arrayBaseUno.length; i++) {
+        if (arrayBaseUno[i].length > 5 && arrayBaseUno[i].startsWith("A")) {
+            arrayCincoUno.push(arrayBaseUno[i])
+        }
+    }
+    console.log(arrayCincoUno)
+}
+//arrayMasCincoA()
+
+// 26) Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.
+
+let arrayX = [5, 10, 15, 20, 25, 30, 35, 40]
+let arrayXNuevo = []
+let contador = 0
+
+const arrayMayores = () => {
+    for (let i = 0; i < arrayX.length; i++) {
+        if (arrayX[i] > 10) {
+            arrayXNuevo.push(arrayX[i])
+            contador++
+        }
+        if (contador == 3) {
+            break
+        }
+
+    }
+    console.log(arrayXNuevo)
+}
+//arrayMayores()
+
+// 27) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original, pero sumándoles 1.
+
+let arrayDeNumeros = [5, 10, 15, 20, 25, 30, 35, 40]
+let arrayDeNumerosNuevo = []
+
+const arrayMasUno = () => {
+    for (let i = 0; i < arrayDeNumeros.length; i++) {
+        arrayDeNumerosNuevo.push(arrayDeNumeros[i] + 1)
+    }
+    console.log(arrayDeNumerosNuevo)
+}
+//arrayMasUno()
+
+// 28) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el último.
+
+let arrayNumber = [1, 2, 3, 4, 5]
+let arrayNumberNuevo = []
+
+const arrayMenosUltimo = () => {
+    for (let i = 0; i < arrayNumber.length; i++) {
+        arrayNumberNuevo.push(arrayNumber[i])
+    }
+    arrayNumberNuevo.pop()
+    console.log(arrayNumberNuevo)
+}
+//arrayMenosUltimo()
+
+// 29) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el primero y el último.
+
+let arrayY = [10, 20, 30, 40, 50]
+let arrayNuevoY = []
+
+const arrayMenosUltimoPrimero = () => {
+    for (let i = 0; i < arrayY.length; i++) {
+        arrayNuevoY.push(arrayY[i])
+    }
+    arrayNuevoY.pop()
+    arrayNuevoY.shift()
+    console.log(arrayNuevoY)
+}
+//arrayMenosUltimoPrimero()
+
+// 30) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el número que se encuentre en la posición X.
+
+let arrayEspecifico = [2, 4, 6, 8, 10]
+let arrayEspecificoNuevo = []
+let x = 2
+
+const arrayMenosX = () => {
+    for (let i = 0; i < arrayEspecifico.length; i++) {
+        arrayEspecificoNuevo.push(arrayEspecifico[i])
+    }
+    arrayEspecificoNuevo.splice(x, 1)
+    console.log(arrayEspecificoNuevo)
+}
+//arrayMenosX()
