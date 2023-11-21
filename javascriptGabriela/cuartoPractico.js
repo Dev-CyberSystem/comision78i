@@ -385,25 +385,74 @@
 
 // Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings en mayúsculas.
 
-function convertirAMayusculas(arr) {
+// function convertirAMayusculas(arr) {
    
-    const nuevoArr = arr.map(function(str) {
-      return str.toUpperCase()
-    });
+//     const nuevoArr = arr.map(function(str) {
+//       return str.toUpperCase()
+//     });
     
-    return nuevoArr
-  }
+//     return nuevoArr
+//   }
  
-  const arrayOriginal = ['hola', 'mundo', 'javascript']
-  const arrayMayusculas = convertirAMayusculas(arrayOriginal)
-  console.log(arrayMayusculas)
+//   const arrayOriginal = ['hola', 'mundo', 'javascript']
+//   const arrayMayusculas = convertirAMayusculas(arrayOriginal)
+//   console.log(arrayMayusculas)
 
 
 
 
 
 // Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X.
+
+
+// function mayoresQueX(array, X) {
+//     return array.filter(num => num > X)
+//   }
+  
+  
+  
+//   const numeros = [3, 6, 7, 2, 9, 1]
+//   const X = 5
+  
+//   const numerosMayores = mayoresQueX(numeros, X)
+//   console.log(numerosMayores)
+
+
+
+
 // Dado un array de números, escribir una función que retorne la suma de todos los números del array. Además, si algún número es mayor que 10, agregarlo a un nuevo array de "números grandes".
+//funcion con la suma de arrays
+//array con numeros grandes
+
+// function sumarNumeros(array) {
+//     let sumaTotal = 0
+//     let numerosGrandes = []
+  
+//     for (let i = 0; i < array.length; i++) {
+//       sumaTotal += array[i]
+  
+//       if (array[i] > 10) {
+//         numerosGrandes.push(array[i])
+//       }
+//     }
+  
+//     return {
+//       sumaTotal: sumaTotal,
+//       numerosGrandes: numerosGrandes
+//     }
+//   }
+  
+  
+//   let numeros = [5, 12, 8, 15, 3]
+//   let resultado = sumarNumeros(numeros)
+  
+//   console.log("La suma total es: " + resultado.sumaTotal)
+//   console.log("Los números grandes son: " + resultado.numerosGrandes)
+
+
+
+
+
 // Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres.
 // Dado un array de strings, escribir una función que retorne un nuevo array con todos los strings que tengan más de 5 caracteres y que empiecen con la letra "a".
 // Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.
