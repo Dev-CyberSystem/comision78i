@@ -61,14 +61,14 @@ maxMin(num2,num3)*/
 // Crear un programa que pida al usuario una contraseña y la valide según ciertas condiciones, como la longitud y la presencia de caracteres especiales.
 // let contraseña=prompt("ingrese contraseña").length
 
-const comprbacion = (palabra) => {
+const comprovacion = (palabra) => {
   if (palabra < 8) {
     alert("contraseña incorrecta");
   } else {
     alert("contraseña correcta!");
   }
 };
-//  comprbacion()
+//  comprovacion()
 
 // Crear un programa que pida al usuario una calificación y luego muestre si es aprobatoria o no (nota mínima para aprobar es 70).
 // let nota= prompt("Ingresa tu nota entre 10 y 100")
