@@ -53,22 +53,17 @@
 
 
 
-
-//Crear un programa que pida al usuario un número y luego muestre si es par o impar. FALTA!!!!!!!!!!!!!!!!!!!!!!!
+//Crear un programa que pida al usuario un número y luego muestre si es par o impar. 
   
-//    let numero = parseInt(prompt ("Ingrese un numero"))
+let numero = prompt("Ingrese un número:")
 
-//    const restoNumero = (numero) => {
-//     if (numero % 2 === 0){
-//         console.log ("El numero" + numero + "es par")
-//     }
-//     else {
-//         console.log ("El numero" + numero + "es impar")
-//     }
-//     restoNumero()
-//     }
 
-      
+if (numero % 2 === 0) {
+  console.log(numero + " es un número par.");
+} else {
+  console.log(numero + " es un número impar.");
+}
+   
 
 
 
@@ -182,58 +177,41 @@
 
 // Crear un programa que pida al usuario un número del 1 al 7 y luego muestre el día de la semana correspondiente.
 
-    // let ingreseNumero = prompt("Ingrese un numero del 1 al 7")
-    // let fecha = new Date (ingreseNumero)
-    // let dia = ingreseNumero.getDay() //me da la fecha en formato numero
-
-    // let diaSemana
-
-   
     
-    // switch (dia){
-    //     case 0 :
-    //     diaSemana = "Domingo"
-    //     //console.log (diaSemana)
-    //     break;
+// let numero = parseInt(prompt("Ingrese un número del 1 al 7:"))
 
-    //     case 1 : 
-    //     diaSemana = "Lunes"
-    //     //console.log (diaSemana)
-    //     break;
 
-    //     case 2 : 
-    //     diaSemana = "Martes"
-    //    // console.log (diaSemana)
-    //     break;
-
-    //     case 3 : 
-    //     diaSemana = "Miercoles"
-    //    // console.log (diaSemana)
-    //     break;
-
-    //     case 4 : 
-    //     diaSemana = "Jueves"
-    //     //console.log (diaSemana)
-    //     break;
-
-    //     case 5: 
-    //     diaSemana = "Viernes"
-    //     //console.log (diaSemana)
-    //     break;
-
-    //     case 6 : 
-    //     diaSemana = "Sabado"
-    //     //console.log (diaSemana)
-    //     break;
-        
-    //     default :
-    //     //console.log ("Dia no valido")
-    // }
-
-    // console.log ("El dia de la semana de esa fecha es: " + diaSemana )
+// if (numero >= 1 && numero <= 7) {
     
+//     let dia
+//     switch (numero) {
+//         case 1:
+//             dia = "Domingo"
+//             break
+//         case 2:
+//             dia = "Lunes"
+//             break
+//         case 3:
+//             dia = "Martes"
+//             break
+//         case 4:
+//             dia = "Miércoles"
+//             break
+//         case 5:
+//             dia = "Jueves"
+//             break
+//         case 6:
+//             dia = "Viernes"
+//             break
+//         case 7:
+//             dia = "Sábado"
+//             break
+//     }
 
- 
+//     console.log("El día correspondiente al número ingresado es:", dia)
+// } else {
+//     console.log("El número ingresado no está dentro del rango válido.")
+// }
 
 
 
