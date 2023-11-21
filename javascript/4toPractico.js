@@ -203,7 +203,18 @@ let numeros2 = serieNumeros2.split(",")
 let numMinimo = Math.min (...numeros2)
 console.log("El n° más pequeño de la serie ingresada es " + numMinimo)
 // 16) Pedir al usuario que adivine un número generado aleatoriamente entre 1 y 100. Mostrar en la consola si el usuario adivinó o no el número y la cantidad de intentos que le tomó.
-
+const punto16 = () => {
+    let intentos = 0
+    let número = Math.floor((Math.random() * 100))
+    let usuario;
+    do {
+    usuario = parseInt(prompt("Ingrese un número del 1 al 100"))
+    intentos++
+    } while (usuario != número)
+    console.log("El número que ingresaste es: " + número)
+    console.log("Los intentos fueron: " + intentos)
+}
+punto16()
 // 17) Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números pares.
 const numeroPares =(esPar) => {
     let number = esPar.split(",")
@@ -318,7 +329,65 @@ const arrayConA =(stringConA) => {
 }
 arrayConA(array25)
 // 26) Dado un array de números y un número X, escribir una función que retorne un nuevo array con todos los números del array original que sean mayores que X. Además, cortar el array resultante para que tenga solamente los primeros 3 números.
+let array26 = [11,2,33,4,5,7]
+let numX = 4
+let primerosTres = []
+let todosNumMayores = []
+const arrayTres =(número, X) => {
+    for (let i = 0; i < número.length; i++){
+       if (número[i] > X){
+        todosNumMayores.push(número[i])
+       } 
+    }
+    console.log("Son mayores a X, los siguientes números: " + todosNumMayores)
+    primerosTres = número.slice(0, 3)
+    console.log("Estos números son los tres primeros del array: " + primerosTres)
+    return{
+        primerosTres: primerosTres,
+        todosNumMayores: todosNumMayores
+    }
+}
+arrayTres(array26, numX)
 // 27) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original, pero sumándoles 1.
+let array27 = [43,56,12,3,9]
+let arrayNuevo = []
+const arrayMas1 =(numero) => {
+    for (let i = 0; i < numero.length; i++){
+        arrayNuevo.push(numero[i] + 1)
+    }
+    console.log("Array nuevo: " + arrayNuevo)
+    return(arrayNuevo)
+}
+arrayMas1(array27)
 // 28) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el último.
+let array28 = [10, 11, 12, 13, 14, 15]
+let arraySinUltimoNum = []
+const arrayNuevo1 =(num) => {
+    arraySinUltimoNum = num.slice(0, 5)
+    console.log("Array sin el último número: " + arraySinUltimoNum)
+    return(arraySinUltimoNum)
+}
+arrayNuevo1(array28)
 // 29) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el primero y el último.
+let array29 = [10, 71, 34, 3, 14, 15]
+let array = []
+const arrayNuevo2 =(number1) => {
+    array = number1.slice(1, 5)// indico la posición de los números que no quiero que esten en el nuevo array.
+    console.log("Array original sin el primer y último número: " + array)
+    return(array)
+}
+arrayNuevo2(array29)
 // 30) Dado un array de números, escribir una función que retorne un nuevo array con todos los números del array original menos el número que se encuentre en la posición X.
+let array30 = [4,6,3,8,20,54]
+let X = 2
+let arraySinX =[]
+const arrayNuevo3 =(numero, X) => {
+    for (let i = 0; i < numero.length; i++){
+        if (i !== X) { // aqui indico que el n° que esta en la posición de X, no sea agregado al nuevo array. 
+            arraySinX.push(numero[i])
+        }
+    }
+    console.log("array nuevo: " + arraySinX)
+    return(arraySinX)
+}
+arrayNuevo3(array30, X)
