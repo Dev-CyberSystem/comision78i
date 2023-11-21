@@ -280,29 +280,103 @@
 
 // Crear un programa que pida al usuario dos números y luego muestre si su suma es mayor, menor o igual a 100.
   
-let numero1 = parseFloat(prompt("Ingrese el primer número:"))
-let numero2 = parseFloat(prompt("Ingrese el segundo número:"))
+// let numero1 = parseFloat(prompt("Ingrese el primer número:"))
+// let numero2 = parseFloat(prompt("Ingrese el segundo número:"))
 
 
-let suma = numero1 + numero2
+// let suma = numero1 + numero2
 
-if (suma > 100) {
-  console.log("La suma de los números es mayor a 100")
-} else if (suma < 100) {
-  console.log("La suma de los números es menor a 100")
-} else {
-  console.log("La suma de los números es igual a 100")
-}
+// if (suma > 100) {
+//   console.log("La suma de los números es mayor a 100")
+// } else if (suma < 100) {
+//   console.log("La suma de los números es menor a 100")
+// } else {
+//   console.log("La suma de los números es igual a 100")
+// }
  
 
 // Crear un programa que pida al usuario tres números y luego muestre cuál es el mayor de los tres.
 
+// let num1 = parseInt (prompt("Ingrese el primer numero"))
+// let num2 = parseInt (prompt("Ingrese el segundo numero"))
+// let num3 = parseInt (prompt("Ingrese el tercer numero"))
+
+// if (num1 >= num2 && num1 >=num3){
+//     console.log ("El numero "+ num1 + " es mayor")
+// }
+// else if (num2 >= num1 && num2 >= num3){
+//     console.log ("El numero " + num2 + " es mayor")
+// }
+// else {
+//     console.log ("El numero " + num3 + " es mayor")
+// }
+
 // Crear un programa que pida al usuario una letra y luego muestre si es una letra mayúscula o minúscula.
+
+//   let letra = prompt("Ingrese una letra")
+
+//   if (letra === letra.toUpperCase()){
+//     console.log ("La letra " + letra + " es mayuscula")
+//   }
+ 
+//   else {
+//     console.log ("Es minuscula ")
+//   }
 
 //Crear una función que tome un número como parámetro y devuelva "Fizz" si es divisible por 3, "Buzz" si es divisible por 5 o "FizzBuzz" si es divisible por ambos. En cualquier otro caso, devolver el número.
 
+// function fizzBuzz (numero){
+//     if(numero % 3 === 0 && numero % 5 ===0){
+//         console.log ("fizzBuzz")
+//     }
+//     else if (numero % 3 === 0){
+//         console.log("Fizz")
+//     }
+//     else if ( numero % 5 === 0){
+//         console.log ("Buzz")
+//     }
+//     else {
+//         console.log (numero)
+//     }
+// }
+
+
+// fizzBuzz(45)
+
+
+
 // Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
 
+//  let numero = parseInt(prompt("Ingese un numero"))
+
+//  function esNumeroPerfecto(numero) {
+//    let sumaDivisores = 0
+ 
+//    for (let i = 1; i < numero; i++) {
+//      if (numero % i === 0) {
+//        sumaDivisores += i;
+//      }
+//    }
+ 
+//    if (sumaDivisores === numero) {
+//      return true;
+//    } else {
+//      return false;
+//    }
+//  }
+ 
+//  let esPerfecto = esNumeroPerfecto(numero);
+ 
+//  if (esPerfecto) {
+//    console.log(numero + " es un número perfecto.");
+//  } else {
+//    console.log(numero + " no es un número perfecto.");
+//  }
+//  esNumeroPerfecto()
+
 // Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
+
+
+
 
 // Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
