@@ -12,9 +12,9 @@ let carrito = []
 
 // Función para agregar productos al array (en este caso carrito)
 
-const agregarProductos = (array, producto) => {
+const agregarProductos = (producto) => {
     producto = producto.toLowerCase()
-    array.push(producto)
+    carrito.push(producto)
 }
 
 // Función para ver los productos del array (en este caso carrito)
@@ -30,12 +30,15 @@ const listaDeProductos = () => {
 
 const busquedaDeProducto = (productoABuscar) => {
     productoABuscar = productoABuscar.toLowerCase()
+    let encontrado = false
     for (let i = 0; i < carrito.length; i++) {
-        if (productoABuscar === carrito [i]) {
-            return console.log("El producto " + productoABuscar + " fue encontrado en el Carrito, su posicion es la número " + i)
-        } else {
-            return console.log("Lo sentimos, no pudimos encontrar " + productoABuscar + " en el carrito ¿Probaste agregandolo?")
+        if (carrito[i].includes(productoABuscar)) {
+            encontrado = true
+            console.log ("El producto " + productoABuscar + " está presente en el carrito, su posición es la número " + i) 
         }
+    }
+    if (!encontrado) {
+        console.log ("Lo sentimos! No pudimos encontrar " + productoABuscar + " en tu carrito ¿Probaste agregándolo?")
     }
 }
 
