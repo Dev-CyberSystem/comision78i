@@ -11,6 +11,33 @@
 // o una letra
 // ● Eliminar producto del carrito
 let carrito = []
+const inputCarrito = document.getElementById('inputCarrito')
+const btnAgregar = document.getElementById('agregarProducto')
+let carritoContendor = document.querySelector('.carrito')
+let listaCarrito = document.createElement('ul')
+carritoContendor.appendChild(listaCarrito)
+
+btnAgregar.addEventListener('click', (e) => {
+    e.preventDefault()
+    let producto = inputCarrito.value
+    if(carrito.find(item => item == producto)){
+        console.log('el producto ya se encuentra en el carrito')
+    }else{
+        carrito.push(producto)
+        console.log('Producto agregado correctamente')
+        inputCarrito.value=''
+        console.log(carrito)
+        listarProductos()
+    }
+})
+
+const listarProductos = () => {
+    let producto = document.createElement('li')
+    for (let i=0; i < carrito.length; i++){
+        producto.innerHTML = `<li>${carrito[i]}<button>Borrar</button></li>`
+        listaCarrito.appendChild(producto)
+    } 
+}
 
 const buscarProducto = (str) => {
     let buscar = str;
@@ -31,21 +58,7 @@ const eliminarProducto = (str) =>{
     console.log(carrito)
 }
 
-const agregarProducto = (item) =>{
-    let producto = item
-    if(carrito.find(item => item == producto)){
-        console.log('el producto ya se encuentra en el carrito')
-    }else{
-        carrito.push(producto)
-        console.log('Producto agregado correctamente')
-    }
-}
 
-const listarProductos = () => { 
-  for (let i=0; i < carrito.length; i++){
-    console.log(carrito[i])
-  } 
-}
 
 const filtrarProducto =(palabra)=>{
     let resultado= carrito.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
