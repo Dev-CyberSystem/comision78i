@@ -91,3 +91,27 @@ esVocal('i');
 
 /*4) Crea un programa que reciba un número del 1 al 5 y muestre el nombre del día de la semana 
 correspondiente a esa posición en un arreglo.*/
+function obtenerDiaSemana(numero) {
+    //creamos un arreglo
+    const diasSemana = [
+        'Domingo',
+        'Lunes',
+        'Martes',
+        'Miércoles',
+        'Jueves',
+        'Viernes',
+        'Sábado'
+    ];
+
+    //si numero es mayor o igual a 1 y numero es menor o igual que 5
+    if (numero >= 1 && numero <= 5) {
+        const nombreDia = diasSemana[numero - 1];
+        console.log(`El día correspondiente al número ${numero} es: ${nombreDia}`);
+    } else {
+        console.log('Por favor, ingresa un número del 1 al 5.');
+    }
+}
+
+// Ejemplo de uso
+const numeroIngresado = 3; // Puedes cambiar este número para probar diferentes días
+obtenerDiaSemana(numeroIngresado);
