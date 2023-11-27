@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <h1>Carrito</h1>
+
+    <h2>Tu carrito tiene <span id="catidadDeProductos"></span> productos </h2>
+    <form id="form-add-producto" >
+        <label for="">Agregar Producto</label>
+        <input type="text" id="addProduct" required>
+        <button type="button" id="buttonAdd">Agregar</button>
+    </form>
+    <ul id="listaProductos"></ul>
+
+    <form id="form-search-product">
+        <label for="">Buscar productos</label>
+        <input type="text" id="search-product" required>
+        <button type="button" id="button-search">Buscar</button>
+    </form>
+    
+
+    <script src="./carrito.js"></script>
+</body>
+</html>
