@@ -6,6 +6,12 @@ const inputAddProduct = document.getElementById("addProduct");
 const buttonAddProduct = document.getElementById("buttonAdd");
 const listaProductos = document.getElementById("listaProductos");
 
+const formSerch = document.getElementById("formSerchProduct")
+const inputSerch = document.getElementById("inputSerchProduct")
+const buttonSerch = document.getElementById("buttonSerch")
+const p=document.getElementById("serchResults")
+
+
 buttonAddProduct.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -34,3 +40,29 @@ const listarProductos = () => {
     });
   }
 };
+
+buttonSerch.addEventListener("click", (e) => {
+  e.preventDefault()
+  const busqueda = inputSerch.value.trim()
+  console.log(busqueda)
+  carrito.forEach((producto)=>{
+    if (producto===busqueda) {
+      p.textContent=producto
+    }
+    formSerch.reset()
+  })
+
+}
+)
+
+// const buscarProducto = (str) => {
+//   let buscar = str;
+//   let encontrado = ''
+//   for (let i = 0; i < carrito.length; i++){
+//       if (carrito[i].toLowerCase() === buscar.toLowerCase()){
+//           encontrado = carrito[i]
+//           console.log(encontrado)
+//       }
+//   }
+//   if(encontrado=='') console.log('No existe el producto')
+// }
