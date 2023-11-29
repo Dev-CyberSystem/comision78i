@@ -59,21 +59,18 @@ btnAgregar.addEventListener('click', (e) => {
 //BUSCAR Y FILTRRAR
 const inputBuscar = document.getElementById('buscarCarrito')
 const buscarResultados = document.getElementById('buscar')
+const btnFiltrar = document.getElementById('filtrar')
+const listaResultado = document.createElement('ul')
 
-const buscarProducto = (str) => {
-    const listaResultado = document.createElement('ul')
+const buscarProducto = () => {
+    listaResultado.innerHTML=''
     buscarResultados.appendChild(listaResultado)
-    let resultado = carrito.filter(producto => producto.producto.toLowerCase().includes(str.toLowerCase()));
+    resultado = carrito.filter(producto => producto.producto.toLowerCase().includes(inputBuscar.value.toLowerCase()));
     if(resultado.length>0){
         for(i=0; i<resultado.length; i++){
             let resultadoItem = document.createElement('li')
-            console.log(resultadoItem)
             resultadoItem.textContent=`${resultado[i].producto}`
-            if(resultado.includes(resultado[i].producto)){
-                return
-            }else{
-                listaResultado.appendChild(resultadoItem)
-            }
+            listaResultado.appendChild(resultadoItem)
         }
     }else{
         let resultadoItem = document.createElement('li')
@@ -82,9 +79,8 @@ const buscarProducto = (str) => {
     }
 }
 
-inputBuscar.addEventListener('input', ()=> buscarProducto(inputBuscar.value))
+inputBuscar.addEventListener('input', (e) => {
+    e.preventDefault()
+    buscarProducto()
+})
 
-// const filtrarProducto =(palabra)=>{
-//     let resultado= carrito.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
-//     return console.log(resultado)
-// }
