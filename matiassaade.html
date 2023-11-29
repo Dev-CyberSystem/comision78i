@@ -6,18 +6,26 @@
     <title>Javascript</title>
 
   </head>
-  <body>
+  <body style="font-family: sans-serif">
     <header>
       <h1>Quizz Javascript</h1>
     </header>
-    <main>
-      <h3>Carrito</h3>
+    <main style='display: flex; justify-content: space-around; align-items: flex-start; border: 2px solid #000; border-radius: 10px; min-height: 300px; padding-top: 20px; max-width: 700px'>
       <section class="carrito">
+        <h3>Carrito</h3>
         <form>
           <label for="inputCarrito">
             <input type="text" name="inputCarrito" id="inputCarrito" autofocus>
           </label>
           <input type="submit" value="AGREGAR" id="agregarProducto">
+        </form>
+      </section>
+      <section class="buscar" id="buscar">
+        <h3>Buscar Producto</h3>
+        <form>
+          <label for="buscarCarrito">
+            <input type="text" name="buscarCarrito" id="buscarCarrito">
+          </label>
         </form>
       </section>
     </main>

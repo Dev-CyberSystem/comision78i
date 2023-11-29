@@ -55,17 +55,34 @@ btnAgregar.addEventListener('click', (e) => {
     inputCarrito.value=''
 })
 
-// const buscarProducto = (str) => {
-//     let buscar = str;
-//     let encontrado = ''
-//     for (let i = 0; i < carrito.length; i++){
-//         if (carrito[i].toLowerCase() === buscar.toLowerCase()){
-//             encontrado = carrito[i]
-//             console.log(encontrado)
-//         }
-//     }
-//     if(encontrado=='') console.log('No existe el producto')
-//  }
+
+//BUSCAR Y FILTRRAR
+const inputBuscar = document.getElementById('buscarCarrito')
+const buscarResultados = document.getElementById('buscar')
+
+const buscarProducto = (str) => {
+    const listaResultado = document.createElement('ul')
+    buscarResultados.appendChild(listaResultado)
+    let resultado = carrito.filter(producto => producto.producto.toLowerCase().includes(str.toLowerCase()));
+    if(resultado.length>0){
+        for(i=0; i<resultado.length; i++){
+            let resultadoItem = document.createElement('li')
+            console.log(resultadoItem)
+            resultadoItem.textContent=`${resultado[i].producto}`
+            if(resultado.includes(resultado[i].producto)){
+                return
+            }else{
+                listaResultado.appendChild(resultadoItem)
+            }
+        }
+    }else{
+        let resultadoItem = document.createElement('li')
+        resultadoItem.textContent='No hay productos con ese nombre'
+        listaResultado.appendChild(resultadoItem)
+    }
+}
+
+inputBuscar.addEventListener('input', ()=> buscarProducto(inputBuscar.value))
 
 // const filtrarProducto =(palabra)=>{
 //     let resultado= carrito.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
