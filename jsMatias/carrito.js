@@ -14,66 +14,60 @@ let carrito = []
 const inputCarrito = document.getElementById('inputCarrito')
 const btnAgregar = document.getElementById('agregarProducto')
 const carritoContendor = document.querySelector('.carrito')
-const listaCarrito = document.createElement('ul')
+const listaCarrito = document.createElement('ol')
 carritoContendor.appendChild(listaCarrito)
 
-
-const listarProductos = () => {
+//MOSTRAR CARRITO
+const crearProducto = (newProducto) =>{
+    const productoItem = document.createElement('li')
+    productoItem.innerText = newProducto.producto
+    productoItem.setAttribute('id', newProducto.id)
     const btnBorrar = document.createElement('button')
-    const producto = document.createElement('li')
     btnBorrar.textContent='X'
     btnBorrar.classList.add('borrar')
-    for(i=0; i<carrito.length; i++){
-        producto.innerText = `${carrito[i].producto}`
-        producto.appendChild(btnBorrar)
-        listaCarrito.appendChild(producto)
-    }
-    // carrito.forEach( item => {
-    //     const btnBorrar = document.createElement('button')
-    //     const producto = document.createElement('li')
-    //     btnBorrar.textContent='X'
-    //     btnBorrar.classList.add='borrar'
-    //     producto.innerText = `${item.producto}`
-    //     producto.appendChild(btnBorrar)
-    //     listaCarrito.appendChild(producto)
-    // })
+    productoItem.appendChild(btnBorrar)
+    listaCarrito.appendChild(productoItem)
 }
-btnAgregar.addEventListener('click', (e) => {
-    e.preventDefault()
-    let producto = inputCarrito.value
-    if(carrito.find(item => item.producto.toLowerCase() == producto.toLowerCase())){
-        alert('el producto ya se encuentra en el carrito')
-        return
-    }else{
-        carrito.push({producto, id:window.crypto.randomUUID()})
-        inputCarrito.value=''
-        listarProductos()
+
+//BORRAR PRODUCTO
+const borrarProducto = (id) =>{
+    carrito = carrito.filter(producto => producto.id !== id)
+    document.getElementById(id).remove()
+}
+listaCarrito.addEventListener('click', (e)=>{
+    if(e.target.classList.contains('borrar') || e.target.parentElement.classList.contains('borrar')){
+        const productoId = e.target.closest('li').id
+        borrarProducto(productoId)
     }
 })
 
-const eliminarProducto = (id) =>{
-    console.log(id)
-    // let nuevoCarrito = carrito.filter(item => item.id !== id)
-    // carrito = nuevoCarrito
-    // listarProductos()
-}
-
-const buscarProducto = (str) => {
-    let buscar = str;
-    let encontrado = ''
-    for (let i = 0; i < carrito.length; i++){
-        if (carrito[i].toLowerCase() === buscar.toLowerCase()){
-            encontrado = carrito[i]
-            console.log(encontrado)
-        }
+//AGREGAR AL CARRITO
+btnAgregar.addEventListener('click', (e) => {
+    e.preventDefault()
+    let producto = inputCarrito.value
+    if(producto.trim() == ''){
+        alert('El ingreso no puede estar vacio')
+    }else{
+        let newProducto = {producto, id:window.crypto.randomUUID().slice(0,4)}
+        carrito.push(newProducto)
+        crearProducto(newProducto)
     }
-    if(encontrado=='') console.log('No existe el producto')
- }
+    inputCarrito.value=''
+})
 
+// const buscarProducto = (str) => {
+//     let buscar = str;
+//     let encontrado = ''
+//     for (let i = 0; i < carrito.length; i++){
+//         if (carrito[i].toLowerCase() === buscar.toLowerCase()){
+//             encontrado = carrito[i]
+//             console.log(encontrado)
+//         }
+//     }
+//     if(encontrado=='') console.log('No existe el producto')
+//  }
 
-
-
-const filtrarProducto =(palabra)=>{
-    let resultado= carrito.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
-    return console.log(resultado)
-}
+// const filtrarProducto =(palabra)=>{
+//     let resultado= carrito.filter(producto => producto.toLowerCase().includes(palabra.toLowerCase()));
+//     return console.log(resultado)
+// }
