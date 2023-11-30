@@ -65,14 +65,15 @@ function buscarProductoEnCarrito(productoABuscar) {
 
 buttonFiltrarProducto.addEventListener("click", (e) => {
   e.preventDefault();
-
   let valorFiltro = inputFiltrarProducto.value.toLowerCase().trim();
   console.log(valorFiltro, "Estoy Filtrado")
-
   let valorFiltrado = buscarProductoFiltrado(valorFiltro);
-
-  console.log(valorFiltrado, "Valor Filtrado")
-
+  enlistador.innerHTML = "";
+  valorFiltrado.forEach((producto) => {
+    const li = document.createElement("li");
+    li.textContent = producto;
+    enlistador.appendChild(li);
+  });
   if(valorFiltrado.length === 0){
     resultadoFiltrado.textContent = `No se encontraron resultados para ${valorFiltro}`;
   } else {
@@ -87,3 +88,4 @@ function buscarProductoFiltrado(filtro){
   const productoFiltrado = carrito.filter( producto => producto.includes(filtro)); // filter() crea un nuevo array con todos los elementos que cumplan la condicion implementada por la funcion dada. includes() determina si un array incluye un determinado elemento, devuelve true o false segun corresponda.
   return productoFiltrado;
 }
+
