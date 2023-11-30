@@ -127,7 +127,7 @@ if (nota >= 0 && nota <= 10) {
 const pares = () => {
     for(let i = 2 ; i <= 20 ; i+=2){
     console.log(i)
-}}; pares();
+}}}; pares();
 
 // Recorrer un string y mostrar en la consola cada letra en mayúsculas.
 
