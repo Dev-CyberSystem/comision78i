@@ -146,6 +146,138 @@ const esMayus = (letra) =>{
 // 6) Crea un programa que reciba una nota del 0 al 10 y muestre la calificación correspondiente (suspenso, aprobado, notable, sobresaliente).
 const calificacion = (nro) =>{
     switch(nro){
+const esMes = (num) =>{
+    switch (num) {
+        case 1:
+            console.log('Enero')
+            break;
+        case 2:
+            console.log('Febrero')
+            break;
+        case 3:
+            console.log('Marzo')
+            break;
+        case 4:
+            console.log('Abril')
+            break;
+        case 5:
+            console.log('Mayo')
+            break;
+        case 6:
+            console.log('Junio')
+            break;
+        case 7:
+            console.log('Julio')
+            break;
+        case 8:
+            console.log('Agosto')
+            break;
+        case 9:
+            console.log('Septiembre')
+            break;
+        case 10:
+            console.log('Octubre')
+            break;
+        case 11:
+            console.log('Noviembre')
+            break;
+        case 12:
+            console.log('Diciembre')
+            break;
+        default:
+            console.log('No ingresaste un caracter valido')
+            break;
+    }
+}
+// esMes(2)
+
+// 2) Crea un programa que reciba un número del 1 al 7 y muestre el día de la semana correspondiente.
+const esDia = (num) =>{
+    switch (num){
+        case 1:
+            console.log('Lunes')
+            break;
+        case 2:
+            console.log('Martes')
+            break;
+        case 3:
+            console.log('Miércoles')
+            break;
+        case 4:
+            console.log('Jueves')
+            break;
+        case 5:
+            console.log('Viernes')
+            break;
+        case 6:
+            console.log('Sábado')
+            break;
+        case 7:
+            console.log('Domingo')
+            break;
+        default:
+            console.log('No ingresaste un número válido')
+            break;
+    }
+}
+// esDia(3);
+
+// 3) Crea un programa que reciba un carácter y muestre si es una vocal o una consonante.
+const esVocal = (a) =>{
+    if('aeiou'.includes(a)){
+        console.log('es una vocal')
+    }else if('0123456789'.includes(a)){
+        console.log('es un número')
+    }else{
+        console.log('es una consonante')
+    }
+}
+// esVocal('a')
+
+// 4) Crea un programa que reciba un número del 1 al 5 y muestre el nombre del día de la semana correspondiente a esa posición en un arreglo.
+const esNumero = (num) => {
+    const dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
+    if(num>5 || num<0) return console.log('numero invalido')
+    switch (num) {
+        case 1:
+            console.log(`el nro ingresado corresponde al dia ${dias[num]}`)
+            break
+        case 2:
+            console.log(`el nro ingresado corresponde al dia ${dias[num]}`)
+            break
+        case 3:
+            console.log(`el nro ingresado corresponde al dia ${dias[num]}`)
+            break
+        case 4:
+            console.log(`el nro ingresado corresponde al dia ${dias[num]}`)
+            break
+        case 5:
+            console.log(`el nro ingresado corresponde al dia ${dias[num]}`)
+            break
+        default:
+            console.log(`el nro ingresado es inválido`)
+            break
+    }
+}
+// esNumero(1)
+
+// 5) Crea un programa que reciba una letra y muestre si es mayúscula o minúscula.
+const esMayus = (a) =>{
+    const mayus = 'abcdefghijklmnñopqrstuvwxyz'
+    const nros = '0123456789'
+    if(mayus.includes(a)){
+        console.log('es minuscula')
+    }else if(nros.includes(a)){
+        console.log('es un numero')
+    }else{
+        console.log('es MAYUSCULA')
+    }
+}
+// esMayus('g')
+
+// 6) Crea un programa que reciba una nota del 0 al 10 y muestre la calificación correspondiente (suspenso, aprobado, notable, sobresaliente).
+const calificacion = (num) =>{
+    switch (num){
         case 0:
         case 1:
         case 2:
@@ -153,6 +285,7 @@ const calificacion = (nro) =>{
         case 4:
         case 5:
             console.log('Suspendido')
+            console.log('Suspenso')
             break
         case 6:
         case 7:
@@ -220,6 +353,93 @@ const masGrande = () =>{
 
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la suma de los números pares.
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números negativos.
+            console.log('SObresaliente')
+            break
+        default:
+            console.log('numero invalido')
+            break
+    }
+}
+// calificacion(4)
+
+// Imprimir los números pares del 2 al 20 en la consola.
+const esPar = () =>{
+    for(i=2; i<=20; i++){
+        if(i%2 == 0) console.log(i)
+    }
+}
+// esPar()
+
+
+// Recorrer un string y mostrar en la consola cada letra en mayúsculas.
+const esMayuscula = (str) =>{
+    let array = str.replace(' ','').split('')
+    for(i=0; i<array.length; i++){
+        console.log(array[i].toUpperCase())
+    }
+}
+// esMayuscula('vllc')
+
+
+// Pedir al usuario que ingrese un número y mostrar en la consola los números del 1 al número ingresado.
+const menoresQue =()=>{
+    let nroUsuario = Number(prompt('Ingresa un numero'))
+    if(isNaN(nroUsuario)) return console.log('Solo podes ingresar numeros')
+    for(i=1; i<nroUsuario; i++){
+        console.log(i)
+    }
+}
+// menoresQue()
+
+
+// Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más grande de la serie.
+const nroMasGrande = () =>{
+    let nroUsuario = prompt('Ingresa los numeros que quieras separados por una coma')
+    let mayor = 0
+    let array = nroUsuario.split(',')
+    // console.log(array)
+    for(i=0; i<array.length; i++){
+        if(Number(array[i]> mayor)) {
+            mayor = array[i]
+        } 
+    }
+    console.log(mayor)
+}
+// nroMasGrande()
+
+
+// Pedir al usuario que ingrese una palabra y mostrar en la consola si la palabra es un palíndromo o no.
+const esPalindromo = () =>{
+    let palabra = prompt('Ingresa una palabra')
+    let palabraArray = palabra.split('')
+    let palabraReves = palabraArray.reverse().join().replaceAll(',','')
+    
+    if(palabra == palabraReves){
+        console.log('PALINDROMO')
+    }else{
+        console.log('NO es palindromo')
+    }
+}
+// esPalindromo()
+
+
+// Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la suma de los números pares.
+const sumaPares = () =>{
+    let numeros = prompt('ingrese numeros separados por coma')
+    let suma = 0;
+    let array = numeros.split(',')
+    for(i=0; i<array.length; i++){
+        if(Number(array[i])%2 === 0){
+            suma += Number(array[i])
+        }
+    }
+    console.log(suma)
+}
+// sumaPares()
+
+
+// Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola la cantidad de números negativos.
+
 // Pedir al usuario que ingrese un número y mostrar en la consola todos los números impares desde el 1 hasta el número ingresado.
 // Pedir al usuario que ingrese una serie de números separados por coma y mostrar en la consola el número más pequeño de la serie.
 // Pedir al usuario que adivine un número generado aleatoriamente entre 1 y 100. Mostrar en la consola si el usuario adivinó o no el número y la cantidad de intentos que le tomó.
