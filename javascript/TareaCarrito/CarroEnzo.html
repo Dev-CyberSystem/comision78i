@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <h1>Carrito</h1>
+
+    <h2>Tu carrito tiene <span id="catidadDeProductos"></span> productos </h2>
+    <form id="form-add-producto" >
+        <label for="">Agregar Producto</label>
+        <input type="text" id="addProduct">
+        <button type="submit" id="buttonAdd">Agregar</button>
+    </form>
+    <ul id="listaProductos"></ul>
+    <h2>Buscador</h2>
+    <form  id="formBuscarProducto">
+        <label > Escribi el nombre del producto </label>
+        <input type="text" id="inputBuscarProducto">
+        <button id="buttonBuscarProducto" type="submit"> Buscar </button>
+    </form>
+    <p id="mostrarResultadoBusqueda"></p>
+    <h2>Filtro</h2>
+    <form  id="formFiltrarProducto">
+        <label > Escribi el nombre del producto </label>
+        <input type="text" id="inputFiltrarProducto">
+        <button id="buttonFiltrarProducto" type="submit">Filtrar</button>
+    </form>
+    <p id="mostrarResultadoFiltrado"></p>
+
+    <h3>Listado de Diego:</h3>
+    <ul id="enlistador"></ul>
+
+
+    <script src="CarroEnzo.js"></script>
+</body>
+</html>
