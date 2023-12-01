@@ -5,12 +5,15 @@ const formAddProduct = document.getElementById("form-add-producto");
 const inputAddProduct = document.getElementById("addProduct");
 const buttonAddProduct = document.getElementById("buttonAdd");
 const listaProductos = document.getElementById("listaProductos");
-
-const formSerch = document.getElementById("formSerchProduct")
-const inputSerch = document.getElementById("inputSerchProduct")
-const buttonSerch = document.getElementById("buttonSerch")
-const p=document.getElementById("serchResults")
-
+const buscarProducto = document.getElementById("formBuscarProducto");
+const inputBuscarProducto = document.getElementById("inputBuscarProducto");
+const buttonBuscarProducto = document.getElementById("buttonBuscarProducto");
+const resultadoBusqueda = document.getElementById("mostrarResultadoBusqueda");
+const filtrarProducto = document.getElementById("formFiltrarProducto");
+const inputFiltrarProducto = document.getElementById("inputFiltrarProducto");
+const buttonFiltrarProducto = document.getElementById("buttonFiltrarProducto");
+const resultadoFiltrado = document.getElementById("mostrarResultadoFiltrado");
+const listaProductosFiltrados = document.getElementById("productosFiltrados")
 
 buttonAddProduct.addEventListener("click", (event) => {
   event.preventDefault();
@@ -19,7 +22,7 @@ buttonAddProduct.addEventListener("click", (event) => {
     alert("No se puede agregar un producto vacio");
     return;
   }
-  const producto = inputAddProduct.value;
+  const producto = inputAddProduct.value.toLowerCase().trim();
   cantidadProdutos.textContent = carrito.length + 1;
   carrito.push(producto);
   console.log(carrito);
@@ -33,36 +36,62 @@ const listarProductos = () => {
   if (carrito.length === 0) {
     listaProductos.textContent = "No hay productos en el carrito";
   } else {
-    carrito.forEach((producto) => {
+    carrito.forEach((producto, index) => {
       const li = document.createElement("li");
-      li.textContent = producto;
+      li.textContent = `${index + 1} - ${producto}`;
       listaProductos.appendChild(li);
     });
   }
 };
 
-buttonSerch.addEventListener("click", (e) => {
-  e.preventDefault()
-  const busqueda = inputSerch.value.trim()
-  console.log(busqueda)
-  carrito.forEach((producto)=>{
-    if (producto===busqueda) {
-      p.textContent=producto
-    }
-    formSerch.reset()
-  })
+buttonBuscarProducto.addEventListener("click", (e) => { // agregamos un evento al boton de buscar producto y le pasamos por parametro el evento e
+  e.preventDefault();
 
+  let productoABuscar = inputBuscarProducto.value.toLowerCase().trim(); // trim() elimina los espacios en blanco al principio y al final de un string
+  console.log(productoABuscar);
+
+  const indice = buscarProductoEnCarrito(productoABuscar); // llamamos a la funcion buscarProductoEnCarrito y le pasamos por parametro el producto a buscar que estamos recibiendo en la funcion buscarProductoEnCarrito
+
+  console.log(indice, "indice");
+
+  if (indice !== -1) { // si el indice es distinto a -1, es porque el producto se encuentra en el carrito
+    resultadoBusqueda.textContent = `El producto ${productoABuscar} se encuentra en el carrito en la posicion ${indice}`;
+  } else {
+    resultadoBusqueda.textContent = `El producto ${productoABuscar} NO se encuentra en el carrito`;
+  }
+});
+
+function buscarProductoEnCarrito(productoABuscar) {
+  return carrito.indexOf(productoABuscar); // traemos por parametro el producto a buscar que estamos recibiendo en la funcion. indexOf nos devuelve el indice del elemento que estamos buscando. Si no lo encuentra devuelve -1
 }
-)
 
-// const buscarProducto = (str) => {
-//   let buscar = str;
-//   let encontrado = ''
-//   for (let i = 0; i < carrito.length; i++){
-//       if (carrito[i].toLowerCase() === buscar.toLowerCase()){
-//           encontrado = carrito[i]
-//           console.log(encontrado)
-//       }
-//   }
-//   if(encontrado=='') console.log('No existe el producto')
-// }
+buttonFiltrarProducto.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  let valorFiltro = inputFiltrarProducto.value.toLowerCase().trim();
+  filtrarProducto.reset();
+  let valorFiltrado = buscarProductoFiltrado(valorFiltro);
+
+  console.log(valorFiltrado, "Valor Filtrado")
+
+  if (valorFiltrado.length === 0) {
+    resultadoFiltrado.textContent = `No se encontraron resultados para ${valorFiltro}`;
+  } else {
+    resultadoFiltrado.textContent = `Se encontraron ${valorFiltrado.length} resultados para ${valorFiltro}`;
+    valorFiltrado.forEach((productoF) => {
+      const li = document.createElement("li");
+      li.textContent = `${productoF}`;
+      listaProductosFiltrados.appendChild(li);
+    })
+  }
+})
+
+function buscarProductoFiltrado(filtro) {
+  
+  if (filtro==="") {
+    alert("Debes ingresar 1 caracter")
+  } else {
+    const productoFiltrado = carrito.filter(producto => producto.includes(filtro)); // filter() crea un nuevo array con todos los elementos que cumplan la condicion implementada por la funcion dada. includes() determina si un array incluye un determinado elemento, devuelve true o false segun corresponda.
+  return productoFiltrado;
+  }
+}
