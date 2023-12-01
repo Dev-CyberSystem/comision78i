@@ -88,4 +88,3 @@ function buscarProductoFiltrado(filtro){
   const productoFiltrado = carrito.filter( producto => producto.includes(filtro)); // filter() crea un nuevo array con todos los elementos que cumplan la condicion implementada por la funcion dada. includes() determina si un array incluye un determinado elemento, devuelve true o false segun corresponda.
   return productoFiltrado;
 }
-
