@@ -13,6 +13,7 @@ const filtrarProducto = document.getElementById("formFiltrarProducto");
 const inputFiltrarProducto = document.getElementById("inputFiltrarProducto");
 const buttonFiltrarProducto = document.getElementById("buttonFiltrarProducto");
 const resultadoFiltrado = document.getElementById("mostrarResultadoFiltrado");
+const listaFiltrada = document.getElementById("mostrarProductosFiltrados")
 
 buttonAddProduct.addEventListener("click", (event) => {
   event.preventDefault();
@@ -78,10 +79,15 @@ buttonFiltrarProducto.addEventListener("click", (e) => {
     resultadoFiltrado.textContent = `No se encontraron resultados para ${valorFiltro}`;
   } else {
     resultadoFiltrado.textContent = `Se encontraron ${valorFiltrado.length} resultados para ${valorFiltro}`;
-  }
+    listaFiltrada.innerHTML = ""
+    valorFiltrado.forEach((producto, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${index + 1} - ${producto}`;
+      listaFiltrada.appendChild(li);
+    })
 
 
-});
+}});
 
 function buscarProductoFiltrado(filtro){
   const productoFiltrado = carrito.filter( producto => producto.includes(filtro)); // filter() crea un nuevo array con todos los elementos que cumplan la condicion implementada por la funcion dada. includes() determina si un array incluye un determinado elemento, devuelve true o false segun corresponda.
