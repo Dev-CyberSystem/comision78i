@@ -25,6 +25,8 @@ const botondefiltrar = document.getElementById("botonDeFiltrar");
 
 const resultadodefiltrado = document.getElementById("resultadoDeFiltrado"); /*esto es un PÁRRAFO*/
 
+const listaDeLasCosasFiltradas  = document.getElementById("listaDeLasCosasFiltradas");
+
 /*vamos a hacer un EVENTO ahora justamente para agarrar los datos*/
 
 botonDeAñadir.addEventListener("click", (event) => {    
@@ -108,9 +110,13 @@ botondefiltrar.addEventListener("click", (event) => {
     if (elNuevoValorFiltrado.lenght === 0) {
         resultadodefiltrado.textContent = "Naranjaaa"
     } else {
-        resultadodefiltrado.textContent = "se encontró algo"
+        const liQueCreamosParaLasCosasFiltradas = document.createElement("li");
+        liQueCreamosParaLasCosasFiltradas.textContent = elNuevoValorFiltrado;
+        listaDeLasCosasFiltradas.appendChild(liQueCreamosParaLasCosasFiltradas);
     }
 })
+
+
 
 /* funciona para buscar lo que filtramos */
 
