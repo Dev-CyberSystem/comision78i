@@ -12,7 +12,19 @@ const listaDeLosProductos = document.getElementById("listaDeLosProductos"); /*la
     const botonDeBuscar = document.getElementById("botonDeBuscar");
     /* aqui terminan las constantes de la segunda clase*/
     
-    
+/* otra constante */
+
+const mostradorDeBusqueda = document.getElementById("mostradorDeBusqueda")
+
+/**/ 
+
+const filtrador = document.getElementById("filtrador");
+
+const añadirproductofiltrar = document.getElementById("añadirProductoFiltrar");
+const botondefiltrar = document.getElementById("botonDeFiltrar");
+
+const resultadodefiltrado = document.getElementById("resultadoDeFiltrado"); /*esto es un PÁRRAFO*/
+
 /*vamos a hacer un EVENTO ahora justamente para agarrar los datos*/
 
 botonDeAñadir.addEventListener("click", (event) => {    
@@ -54,11 +66,24 @@ botonDeBuscar.addEventListener("click", (event) => {
     console.log(productoBuscado)
     
     const indiceFuncionCallBack =  buscaElProductoEnElCarrito(productoBuscado);
+
     if (indiceFuncionCallBack !== -1) {
-        alert("Lo tengoooo")
+        mostradorDeBusqueda.textContent = "El producto " + productoBuscado + " se encuentra en el carrito gg en la posición: " + (indiceFuncionCallBack + 1) }
+        else {
+            mostradorDeBusqueda.textContent = "El producto " + productoBuscado + " NO LO TENGO"
+        }
+    });
+
+
+    /* Aquí arriba haremos que se muestren los resultados en un P
+
+    if (indiceFuncionCallBack !== -1) {
+        alert("Lo tengoooo en la posición: " + (indiceFuncionCallBack + 1))
     } else {
         alert("No lo tengo, pa")
-    }
+    } 
+    */
+
 /*
     carroEnzo.forEach((producto) => {
         if (productoBuscado === producto) {
@@ -67,11 +92,30 @@ botonDeBuscar.addEventListener("click", (event) => {
             alert("Esto es lo único que me consologuea");
         } 
     } ) */
-})
 
 /* buscar en el carrito, en un array. A esta función la puedo invocar dentro del listener que ya hicimos*/
 
 function buscaElProductoEnElCarrito (producto) {
   return carroEnzo.indexOf(producto) /*traemos por parámetro el elemento que estamos buscando, si no lo encuentra tira un -1 */
+}
+
+botondefiltrar.addEventListener("click", (event) => {
+    event.preventDefault();
+    let valorDeloQueFiltro = añadirproductofiltrar.value.toLowerCase().trim();
+    console.log(valorDeloQueFiltro);
+    let elNuevoValorFiltrado = horaDeBuscar(valorDeloQueFiltro)
+
+    if (elNuevoValorFiltrado.lenght === 0) {
+        resultadodefiltrado.textContent = "Naranjaaa"
+    } else {
+        resultadodefiltrado.textContent = "se encontró algo"
+    }
+})
+
+/* funciona para buscar lo que filtramos */
+
+function horaDeBuscar(filtro) {
+    const productoFiltrado = carroEnzo.filter( producto => producto.includes(filtro));
+    return productoFiltrado
 }
 

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Agregador</h1>
     <form id="agregador">
@@ -14,7 +16,7 @@
     </form>
 
     <h2>Listado de los productos: Tienes <span id="cantidadProductos"></span> productos gg</h2>
-    
+
     <ul id="listaDeLosProductos"></ul>
 
     <h3>Buscador</h3>
@@ -24,6 +26,18 @@
         <button type="button" id="botonDeBuscar">busca aquí</button>
     </form>
 
-    <script src="./PrácticaCarrito.js" ></script>
+    <p id="mostradorDeBusqueda"></p>
+
+    <h1>Ahora vamos a filtrar!</h1>
+    <form id="filtrador">
+        <label for="añadirProductoFiltrar">Filtra tu PRODUCTO</label>
+        <input type="text" id="añadirProductoFiltrar">
+        <button type="button" id="botonDeFiltrar">Filtra aquí gg</button>
+    </form>
+    <p id="resultadoDeFiltrado"></p>
+
+
+    <script src="./PrácticaCarrito.js"></script>
 </body>
+
 </html>
