@@ -64,6 +64,7 @@ buttonBuscarProducto.addEventListener("click", (e) => { // agregamos un evento a
 function buscarProductoEnCarrito(productoABuscar) {
   return carrito.indexOf(productoABuscar); // traemos por parametro el producto a buscar que estamos recibiendo en la funcion. indexOf nos devuelve el indice del elemento que estamos buscando. Si no lo encuentra devuelve -1
 }
+
 buttonFiltrarProducto.addEventListener("click", (e) => {
     e.preventDefault();
   
