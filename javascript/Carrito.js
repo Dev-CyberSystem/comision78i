@@ -13,6 +13,7 @@ const inputFiltrarProducto = document.getElementById("inputFiltrarProducto");
 const buttonFiltrarProducto = document.getElementById("buttonFiltrarProducto");
 const resultadoFiltrado = document.getElementById("mostrarResultadoFiltrado");
 const listaFiltrada = document.getElementById("mostrarProductosFiltrados")
+const filtroResultado = document.getElementById("filtroResultado")
 
 buttonAddProduct.addEventListener("click", (event) => {
   event.preventDefault();
@@ -63,8 +64,6 @@ buttonBuscarProducto.addEventListener("click", (e) => { // agregamos un evento a
 function buscarProductoEnCarrito(productoABuscar) {
   return carrito.indexOf(productoABuscar); // traemos por parametro el producto a buscar que estamos recibiendo en la funcion. indexOf nos devuelve el indice del elemento que estamos buscando. Si no lo encuentra devuelve -1
 }
-
-
 buttonFiltrarProducto.addEventListener("click", (e) => {
     e.preventDefault();
   
@@ -74,18 +73,17 @@ buttonFiltrarProducto.addEventListener("click", (e) => {
     let valorFiltrado = buscarProductoFiltrado(valorFiltro);
   
     console.log(valorFiltrado, "Valor Filtrado")
-  
+
     if(valorFiltrado.length === 0){
       resultadoFiltrado.textContent = `No se encontraron resultados para ${valorFiltro}`;
     } else {
       resultadoFiltrado.textContent = `Se encontraron ${valorFiltrado.length} resultados para ${valorFiltro}`;
     }
-  
 });
 
 function buscarProductoFiltrado(filtro){
-    const productoFiltrado = carrito.filter( producto => producto.includes(filtro)); // filter() crea un nuevo array con todos los elementos que cumplan la condicion implementada por la funcion dada. includes() determina si un array incluye un determinado elemento, devuelve true o false segun corresponda.
-    return productoFiltrado;
+  const productoFiltrado = carrito.filter( producto => producto.includes(filtro)); // filter() crea un nuevo array con todos los elementos que cumplan la condicion implementada por la funcion dada. includes() determina si un array incluye un determinado elemento, devuelve true o false segun corresponda.
+  return productoFiltrado;
 }
   
 
