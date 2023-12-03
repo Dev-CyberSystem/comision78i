@@ -79,6 +79,12 @@ buttonFiltrarProducto.addEventListener("click", (e) => {
     } else {
       resultadoFiltrado.textContent = `Se encontraron ${valorFiltrado.length} resultados para ${valorFiltro}`;
     }
+    filtroResultado.innerHTML= ""//para que no se repita dos veces el producto, cuando se recorre el array.
+    valorFiltrado.forEach ((producto , index) => {
+      const li = document.createElement("li")
+      li.textContent = `${index + 1} - ${producto}`;
+      filtroResultado.appendChild(li)
+    })
 });
 
 function buscarProductoFiltrado(filtro){
