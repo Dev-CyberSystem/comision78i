@@ -31,6 +31,24 @@ let ceil = 5.1;
 let resultadoCeil = Math.ceil(ceil);
 console.log("ceil--->", resultadoCeil);
 
+//6-Random Devuelve un número aleatorio entre 0 y 0.99, no llega nunca al 1.
+let random = Math.random();
+console.log("random---> ", random);
+
+
+//Random entre 0 20
+const numerosAleatorios = () => {
+	return Math.floor(Math.random() * 10 +1);
+}
+
+//Traga Monedas
+const girarTragaMonedas = () =>{
+    const num1 = numerosAleatorios();
+    const num2 = numerosAleatorios();
+    const num3 = numerosAleatorios();
+    console.log(`Numeros: ${num1}, ${num2}, ${num3}`);
+}
+
 //ultimo
 const esMayor = (num1, num2) => {
     if (num1 > num2) {
