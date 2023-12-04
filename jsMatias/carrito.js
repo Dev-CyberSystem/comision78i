@@ -30,10 +30,21 @@ const crearProducto = (newProducto) =>{
 }
 
 //BORRAR PRODUCTO
+const borrarProductoPorIdx = (producto) => {
+    const indice = carrito.indexOf(producto)
+    if(indice !== -1){
+        carrito.splice(indice, 1)
+        console.log('Producto eliminado')
+    }else{
+        console.log('No se encuentra el producto')
+    }
+}
 const borrarProducto = (id) =>{
-    carrito = carrito.filter(producto => producto.id !== id)
     document.getElementById(id).remove()
 }
+//Agregar la funcion de BORRAR en la lista filtrada, no en la principal
+
+
 listaCarrito.addEventListener('click', (e)=>{
     if(e.target.classList.contains('borrar') || e.target.parentElement.classList.contains('borrar')){
         const productoId = e.target.closest('li').id
@@ -83,4 +94,3 @@ inputBuscar.addEventListener('input', (e) => {
     e.preventDefault()
     buscarProducto()
 })
-
