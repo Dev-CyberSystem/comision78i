@@ -1,0 +1,40 @@
+{
+    "ropa": [
+      {
+        "tipo": "camisa",
+        "color": "azul",
+        "talla": "M",
+        "precio": 29.99,
+        "marca": "MarcaX"
+      },
+      {
+        "tipo": "pantalón",
+        "color": "negro",
+        "talla": "L",
+        "precio": 39.99,
+        "marca": "MarcaY"
+      },
+      {
+        "tipo": "vestido",
+        "color": "rojo",
+        "talla": "S",
+        "precio": 49.99,
+        "marca": "MarcaZ"
+      },
+      {
+        "tipo": "chaqueta",
+        "color": "verde",
+        "talla": "XL",
+        "precio": 59.99,
+        "marca": "MarcaA"
+      },
+      {
+        "tipo": "falda",
+        "color": "blanca",
+        "talla": "XS",
+        "precio": 34.99,
+        "marca": "MarcaB"
+      }
+    ]
+  }
+  
