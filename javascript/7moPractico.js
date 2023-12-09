@@ -54,17 +54,15 @@ console.log("Fin")
 
 const resultado = document.getElementById("resultado");
 const datosGenerales = ["name", "username", "address", "email", "id", "phone", "website","company"];
-
 console.log("Inicio");
-
 async function obtenerUsuarios() {
   try {
-    let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/4");
+    let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/7");
     let usuarios = await respuesta.json();
-    //resultado.innerHTML = ""
+    resultado.innerHTML = ""
     for (let i = 0; i < datosGenerales.length; i++ ){//se crea el bucle for para recorrer el array de los datos del usuario.
     const li = document.createElement("li")
-    li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]]}`
+    li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]]}`//no son objetos, solo valores primitivos o simple. 
     resultado.appendChild(li)
     }
     console.log(usuarios);
@@ -73,8 +71,11 @@ async function obtenerUsuarios() {
   }
 }
 obtenerUsuarios()
+console.log("Fin");
 
-// console.log("Fin");
+
+
+
 //resultado.innerHTML= ""
     //datosGeneral.forEach ((usuarios , datos) =>{
     //const li = document.createElement("li")
@@ -86,3 +87,16 @@ obtenerUsuarios()
     //const li = document.createElement("li");
     //li.textContent = usuarios.name;
     // resultado.appendChild(li);
+
+
+
+    //if (typeof datosGenerales[i] === "object"){
+      //  if (datosGenerales[i] === "address"){
+        //    li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]].street}, ${usuarios[datosGenerales[i]].suite}, ${usuarios[datosGenerales[i]].city}, ${usuarios[datosGenerales[i]].zipcode}`;
+        //} 
+        //else if (datosGenerales[i] === "company"){
+        //    li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]].name}, ${usuarios[datosGenerales[i]].catchPhrase}, ${usuarios[datosGenerales[i]].bs}`;
+        //}
+        //else {
+         //   li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]]}`//no son objetos, solo valores primitivos o simple. 
+        //}
