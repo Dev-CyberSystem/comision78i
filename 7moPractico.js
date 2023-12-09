@@ -61,8 +61,8 @@ async function obtenerUsuarios() {
   try {
     let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/4");
     let usuarios = await respuesta.json();
-    resultado.innerHTML = ""
-    for (let i = 0; i < datosGenerales.length; i++ ){
+    //resultado.innerHTML = ""
+    for (let i = 0; i < datosGenerales.length; i++ ){//se crea el bucle for para recorrer el array de los datos del usuario.
     const li = document.createElement("li")
     li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]]}`
     resultado.appendChild(li)
