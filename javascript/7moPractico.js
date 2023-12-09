@@ -57,12 +57,20 @@ const datosGenerales = ["name", "username", "address", "email", "id", "phone", "
 console.log("Inicio");
 async function obtenerUsuarios() {
   try {
-    let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/7");
+    let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/5");
     let usuarios = await respuesta.json();
     resultado.innerHTML = ""
     for (let i = 0; i < datosGenerales.length; i++ ){//se crea el bucle for para recorrer el array de los datos del usuario.
     const li = document.createElement("li")
-    li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]]}`//no son objetos, solo valores primitivos o simple. 
+    // son objetos address y company por lo que hice un condicional para poder mostrar las propiedades de cada objeto.
+    if (datosGenerales[i] === "address") {//aqui se comprueba que datosGenerales[i] sea estrictamente igual a address, basicamente buscar que exista address y asi mostrar sus propiedades. 
+      li.textContent = `${datosGenerales[i]} - ${usuarios.address.street}, ${usuarios.address.suite}, ${usuarios.address.city}, ${usuarios.address.zipcode}`
+    } else if (datosGenerales[i] === "company"){
+      li.textContent =  `${datosGenerales[i]} - ${usuarios.company.name}, ${usuarios.company.catchPhrase}, ${usuarios.company.bs}`
+    }
+    else { //los demas datos son obejtos con valores simple o primitivos como el strings en este caso.
+      li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]]}`;
+    } 
     resultado.appendChild(li)
     }
     console.log(usuarios);
@@ -72,31 +80,3 @@ async function obtenerUsuarios() {
 }
 obtenerUsuarios()
 console.log("Fin");
-
-
-
-
-//resultado.innerHTML= ""
-    //datosGeneral.forEach ((usuarios , datos) =>{
-    //const li = document.createElement("li")
-    //li.textContent = `${usuarios} - ${datos}`
-    //resultado.appendChild(li)
-    //}
-    //)
-
-    //const li = document.createElement("li");
-    //li.textContent = usuarios.name;
-    // resultado.appendChild(li);
-
-
-
-    //if (typeof datosGenerales[i] === "object"){
-      //  if (datosGenerales[i] === "address"){
-        //    li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]].street}, ${usuarios[datosGenerales[i]].suite}, ${usuarios[datosGenerales[i]].city}, ${usuarios[datosGenerales[i]].zipcode}`;
-        //} 
-        //else if (datosGenerales[i] === "company"){
-        //    li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]].name}, ${usuarios[datosGenerales[i]].catchPhrase}, ${usuarios[datosGenerales[i]].bs}`;
-        //}
-        //else {
-         //   li.textContent = `${datosGenerales[i]} - ${usuarios[datosGenerales[i]]}`//no son objetos, solo valores primitivos o simple. 
-        //}
