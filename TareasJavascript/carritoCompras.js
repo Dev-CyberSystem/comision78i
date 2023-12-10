@@ -36,6 +36,36 @@ function buscarProductosCarrito(carritoDeCompras, nombre){
 buscarProductosCarrito(carritoDeCompras, 'Leche');
 
 //4-Eliminar productos del carrito:
+// Función para eliminar un producto del carrito por su nombre
+function eliminarProductoDelCarrito(nombre) {
+    const indiceProducto = carritoDeCompras.findIndex(producto => producto.nombre === nombre);
+    if (indiceProducto !== -1) {
+        const productoEliminado = carritoDeCompras.splice(indiceProducto, 1);
+        console.log(`"${productoEliminado[0].nombre}" eliminado del carrito.`);
+    } else {
+        console.log(`El producto "${nombre}" no se encontró en el carrito.`);
+    }
+}
+// Eliminar un producto del carrito por su nombre
+eliminarProductoDelCarrito('Leche');
 
+// Mostrar el contenido actualizado del carrito después de eliminar un producto
+console.log('Contenido del carrito después de eliminar un producto:');
+console.log(carritoDeCompras);
 
-//5-Filtrar elementos del carrito
+// Función para filtrar productos por su nombre
+function filtrarProductosPorNombre(nombreProducto) {
+    const productosFiltrados = carritoDeCompras.filter(producto => {
+        return producto.nombre.toLowerCase() === nombreProducto.toLowerCase();
+    });
+
+    if (productosFiltrados.length > 0) {
+        console.log(`Productos con el nombre "${nombreProducto}":`);
+        console.log(productosFiltrados);
+    } else {
+        console.log(`No hay productos con el nombre "${nombreProducto}".`);
+    }
+}
+
+// Filtrar productos en el carrito por nombre
+filtrarProductosPorNombre('Leche'); 
