@@ -34,15 +34,15 @@
 
 // Sincronia
 
-console.log("Inicio");
+// console.log("Inicio");
 
-// Asincronia
+// // Asincronia
 
-setTimeout(() => {
-    console.log("Timeout");
-}, 3000);
+// setTimeout(() => {
+//   console.log("Timeout");
+// }, 3000);
 
-console.log("Fin")
+// console.log("Fin")
 
 // Async / Await
 
@@ -54,22 +54,23 @@ console.log("Fin")
 
 // const resultado = document.getElementById("resultado");
 
-console.log("Inicio");
+// console.log("Inicio");
 
 async function obtenerUsuarios() {
   try {
     let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/1");
     let usuarios = await respuesta.json();
-    // const li = document.createElement("li");
-    // li.textContent = usuarios.name;
-    // resultado.appendChild(li);
+    let users = JSON.stringify(usuarios)
+    console.log(Object.values(usuarios))
 
-    console.log(usuarios);
+    const li = document.createElement("li");
+    li.textContent = users
+    resultado.appendChild(li);
   } catch (error) {
     console.log(error, "entre en el error");
   }
 }
-obtenerUsuarios()
+
 
 
 // console.log("Fin");
