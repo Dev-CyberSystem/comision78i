@@ -61,8 +61,7 @@ async function obtenerUsuarios() {
     let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/1");
     let usuarios = await respuesta.json();
     let users = JSON.stringify(usuarios)
-    console.log(Object.values(usuarios))
-
+    console.log(usuarios)
     const li = document.createElement("li");
     li.textContent = users
     resultado.appendChild(li);
