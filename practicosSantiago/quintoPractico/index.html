@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUINTO PRACTICO | AGENDA TELEFONICA</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="highlight-text">AGENDA DE CONTACTOS</h1>
+    <p class="highlight-text">Nota: El máximo de contactos que esta agenda permite son 10 (diez) contactos</p>
+    <form action="" id="form-add-contactos">
+        <label>Insertá acá los datos del contacto que querés agregar</label>
+        <input type="text" id="addContactName" placeholder="Nombre del Contacto">
+        <input type="text" id="addContactNumber" placeholder="Número del Contacto">
+        <button type="submit" id="btn-addContact" class="btn-green">Añadir contacto nuevo</button>
+    </form>
+    <form action="" id="form-search-contactos">
+        <label>Insertá acá el nombre del contacto para ver su número (si está en la agenda)</label>
+        <input type="text" id="searchContactName" placeholder="Nombre del Contacto">
+        <button type="submit" id="btn-srchContact" class="btn-green">Realizar Búsqueda</button>
+    </form>
+    <h2 id="resultadoBusqueda"></h2>
+    <form action="" id="form-encontrar-contactos">
+        <label>Insertá acá el nombre del contacto para comprobar si existe en tu agenda</label>
+        <input type="text" id="findContactName" placeholder="Nombre del Contacto">
+        <button type="submit" id="btn-findContact" class="btn-green">Realizar Búsqueda</button>
+    </form>
+    <h2 id="resultadoEncontrado" class="highlight-text"></h2>
+    <h3>Lista de contactos</h3>
+    <ul id="listaDeContactos"></ul>
+    <h2 id="agendaEstado" class="highlight-text"></h2>
+    <h2 id="huecosLibresDeAgenda" class="highlight-text"></h2>
+    </div>
+
+
+
+
+    <script src="./quintoPractico.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

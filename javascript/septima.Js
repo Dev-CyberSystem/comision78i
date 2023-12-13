@@ -66,6 +66,7 @@ async function obtenerUsuarios() {
       li.textContent = `${atributo}: ${usuarios[atributo]}`;
       resultado.appendChild(li);
     } // Aun asi, hay un problema, los atributos company y address figuran como [object object], no estaría sabiendo cómo solucionarlo la verdad
+    
     // const li = document.createElement("li");
     // li.textContent = usuarios.name;
     // resultado.appendChild(li);
