@@ -18,7 +18,6 @@
 // ■ huecosLibres(): indica cuántos contactos más podemos ingresar.
 // ○ Usar LocalStorage para guardar la info de la agenda y para consultar sus
 // datos
-import "../api/fakeApiAgenda.json"
 async function obtenerAgenda() {
 try {
     const agenda = await fetch("../api/fakeApiAgenda.json")
