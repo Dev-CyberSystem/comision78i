@@ -47,14 +47,14 @@
 //     .then(respuesta => console.log(respuesta))
 //     .catch(error => console.log(error));
 
-export let carrito = []
+let carrito = []
 
 async function obtenerProductos() {
     try {
         const productos = await fetch("../api/fakeApi.json");
         const productosJson = await productos.json();
         carrito.push(productosJson);
-
+        console.log(carrito[0])
     } catch (error) {
         console.log(error)
     }
@@ -107,25 +107,25 @@ obtenerProductos()
 
 // El objeto localStorage permite almacenar datos de forma local en el navegador. Los datos almacenados en localStorage no tienen fecha de expiración y permanecen disponibles incluso después de cerrar el navegador o reiniciar el dispositivo.
 
-localStorage.setItem("nombre", "Diego");
+// localStorage.setItem("nombre", "Diego");
 
-const nombre = localStorage.getItem("nombre");
+// const nombre = localStorage.getItem("nombre");
 
-console.log(nombre, "nombre desde local")
+// console.log(nombre, "nombre desde local")
 
-localStorage.removeItem("nombre");
+// localStorage.removeItem("nombre");
 
- const producto = {
-    nombre: "Fernet",
-    precio: 10000,
-    stock: 23
-} 
+//  const producto = {
+//     nombre: "Fernet",
+//     precio: 10000,
+//     stock: 23
+// } 
 
-localStorage.setItem("producto", JSON.stringify(producto));
+// localStorage.setItem("producto", JSON.stringify(producto));
 
-const productoJson = localStorage.getItem("producto");
+// const productoJson = localStorage.getItem("producto");
 
-console.log(JSON.parse(productoJson), "producto desde local")
+// console.log(JSON.parse(productoJson), "producto desde local")
 
 //Tarea
 
