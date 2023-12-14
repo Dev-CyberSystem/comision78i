@@ -38,7 +38,7 @@
     <p id="resultados"></p> -->
 
     <!-- DOM -->
-<!-- 
+    <!-- 
     <h1>Hola Desde HTML</h1>
     <h2 id="segundoTitulo"></h2>
     <h3 class="tercerTitulo"></h3>
@@ -47,9 +47,13 @@
       <h4 id="changeColor">Cambiando el estilo</h4>
     </div>
 
-    <ul></ul>
+    <ul></ul> -->
+    <!-- <button onclick="obtenerUsuarios()">Obtener resultado</button>
 
-    <script src="./javascript/quinta.js"></script> -->
+    <ul id="resultado">     
+    </ul> -->
+
+    <!-- <script src="./javascript/quinta.js"></script>  -->
     <!-- 
     <script src="./javascript/primeraJs.js"></script> -->
     <!-- <script>
@@ -63,5 +67,34 @@
     }
     sumarNumeros();
     </script> -->
+
+    <!-- <button onclick="alerta()">Ejecuta el alert</button>
+    <script>
+      function alerta() {
+        swal({
+          title: "Estas seguro?",
+          text: "Vas a eliminar este producto",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        }).then((willDelete) => {
+          if (willDelete) {
+            carrito.splice(index, 1);
+            swal("Producto Eliminado!!", {
+              icon: "success",
+            });
+          } else {
+            swal("No pusimos eliminarlo");
+          }
+        });
+      }
+    </script> -->
+
+    <script src="./javascript/octava.js"></script>
+
+    <script src="./javascript/export.js"></script>
+    <script src="./javascript/import.js" type="module"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
