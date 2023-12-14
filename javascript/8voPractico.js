@@ -20,9 +20,9 @@
 // datos
 async function obtenerAgenda() {
 try {
-    const agenda = await fetch("../api/fakeApiAgenda.json")
-    const agendaJson = await agenda.json()
-    console.log(agendaJson)
+  const agenda = await fetch("../api/fakeApiAgenda.json")
+  const agendaJson = await agenda.json()
+  console.log(agendaJson)
 }catch (error) {
   console.log(error)
 }
