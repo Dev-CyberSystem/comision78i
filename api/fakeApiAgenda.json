@@ -1,0 +1,42 @@
+[
+    { 
+        "nombre" : "Lourdes",
+        "teléfono" : "3814682517"
+    },
+    {
+        "nombre" : "Baustista",
+        "teléfono" : "3812026431"
+    },
+    {
+        "nombre" : "Ambar",
+        "teléfono" : "3814464310"
+    },
+    {
+        "nombre" : "Benicio",
+        "teléfono" : "3815043542"
+    },
+    {
+        "nombre" : "Faustino",
+        "teléfono" : "3818970354"
+    },
+    {
+        "nombre" : "Martina",
+        "teléfono" : "3818796210"
+    },
+    {
+        "nombre" : "Valentina",
+        "teléfono" : "3815502597"
+    },
+    {
+        "nombre" : "Mia",
+        "teléfono" : "3814616735"
+    },
+    {
+        "nombre" : "Pablo",
+        "teléfono" : "3815279876"
+    },
+    {
+        "nombre" : "Jose",
+        "teléfono" : "3814616735"
+    }
+]
