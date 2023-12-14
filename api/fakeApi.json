@@ -1,0 +1,22 @@
+[
+  {
+    "producto": "Tortillas",
+    "precio": 100,
+    "stock": 100
+  },
+  {
+    "producto": "Pan",
+    "precio": 1200,
+    "stock": 100
+  },
+  {
+    "producto": "Leche",
+    "precio": 500,
+    "stock": 100
+  },
+  {
+    "producto": "Coca",
+    "precio": 500,
+    "stock": 100
+  }
+]

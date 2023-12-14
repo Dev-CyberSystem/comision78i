@@ -34,15 +34,17 @@
 
 // Sincronia
 
-console.log("Inicio");
-
+// console.log("medio")
+// console.log("Fin")
 // Asincronia
 
-setTimeout(() => {
-    console.log("Timeout");
-}, 3000);
+// console.log("Inicio");
 
-console.log("Fin")
+// setTimeout(() => {
+//   console.log("Timeout");
+// }, 3000);
+
+// console.log("Fin")
 
 // Async / Await
 
@@ -72,6 +74,6 @@ async function obtenerUsuarios() {
 
 
 
-// console.log("Fin");
+console.log("Fin");
 
 
