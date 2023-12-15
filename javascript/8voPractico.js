@@ -18,13 +18,7 @@
 // ■ huecosLibres(): indica cuántos contactos más podemos ingresar.
 // ○ Usar LocalStorage para guardar la info de la agenda y para consultar sus
 // datos
-async function obtenerAgenda() {
-try {
-  const agenda = await fetch("../api/fakeApiAgenda.json")
-  const agendaJson = await agenda.json()
-  console.log(agendaJson)
-}catch (error) {
-  console.log(error)
-}
-}
-obtenerAgenda()
+const formAddContacto = document.getElementById("form-add-contacto")
+const inputAddContactoName = document.getElementById("addContactoName")
+const inputAddContactoNumber = document.getElementById("addContactoNumber")
+const buttonAddContacto = document.getElementById("buttonAddContacto")
