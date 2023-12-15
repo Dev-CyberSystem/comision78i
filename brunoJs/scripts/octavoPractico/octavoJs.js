@@ -26,6 +26,7 @@ const buttonAddContact = document.getElementById("addContact")
 const formFind = document.getElementById("formFindContact")
 const inputfindName = document.getElementById("findName")
 const btnSearch = document.getElementById("searchBtn")
+const ulContact= document.getElementById("ulContact")
 
 
 class Contact {
@@ -65,16 +66,15 @@ buttonAddContact.addEventListener("click", e => {
     console.log(listaContactos)
 })
 
-function findContact() {
+function contactList(){
 
 }
-
 
 btnSearch.addEventListener("click", e => {
     e.preventDefault();
     const filter = inputfindName.value
     const contact = listaContactos.filter(contacto => contacto.getName == filter)
-    formAddProduct.reset();
-    console.log(contact)
+    formFind.reset();
+    console.log(contact[0]._phone)
 })
 
