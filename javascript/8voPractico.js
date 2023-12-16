@@ -40,24 +40,19 @@ buttonAddContacto.addEventListener("click", (event) => {
   else if(nameContacto === ""){
     alert("Ingrese un Nombre")
   }
-  agenda.push([nameContacto, numberContacto])//se establece por array el nombre y número para que asi en la lista se muestren ambos. Que estan englobados en la constante agenda.
+  agenda.push([nameContacto, numberContacto])//se establece por array el nombre y número xq un contacto tiene ambos elementos, ya que sin ser array se entiende que un contacto tendra solo nombre y otro solo número.
   console.log(agenda)
   listarContactos()
+  contactoExistente(nameContacto, numberContacto)
 }
 )
+//Función 2
 const listarContactos = () => {
   listaContacto.innerHTML = ""
   for (let i = 0; i < agenda.length; i++){
-    const [nameContacto, numberContacto] = agenda[i];
+    const [nameContacto, numberContacto] = agenda[i];// se le asigna el valor agenda[i] tanto nameContacto como numberContacto.
     const li = document.createElement("li")
     li.textContent = `${nameContacto} , ${numberContacto}`
     listaContacto.appendChild(li)
-  }
-}
-const existeContacto = () => {
-  if (nameContacto&&numberContacto.includes() === agenda){
-    existeElContacto.textContent = 'El contacto ya existe. No se puede agregar duplicados.'
-  } else {
-    existeElContacto.textContent = 'Contacto agregado correctamente'
   }
 }
