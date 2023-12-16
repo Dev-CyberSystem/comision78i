@@ -24,21 +24,40 @@ const formAddContacto = document.getElementById("form-add-contacto")
 const inputAddContactoName = document.getElementById("addContactoName")
 const inputAddContactoNumber = document.getElementById("addContactoNumber")
 const buttonAddContacto = document.getElementById("buttonAddContacto")
+const listaContacto = document.getElementById("listaContacto") 
+const existeElContacto = document.getElementById("existeElContacto")
 //Función 1
 buttonAddContacto.addEventListener("click", (event) => {
   event.preventDefault()
   //se crean estas constantes para asignarle lo que ingresa de ambos input que luego quedan guardados en la constante agenda.
-  const nameContacto = inputAddContactoName.value.toLoweCase().trim()
+  const nameContacto = inputAddContactoName.value.toLowerCase().trim()
   const numberContacto = parseInt(inputAddContactoNumber.value) 
   formAddContacto.reset()//para limpar los input.
   //para verificar si estan bien los datos ingresados.
   if (numberContacto.toString().length !== 10 ) {//toString para volverlo a convertir en cadena asi funcione el length.
     alert("El número de teléfono debe contener 10 dígitos")
   }
-  if (nameContacto === ""){
+  else if(nameContacto === ""){
     alert("Ingrese un Nombre")
   }
-  agenda.push(nameContacto , numberContacto)
+  agenda.push([nameContacto, numberContacto])//se establece por array el nombre y número para que asi en la lista se muestren ambos. Que estan englobados en la constante agenda.
   console.log(agenda)
+  listarContactos()
 }
 )
+const listarContactos = () => {
+  listaContacto.innerHTML = ""
+  for (let i = 0; i < agenda.length; i++){
+    const [nameContacto, numberContacto] = agenda[i];
+    const li = document.createElement("li")
+    li.textContent = `${nameContacto} , ${numberContacto}`
+    listaContacto.appendChild(li)
+  }
+}
+const existeContacto = () => {
+  if (nameContacto&&numberContacto.includes() === agenda){
+    existeElContacto.textContent = 'El contacto ya existe. No se puede agregar duplicados.'
+  } else {
+    existeElContacto.textContent = 'Contacto agregado correctamente'
+  }
+}
