@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    background-color: #ff90bc;
+}
+form {
+    padding: 40px 90px;
+    width: 50px;
+    display: flex;
+    flex-direction: colum;
+    position: relative;
+}
