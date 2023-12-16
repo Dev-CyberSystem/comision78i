@@ -34,12 +34,14 @@
 
 // Sincronia
 
-// console.log("Inicio");
-
+// console.log("medio")
+// console.log("Fin")
 // Asincronia
 
+// console.log("Inicio");
+
 // setTimeout(() => {
-//     console.log("Timeout");
+//   console.log("Timeout");
 // }, 3000);
 
 // console.log("Fin")
@@ -82,6 +84,7 @@ async function obtenerUsuarios() {
 obtenerUsuarios()
 
 
-// console.log("Fin");
+
+console.log("Fin");
 
 
