@@ -98,11 +98,11 @@ let agenda = new AgendaTelefonica();
 
 // Aquí agrego 5 contactos
 
-agenda.agregarContacto("Juan", "381-225-7520");
-agenda.agregarContacto("Ana", "381-654-3210");
-agenda.agregarContacto("Maria", "381-444-7895")
-agenda.agregarContacto("Pepe", "381-456-4424")
-agenda.agregarContacto("Martin", "381-222-7890")
+agenda.añadirContacto("Juan", "381-225-7520");
+agenda.añadirContacto("Ana", "381-654-3210");
+agenda.añadirContacto("Maria", "381-444-7895")
+agenda.añadirContacto("Pepe", "381-456-4424")
+agenda.añadirContacto("Martin", "381-222-7890")
 
 // console.log("Agenda actual:");
 // agenda.listarContactos();
