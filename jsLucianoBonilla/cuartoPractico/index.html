@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+</head>
+<body>
+    <h1>Agenda</h1>
+
+    <h2>Tu agenda tiene <span id="cantidadDeContactos"></span> contactos </h2>
+    <form id="form-agregar-contacto">
+        <label for="inputNombre">Nombre del Contacto:</label>
+        <input type="text" id="inputNombre" placeholder="Nombre" required>
+        <label for="inputTelefono">Teléfono del Contacto:</label>
+        <input type="text" id="inputTelefono" placeholder="Teléfono" required>
+        <button type="submit" id="buttonAgregarContacto">Agregar</button>
+    </form>
+    <ul id="listaContactos"></ul>
+
+    <script src="./cuartoPractico.js"></script>
+</body>
+</html>

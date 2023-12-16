@@ -110,9 +110,9 @@ const restar = () => {
 
 restar();
 
-// let sumar = function (a, b) {
-//   return a + b;
-// };
+let sumar = function(a,b) {
+    return a + b;
+}
 
 //Tarea
 //Quiz Javascript - Introducción
@@ -140,27 +140,12 @@ restar();
 
 // Crea un programa que cuente el número de palabras en una frase proporcionada por el usuario. Una palabra se define como cualquier secuencia de caracteres separada por espacios en blanco.
 
-function contadorDePalabras() {
-  let frase = prompt("ingrese su frase"); // Pedimos al usuario que ingrese la frase.
-  let numeroPalabras = frase.split(" ").length;
-  document.write(`La cantidad de palabras es de ${numeroPalabras}`);
-  console.log(numeroPalabras);
-}
-// contadorDePalabras();
 
-function sumarNumeros() {
-  //Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
 
-  let numeroUno = 10;
-  let numeroDos = 20;
-  let resultados = numeroUno + numeroDos;
-  console.log(resultados);
-}
 
-// Crea una variable con un valor numérico y aumenta su valor en 5 utilizando el operador de incremento (++). Muestra el resultado en la consola.
+//Realiza una operación matemática simple y almacena el resultado en una variable. Luego, muestra el resultado en la consola.
 
-let valor = 15;
-
-valor += 7;
-
-console.log(valor);
+let numeroUno = 10;
+let numeroDos = 20;
+let resultados = numeroUno + numeroDos;
+console.log(resultados)
