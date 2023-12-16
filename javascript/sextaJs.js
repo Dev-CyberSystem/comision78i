@@ -37,37 +37,79 @@
 // // }
 // // console.log(gato["nombre del gato"])
 
-class Animal {
-    constructor(nombre, edad){
-        this.nombre = nombre;
-        this.edad = edad;
+// class Animal {
+//     constructor(nombre, edad){
+//         this.nombre = nombre;
+//         this.edad = edad;
+//     }
+//     saludar(){
+//         console.log(`Hola soy ${this.nombre}`);
+//     }
+// }
+
+// class Perro extends Animal {
+//     constructor(nombre, edad, color){
+//         super(nombre, edad);
+//         this.color = color;
+              
+//     }
+
+//     sonido() {
+//         console.log(`El perro ${this.nombre} que tiene una edad de ${this.edad} de color ${this.color} años hace guau guau`);
+//     }
+// }
+
+
+// const animal1 = new Animal("Odi", 1); 
+// const animal2 = new Perro("Firulais", 3, "negro");
+
+
+class Producto{
+    constructor(nombre, precio, stock) {
+        this.nombre = nombre,
+        this.precio = precio,
+        this.stock = stock
     }
-    saludar(){
-        console.log(`Hola soy ${this.nombre}`);
+    imprimirDatos() {
+        console.log(`El producto ${this.nombre} tiene un precio de ${this.precio} y quedan en stock ${this.stock}`)
     }
 }
 
-class Perro extends Animal {
-    constructor(nombre, edad, color){
-        super(nombre, edad);
-        this.color = color;
-        
-       
-    }
+const producto1 = new Producto("Coca", 1500, 5)
+const producto2 = new Producto("Pepsi", 1000, 6)
 
-    sonido() {
-        console.log(`El perro ${this.nombre} que tiene una edad de ${this.edad} de color ${this.color} años hace guau guau`);
-    }
-}
+const almacen = [producto1, producto2]
+
+almacen.forEach(pepito => pepito.imprimirDatos())
+
+// Setters y Getters son funciones especiales para establecer y obtener valores
+
+// Getters obtienen los valores.  get 
+
+// Setters establecen los valors  set
+
+// class Persona{
+//     constructor(name, lastname, raza){
+//         this._nombre = name,
+//         this._apellido = lastname
+//         this._raza = raza
+//     }
+
+//     get getNombre(){
+//         return this._nombre
+//     }
+
+//     set setNombre(name){
+//         this._nombre = name
+//     }
+
+// }
 
 
-const animal1 = new Animal("Odi", 1); 
-const animal2 = new Perro("Firulais", 3, "negro");
+// const persona1 = new Persona("Lionel", "Messi", "GOAT")
 
+// console.log(persona1.getNombre, " <---- getNombre") 
 
-console.log(animal1)
+// console.log(persona1.setNombre = "Andres", " <---- setNombre")
 
-
-
-
-    
+// console.log(persona1.getNombre, " <---- getNombre") 
