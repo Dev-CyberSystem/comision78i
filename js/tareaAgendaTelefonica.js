@@ -111,7 +111,7 @@ agenda.añadirContacto("Martin", "381-222-7890")
 // agenda.buscarContacto("Juan");
 
 // Intento agregar un contacto con el mismo nombre (debería mostrar un error)
-// agenda.agregarContacto("Juan", "111-222-3333");
+// agenda.añadirContacto("Juan", "381-445-3323");
 
 // // Elimino un contacto por nombre
 // agenda.eliminarContacto("Ana");
