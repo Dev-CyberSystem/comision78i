@@ -26,6 +26,7 @@ const inputAddContactoNumber = document.getElementById("addContactoNumber")
 const buttonAddContacto = document.getElementById("buttonAddContacto")
 const listaContacto = document.getElementById("listaContacto") 
 const existeElContacto = document.getElementById("existeElContacto")
+const tamañoMaximo = 10 //el tope maximo de contactos que puede tener la agenda.
 //Función 1
 buttonAddContacto.addEventListener("click", (event) => {
   event.preventDefault()
@@ -40,10 +41,14 @@ buttonAddContacto.addEventListener("click", (event) => {
   else if(nameContacto === ""){
     alert("Ingrese un Nombre")
   }
+  else if(contactoExiste(nameContacto , numberContacto)) {
+    existeElContacto.textContent= "El contacto ya existe en la agenda."
+  } 
   agenda.push([nameContacto, numberContacto])//se establece por array el nombre y número xq un contacto tiene ambos elementos, ya que sin ser array se entiende que un contacto tendra solo nombre y otro solo número.
   console.log(agenda)
   listarContactos()
-  contactoExistente(nameContacto, numberContacto)
+  verificarTamañoAgenda()
+  contactoExiste()
 }
 )
 //Función 2
@@ -56,3 +61,14 @@ const listarContactos = () => {
     listaContacto.appendChild(li)
   }
 }
+//Verificar el tamaño de la agenda.
+const verificarTamañoAgenda = () => {
+if (agenda.length === tamañoMaximo) {
+alert("La agenda está llena. Tiene " + agenda.length + " contactos.");
+  console.log("La agenda está llena.");
+} 
+}
+//Función 3 
+const contactoExiste = (nameContacto, numberContacto) => {
+  return agenda.some(contacto => contacto[0]=== nameContacto && contacto[1] === numberContacto);
+} //se estable la posición 0 que indica el primer elemento del contacto que es el nombre y la posición 1 seria el teléfono.
