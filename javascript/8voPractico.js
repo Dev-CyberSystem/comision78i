@@ -72,6 +72,14 @@ const listarContactos = () => {
     const [nameContacto, numberContacto] = agenda[i];// se le asigna el valor agenda[i] tanto nameContacto como numberContacto.
     const li = document.createElement("li")
     li.textContent = `${nameContacto} , ${numberContacto}`
+    const botonEliminar = document.createElement("button")
+    botonEliminar.textContent = "Eliminar"
+    botonEliminar.addEventListener("click" ,() => {
+      eliminarContacto(agenda, [nameContacto, numberContacto])//se establece asi por que agenda contiene tanto el nombre y teléfono.
+      listaContacto.removeChild(li)
+
+    })
+    li.appendChild(botonEliminar)// se agrega a cada li el boton eliminar.
     listaContacto.appendChild(li)
   }
 }
@@ -100,4 +108,10 @@ buttonBuscarContacto.addEventListener("click", (event) => {
 function encontrarContacto(nameAbuscar) {
   return agenda.find(contacto => contacto[0]=== nameAbuscar);//.find busca el primer elemento de un array, en este caso es contacto que tiene como primer propiedad nombre por eso esta en la posición 0.
 } 
-
+function eliminarContacto(listaContacto , contactoAeliminar) {//contactoAeliminar hace referencia a el nombre y teléfono.
+const indice = listaContacto.indexOf(contactoAeliminar)
+if (indice !== -1) {
+listaContacto.splice(indice, 1);
+console.log(`Contacto '${contactoAeliminar[0]}' eliminado.`);
+}
+}
