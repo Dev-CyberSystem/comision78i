@@ -20,6 +20,13 @@
 // ○ Usar LocalStorage para guardar la info de la agenda y para consultar sus
 // datos
 
+let botonAgregar = document.getElementById("btnAgregar")
+let botonBuscar = document.getElementById("btnBuscar")
+let nomAgregar = document.getElementById("nomAgregar")
+let telAgregar = document.getElementById("telAgregar")
+let nomBuscar = document.getElementById("nomBuscar")
+let formAgregar = document.getElementById("formAgregar")
+let formBuscar = document.getElementById("formBuscar")
 let parrafo = document.getElementById("parrafo")
 
 let agenda = fetch(`../json/agenda.json`)
@@ -51,24 +58,31 @@ class Contacto
 
 // }
 
- function existeContacto()
+function existeContacto()
 {
-    let busqueda = prompt("Escriba el contacto que busca(nombre)")
+    let busqueda = nomBuscar.value
     fetch(`../json/agenda.json`)
     .then((resp=>{
     resp.json().then((data=>{ 
-         let contactito = new Contacto(data.nombre, data.telefono)
-         let nombree = JSON.stringify(contactito.getNombre)
+        for (let i = 0; i < data.length; i++) {
+            let contactito = new Contacto(data[i].nombre, data[i].telefono)
+            let nombree = JSON.stringify(contactito.getNombre)
             if(busqueda.length == nombree.length)
             {
                if(nombree.every(item => item == busqueda[0]))
                {
-                parrafo.textContent = "Se encontró el contacto ${busqueda}"
+                parrafo.textContent = `Se encontró el contacto ${busqueda}`
+               }else{
+                parrafo.textContent = "MWA MWA"
                }
             }
+        }
     }))
     }))
     .catch(console.warn)
+    formBuscar.reset()
 }
 
-existeContacto()
+botonBuscar.addEventListener("click", existeContacto())
+
+
