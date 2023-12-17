@@ -19,6 +19,7 @@
 // ○ Usar LocalStorage para guardar la info de la agenda y para consultar sus
 // datos
 
+//                    ---------------------------------------------------
 const agenda = []
 const formAddContacto = document.getElementById("form-add-contacto")
 const inputAddContactoName = document.getElementById("addContactoName")
@@ -27,7 +28,11 @@ const buttonAddContacto = document.getElementById("buttonAddContacto")
 const listaContacto = document.getElementById("listaContacto") 
 const existeElContacto = document.getElementById("existeElContacto")
 const tamañoMaximo = 10 //el tope maximo de contactos que puede tener la agenda.
-//Función 1
+
+const formBuscarContacto = document.getElementById("form-buscar-contacto")
+const inputBuscarNameContacto = document.getElementById("buscarNameContacto")
+const buttonBuscarContacto = document.getElementById("buttonBuscarContacto")
+//Función 1 (princial)
 buttonAddContacto.addEventListener("click", (event) => {
   event.preventDefault()
   //se crean estas constantes para asignarle lo que ingresa de ambos input que luego quedan guardados en la constante agenda.
@@ -44,12 +49,17 @@ buttonAddContacto.addEventListener("click", (event) => {
   else if(contactoExiste(nameContacto , numberContacto)) {
     existeElContacto.textContent= "El contacto ya existe en la agenda."
   } 
+  else if (agenda.length === tamañoMaximo) {//se indica si la agenda ya esta llena. 
+    alert("La agenda está llena. Tiene " + agenda.length + " contactos.")
+    console.log("La agenda está llena.")
+    return
+  } 
   else{
     // si todos los datos son válidos, se agrega el contacto.
     agenda.push([nameContacto, numberContacto])
     console.log(agenda)
     listarContactos()
-    verificarTamañoAgenda()
+    //verificarTamañoAgenda()
     existeElContacto.textContent = ""// Limpiar el mensaje de error si existe.
   }
 }
@@ -65,13 +75,12 @@ const listarContactos = () => {
   }
 }
 //Verificar el tamaño de la agenda.
-const verificarTamañoAgenda = () => {
-if (agenda.length === tamañoMaximo) {
-alert("La agenda está llena. Tiene " + agenda.length + " contactos.");
-  console.log("La agenda está llena.");
-} 
-}
+//const verificarTamañoAgenda = () => {
+//}
 //Función 3 
 const contactoExiste = (nameContacto, numberContacto) => {
   return agenda.some(contacto => contacto[0]=== nameContacto && contacto[1] === numberContacto);
 } //se estable la posición 0 que indica el primer elemento del contacto que es el nombre y la posición 1 seria el teléfono.
+
+//                     ----------------------------------------------------
+
