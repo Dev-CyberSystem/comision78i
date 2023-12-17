@@ -62,6 +62,7 @@ buttonAddContacto.addEventListener("click", (event) => {
     listarContactos()
     //verificarTamañoAgenda()
     existeElContacto.textContent = ""// Limpiar el mensaje de error si existe.
+    localStorage.setItem("agenda", JSON.stringify(agenda))
   }
 }
 )
@@ -112,6 +113,5 @@ function eliminarContacto(listaContacto , contactoAeliminar) {//contactoAelimina
 const indice = listaContacto.indexOf(contactoAeliminar)
 if (indice !== -1) {
 listaContacto.splice(indice, 1);
-console.log(`Contacto '${contactoAeliminar[0]}' eliminado.`);
 }
 }
