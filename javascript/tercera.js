@@ -143,6 +143,6 @@ esMayor(5, 5); //pasando los numeros por parametro
 
 // Crear un programa que pida al usuario un número y luego muestre si es un número perfecto o no. Un número perfecto es aquel que es igual a la suma de sus divisores propios.
 
-// Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos.
+//Crear un programa que pida al usuario un número y luego muestre su descomposición en factores primos. 
 
 // Crear un programa que pida al usuario una fecha (día, mes y año) y luego muestre si es válida o no. Una fecha es válida si cumple con ciertas condiciones, como la cantidad de días en el mes y si es un año bisiesto o no.
