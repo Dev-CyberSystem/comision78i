@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Agenda Telefónica</title>
+</head>
+
+<body>
+  <div class="contenedor">
+    <h3 class="titulo">Agenda Telefónica</h3>
+    <form class="formUno" id="formAniadirContacto">
+      <p>
+        <label><b>Nombre</b></label>
+        <input type="text" id="inputNombre" required>
+      </p>
+      <p>
+        <label><b>Número</b></label>
+        <input type="number" id="inputNumero" min=0 required>
+      </p>
+      <p>
+        <input type="submit" value="Añadir Contacto" id="aniadirContacto" class="boton">
+      </p>
+    </form>
+    <form class="formUno" id="formBuscarContacto">
+      <p>
+        <label><b>Buscar contacto</b></label>
+        <input type="text" id="inputBuscarContacto">
+        <input type="submit" class="boton" value="Buscar" id="buscarContacto"></input>
+      </p>
+    </form>
+    <form class="formUno">
+      <p>
+        <label><b>Eliminar contacto</b></label>
+        <input type="text" id="inputEliminarContacto">
+        <input type="submit" class="boton" value="Eliminar" id="eliminarContacto"></input>
+      </p>
+    </form>
+    <p>
+      <input type="submit" id="listarContactos" value="Lista de Contactos" class="boton">
+      <input type="submit" id="huecosLibres" value="Huecos Libres" class="boton">
+    </p>
+  </div>
+
+
+  <script src="./agenda.js"></script>
+</body>
+
+</html>

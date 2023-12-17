@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0766AD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-wrap: wrap;
+  font-family: Verdana, sans-serif;
+}
+
+.contenedor {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60vw;
+  height: 70vh;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #0766AD;
+  margin: 1.5rem;
+}
+
+.boton {
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.formUno {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+p {
+  margin: 0.2rem;
+}
