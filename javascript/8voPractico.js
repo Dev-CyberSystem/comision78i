@@ -44,11 +44,14 @@ buttonAddContacto.addEventListener("click", (event) => {
   else if(contactoExiste(nameContacto , numberContacto)) {
     existeElContacto.textContent= "El contacto ya existe en la agenda."
   } 
-  agenda.push([nameContacto, numberContacto])//se establece por array el nombre y número xq un contacto tiene ambos elementos, ya que sin ser array se entiende que un contacto tendra solo nombre y otro solo número.
-  console.log(agenda)
-  listarContactos()
-  verificarTamañoAgenda()
-  contactoExiste()
+  else{
+    // si todos los datos son válidos, se agrega el contacto.
+    agenda.push([nameContacto, numberContacto])
+    console.log(agenda)
+    listarContactos()
+    verificarTamañoAgenda()
+    existeElContacto.textContent = ""// Limpiar el mensaje de error si existe.
+  }
 }
 )
 //Función 2
