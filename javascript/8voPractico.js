@@ -32,6 +32,7 @@ const tamañoMaximo = 10 //el tope maximo de contactos que puede tener la agenda
 const formBuscarContacto = document.getElementById("form-buscar-contacto")
 const inputBuscarNameContacto = document.getElementById("buscarNameContacto")
 const buttonBuscarContacto = document.getElementById("buttonBuscarContacto")
+const reusltadoEncontrado = document.getElementById("resultadoEncontrado")
 //Función 1 (princial)
 buttonAddContacto.addEventListener("click", (event) => {
   event.preventDefault()
@@ -83,4 +84,20 @@ const contactoExiste = (nameContacto, numberContacto) => {
 } //se estable la posición 0 que indica el primer elemento del contacto que es el nombre y la posición 1 seria el teléfono.
 
 //                     ----------------------------------------------------
+
+buttonBuscarContacto.addEventListener("click", (event) => {
+  event.preventDefault()
+  const nameAbuscar = inputBuscarNameContacto.value.toLowerCase().trim()
+  console.log(nameAbuscar)
+  const contactoEncontrado = encontrarContacto(nameAbuscar);
+  if (contactoEncontrado) { 
+   reusltadoEncontrado.textContent = `El teléfono de ${nameAbuscar} es: ${contactoEncontrado[1]}`//se indica la pisición 1 que es el teléfono.
+  }else {    
+   reusltadoEncontrado.textContent = `No se encontró el contacto con el nombre ${nameAbuscar}`
+  }
+}
+)
+function encontrarContacto(nameAbuscar) {
+  return agenda.find(contacto => contacto[0]=== nameAbuscar);//.find busca el primer elemento de un array, en este caso es contacto que tiene como primer propiedad nombre por eso esta en la posición 0.
+} 
 
