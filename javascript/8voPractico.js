@@ -110,6 +110,7 @@ buttonBuscarContacto.addEventListener("click", (event) => {
 function encontrarContacto(nameAbuscar) {
   return agenda.find(contacto => contacto[0]=== nameAbuscar);//.find busca el primer elemento de un array, en este caso es contacto que tiene como primer propiedad nombre por eso esta en la posición 0.
 } 
+//Función 4
 function eliminarContacto(listaContacto , contactoAeliminar) {//contactoAeliminar hace referencia a el nombre y teléfono.
 const indice = listaContacto.indexOf(contactoAeliminar)
 if (indice !== -1) {
