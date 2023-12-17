@@ -62,8 +62,9 @@ buttonAddContacto.addEventListener("click", (event) => {
     listarContactos()
     //verificarTamañoAgenda()
     existeElContacto.textContent = ""// Limpiar el mensaje de error si existe.
-    localStorage.setItem("agenda", JSON.stringify(agenda))
-  }
+    localStorage.setItem("contacto", JSON.stringify(agenda))//contacto es key (clave, que puede ser cualquier denominación), y "agenda" es el valor que se convierte en cadena con el json.
+    //el setItem sirve para guardar la informacion aun cuando refresquemos el documento.
+}
 }
 )
 //Función 2
