@@ -55,7 +55,7 @@ buttonBuscarProducto.addEventListener("click", (e) => { // agregamos un evento a
   console.log(indice, "indice");
 
   if (indice !== -1) { // si el indice es distinto a -1, es porque el producto se encuentra en el carrito
-    resultadoBusqueda.textContent = `El producto ${productoABuscar} se encuentra en el carrito en la posicion ${indice}`;
+    resultadoBusqueda.textContent = `El producto ${productoABuscar} se encuentra en el carrito en la posicion ${indice + 1}`;
   } else {
     resultadoBusqueda.textContent = `El producto ${productoABuscar} NO se encuentra en el carrito`;
   }
@@ -74,6 +74,10 @@ function listarProductosFiltrados(array) {
         array.forEach((producto, index) => {
             let li = document.createElement("li");
             li.textContent = `${index + 1} - ${producto}`;
+            let botonEliminar = document.createElement("button")
+            botonEliminar.textContent = "Eliminar"
+            li.appendChild(botonEliminar)
+
             listarProductosFiltrado.appendChild(li);
         });
     }
