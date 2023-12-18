@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>contactos</title>
 </head>
 <body>
-    <h1>Guia telefonica</h1>
-<form id="formAddContact">
-    Nombre de contacto : <input type="text" id="nameContac"><br><br>
-    Numero de telefono : <input type="number" id="phoneContact"><br><br>
-    <button id="addContact">Agregar Contacto</button>
-</form>
-<br>
-<form id="formFindContact">
-    Ingrese el nombre del contacto : <input type="text" id="findName">
-<button id="searchBtn">Buscar contacto</button>
-</form>
+    <h1>contactos</h1>
+
+    <h2>Tu lista de contactos tiene <span id="catidadDeContactos"></span>  </h2>
+    <form id="forminputAddContacto" >
+        Nombre: <input type="text" id="inputAddContacto"> <br><br>
+        Numero: <input type="number" id="inputAddNumero"><br><br>
+        <button type="submit" id="buttonAddContacto">Agregar</button>
+    </form>
+    <ul id="listaContactos"></ul>
+    
+    <h2>Buscador</h2>
+    <form  id="formBuscarContacto">
+        <label > Escribi el nombre del contacto </label>
+        <input type="text" id="inputBuscarContacto">
+        <button id="buttonBuscarContacto" type="submit"> Buscar </button>
+    </form>
+    <p id="mostrarResultadoBusqueda"></p>
 
 
     <script src="./octavoJs.js"></script>
