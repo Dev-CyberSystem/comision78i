@@ -71,7 +71,7 @@ async function obtenerUsuarios() {
     console.log(error, "entre en el error");
   }
 }
-obtenerUsuarios()
+
 
 
 console.log("Fin");
