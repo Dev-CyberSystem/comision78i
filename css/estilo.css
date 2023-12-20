@@ -9,3 +9,12 @@ button{
     background-color: blue;
     color: white;
 }
+
+h1{
+    text-align: center;
+    margin: 1rem;
+}
+
+ol, li{
+    margin: 1rem;
+}

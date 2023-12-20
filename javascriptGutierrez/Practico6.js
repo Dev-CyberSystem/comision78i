@@ -19,6 +19,7 @@
 // ■ huecosLibres(): indica cuántos contactos más podemos ingresar.
 // ○ Usar LocalStorage para guardar la info de la agenda y para consultar sus
 // datos
+// import { agenda } from "exportP6.js"
 
 let botonAgregar = document.getElementById("btnAgregar")
 let botonBuscar = document.getElementById("btnBuscar")
@@ -28,61 +29,86 @@ let nomBuscar = document.getElementById("nomBuscar")
 let formAgregar = document.getElementById("formAgregar")
 let formBuscar = document.getElementById("formBuscar")
 let parrafo = document.getElementById("parrafo")
+let lista = document.querySelector("ol")
+let mensaje = document.getElementById("mensaje")
 
-let agenda = fetch(`../json/agenda.json`)
+let agenda = []
+
+let agendaJson = fetch(`../json/agenda.json`)
 .then((resp=>{
     resp.json().then((data=>{
-        console.log(data) 
-        localStorage.setItem('Contacto', JSON.stringify(data))
+    localStorage.setItem("Contactos", JSON.stringify(data))
     }))
 }))
 .catch(console.warn)
 
+agenda = JSON.parse(localStorage.getItem("Contactos"))
+localStorage.clear()
 
 
-class Contacto
+const agendaLlena = () =>
 {
-    constructor(nombre, telefono)
-    {
-        this._nombre = nombre
-        this._telefono = telefono
-    }
-    get getNombre()
-    {
-        return this._nombre
-    }
+    mensaje.textContent = "La agenda está llena"
 }
 
-// const aniadirContacto = () => 
-// {
+const listarContactos = () =>
+{
+    agenda.forEach(contacto => {
+        let li = document.createElement("li")
+        li.textContent = contacto.nombre + ", " + contacto.telefono 
+        lista.appendChild(li)
+    });
+}
+ 
+listarContactos()
 
-// }
 
-function existeContacto()
+
+const aniadirContacto = () =>
+{
+    nom = nomAgregar.value
+    tel = telAgregar.value
+    class contacto{
+        constructor(nombre, telefono)
+        {
+            this._nombre = nombre
+            this._telefono = telefono
+        }
+    }
+
+    let otro = new contacto(nom, tel)
+    if(agenda.length < 10)
+    {
+      agenda.push(otro)
+      localStorage.setItem("Contactos", JSON.stringify(agenda))
+    }else{
+        agendaLlena()
+    }
+    
+    
+}
+
+
+function existeContacto(agenda)
 {
     let busqueda = nomBuscar.value
-    fetch(`../json/agenda.json`)
-    .then((resp=>{
-    resp.json().then((data=>{ 
-        for (let i = 0; i < data.length; i++) {
-            let contactito = new Contacto(data[i].nombre, data[i].telefono)
-            let nombree = JSON.stringify(contactito.getNombre)
-            if(busqueda.length == nombree.length)
-            {
-               if(nombree.every(item => item == busqueda[0]))
-               {
-                parrafo.textContent = `Se encontró el contacto ${busqueda}`
-               }else{
-                parrafo.textContent = "MWA MWA"
-               }
-            }
-        }
-    }))
-    }))
-    .catch(console.warn)
-    formBuscar.reset()
+    const buscando = agenda.find(item => item.nombre == busqueda)
+    if(buscando)
+    {
+        mensaje.textContent = "Se ha encontrado el contacto" + busqueda
+
+    }
 }
 
-botonBuscar.addEventListener("click", existeContacto())
+botonBuscar.addEventListener("onclick", (event) =>{
+    event.preventDefault
+existeContacto(agenda)
+})
+
+botonAgregar.addEventListener("onclick", (event) =>{
+    event.preventDefault
+aniadirContacto()
+})
+
 
 
