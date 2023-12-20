@@ -59,12 +59,20 @@ console.log("Inicio");
 async function obtenerUsuarios() {
   try {
     let respuesta = await fetch("https://jsonplaceholder.typicode.com/users/1");
-    let usuarios = await respuesta.json();
-    // const li = document.createElement("li");
-    // li.textContent = usuarios.name;
-    // resultado.appendChild(li);
+    let usuario = await respuesta.json();
 
-    console.log(usuarios);
+
+    const resultado = document.getElementById("resultado");
+
+
+    resultado.innerHTML = "";
+
+    // Iterar sobre las propiedades del objeto y mostrar cada par clave-valor
+    for (const [clave, valor] of Object.entries(usuario)) {
+      const p = document.createElement("p");
+      p.textContent = `${clave}: ${valor}`;
+      resultado.appendChild(p);
+    }
   } catch (error) {
     console.log(error, "entre en el error");
   }
