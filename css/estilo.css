@@ -5,8 +5,16 @@
 }
 
 button{
+    margin-left: 1rem;
+    padding: 0.1rem;
+    border-color: red;
+    background-color: white;
+}
+
+form button{
     padding: 0.2rem;
     background-color: blue;
+    border-color: blue;
     color: white;
 }
 
@@ -17,4 +25,10 @@ h1{
 
 ol, li{
     margin: 1rem;
+}
+
+p{
+    margin: 1rem;
+    color: rgb(88, 25, 117);
+    margin-bottom: 2rem;
 }

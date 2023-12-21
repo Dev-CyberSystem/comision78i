@@ -1,4 +1,4 @@
-export let agenda = []
+let agenda = []
 
 let agendaJson = fetch(`../json/agenda.json`)
 .then((resp=>{
@@ -9,6 +9,8 @@ let agendaJson = fetch(`../json/agenda.json`)
 .catch(console.warn)
 
 agenda = JSON.parse(localStorage.getItem("Contactos"))
-localStorage.clear()
-console.log(agenda)
+
+export default agenda
+
+// console.log(agenda)
 
